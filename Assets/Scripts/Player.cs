@@ -7,10 +7,19 @@ public class Player : MonoBehaviour
     // スクリプトSpaceShipのコンポーネントを格納する変数
     SpaceShip spaceShip;
 
+    // スクリプトPlayerHpBarのコンポーネントを格納する変数
+    PlayerHpBar playerHpBar;
+
     // Start is called before the first frame update
     void Start()
     {
         spaceShip = GetComponent<SpaceShip>();
+
+        // HPバーの初期設定
+        playerHpBar = GameObject.Find("PlayerHPBar").GetComponent<PlayerHpBar>();
+        playerHpBar.InitializedHpBar(spaceShip.getHp());
+
+        // 弾の発射処理の開始
         StartCoroutine("Shot");
     }
 
@@ -49,6 +58,9 @@ public class Player : MonoBehaviour
         {
             // ダメージ処理
             spaceShip.damage();
+
+            // HPバーの変更処理
+            playerHpBar.SetPlayerHpBar(spaceShip.getHp());
 
             // HPが0になった時の処理
             if (spaceShip.getHp() <= 0)
