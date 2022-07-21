@@ -332,6 +332,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6574803279127939778, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
+      propertyPath: hp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574803279127939778, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 790810255072894104, guid: b99467d57c1437f4f9c6ee78dc567188, type: 3}
