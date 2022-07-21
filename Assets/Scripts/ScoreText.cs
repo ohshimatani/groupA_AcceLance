@@ -6,15 +6,21 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour {
 
-    // Start is called before the first frame update
+    
+    /// <summary>
+    /// スコアの数字を０で初期化
+    /// </summary>
     void Start() {
         Text scoreNumber = GetComponent<Text>();
         scoreNumber.text = "0";
     }
 
+
+    /// <summary>
+    /// 一秒毎にスコアの数がインクリメントされるように
+    /// （デバッグ用の処理。本番では不要）
+    /// </summary>
     private float timeleft;
-    // デバッグ用の処理
-    // 本番では不要
     void Update() {
         timeleft -= Time.deltaTime;
         if (timeleft <= 0.0) {
@@ -23,15 +29,18 @@ public class ScoreText : MonoBehaviour {
         }
     }
 
-    /*
-     * スコア（倒した数）をインクリメント
-     * 敵が倒されたときに呼ばれる想定
-    */
+    /// <summary>
+    /// スコア（倒した数）をインクリメントするメソッド。
+    /// 敵が倒されたときに呼ばれる想定
+    /// </summary>
     public void IncrementScoreNumber() {
         Text scoreNumber = GetComponent<Text>();
         int score = 0;
-        /*scoreNubmerをintへキャスト。
-        成功すればインクリメントし、Stringへ再度キャスト*/
+
+        /// <summary>
+        /// scoreNubmerをintへキャスト。
+        /// 成功すればインクリメントし、Stringへ再度キャスト
+        /// </summary>
         try {
             score = Int32.Parse(scoreNumber.text);
             score++;
