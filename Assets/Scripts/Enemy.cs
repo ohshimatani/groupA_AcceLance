@@ -31,14 +31,21 @@ public class Enemy : MonoBehaviour
         // レイヤー名がPlayerBulletの場合
         if (layerName == "PlayerBullet")
         {
+            // ダメージ処理
+            spaceShip.damage();
+
             // 弾の削除
             Destroy(collider.gameObject);
 
-            // 爆発処理
-            spaceShip.Explosion();
+            // HPが0になった時の処理
+            if (spaceShip.getHp() <= 0)
+            {
+                // 爆発処理
+                spaceShip.Explosion();
 
-            // 自身（エネミー）を削除
-            Destroy(gameObject);
+                // 自身（エネミー）を削除
+                Destroy(gameObject);
+            }
         }
     }
 

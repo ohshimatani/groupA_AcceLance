@@ -37,20 +37,21 @@ public class Player : MonoBehaviour
         // 衝突オブジェクトのレイヤー名の取得
         string layerName = LayerMask.LayerToName(collider.gameObject.layer);
 
-        // レイヤー名がEnemyBulletの場合
-        if (layerName == "EnemyBullet")
-        {
-            Destroy(collider.gameObject);
-        }
-
         // レイヤー名がEnemyBulletまたはEnemyの場合
         if (layerName == "EnemyBullet" || layerName == "Enemy")
         {
-            // 爆発処理
-            spaceShip.Explosion();
+            // ダメージ処理
+            spaceShip.damage();
 
-            // プレイヤーを削除
-            Destroy(gameObject);
+            // HPが0になった時の処理
+            if (spaceShip.getHp() <= 0)
+            {
+                // 爆発処理
+                spaceShip.Explosion();
+
+                // プレイヤーを削除
+                Destroy(gameObject);
+            }
         }
     }
 
