@@ -13,6 +13,12 @@ public class SpaceShip : MonoBehaviour
     // オブジェクトの移動スピードを格納する変数
     public float speed;
 
+    // プレイヤー・敵のHP
+    [SerializeField] int hp;
+
+    // ダメージポイント
+    private const int DAMAGE_POINT = 1;
+
     // 弾を撃つ間隔を格納する変数
     public float shotDelay;
 
@@ -43,6 +49,23 @@ public class SpaceShip : MonoBehaviour
     public void Explosion()
     {
         Instantiate(explosion, transform.position, transform.rotation);
+    }
+
+    /// <summary>
+    /// ダメージ処理（1ずつダメージを食らう）
+    /// </summary>
+    public void damage()
+    {
+        hp -= DAMAGE_POINT;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public int getHp()
+    {
+        return hp;
     }
 
     /// <summary>
