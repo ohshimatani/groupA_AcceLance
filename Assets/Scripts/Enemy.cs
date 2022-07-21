@@ -37,9 +37,9 @@ public class Enemy : MonoBehaviour
             // ’e‚Ìíœ
             Destroy(collider.gameObject);
 
+            // HP‚ª0‚É‚È‚Á‚½‚Ìˆ—
             if (spaceShip.getHp() <= 0)
             {
-
                 // ”š”­ˆ—
                 spaceShip.Explosion();
 
