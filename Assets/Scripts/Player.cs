@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
             // ƒ_ƒ[ƒWˆ—
             spaceShip.damage();
 
+            // ’e‚Ìíœ
+            Destroy(collider.gameObject);
+
             // HP‚ª0‚É‚È‚Á‚½‚Ìˆ—
             if (spaceShip.getHp() <= 0)
             {
