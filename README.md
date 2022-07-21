@@ -1,23 +1,28 @@
 # 命名規則
 
-## C#ファイル、クラス名、Unityオブジェクト
+## C#プログラム
+### クラス名・メソッド名
 パスカルケース（全ての単語の先頭文字を大文字）を用いて命名する
 
 #### 具体例
-```
-PlayerBullet
-FirstDispTime
-など
+```cs
+public class Player {
+
+}
 ```
 
-## 識別子名（変数名、メソッド名など）
+```cs
+public string GetName() {
+
+}
+```
+
+### 変数名
 キャメルケース（先頭単語を除く、全ての単語先頭文字を大文字）を用いて命名する
 
 #### 具体例
-```
-gameObject
-layerName
-など
+```cs
+string plyaerHp;
 ```
 
 ## ブランチ
@@ -32,6 +37,14 @@ layerName
 （issue番号1の「READMEを作成する」というissueの場合）
 ```
 #1_create_readme
+```
+
+## Unityオブジェクト
+パスカルケース（全ての単語の先頭文字を大文字）を用いて命名する
+
+#### 具体例
+```
+PlayerBullet
 ```
 
 ## コミットメッセージ
