@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHPBar : MonoBehaviour {
+public class PlayerHPBar : MonoBehaviour
+{
 
     // フィールド
     private int maxHp = 100;
+    private int currentHp;
     public Slider playerHpBar;
 
     /// <summary>
     /// HPのmaxを設定＆現在のHPを満タンに
     /// </summary>
-    void Start() {
+    void Start()
+    {
         playerHpBar = GetComponent<Slider>();
         playerHpBar.maxValue = maxHp;
-        playerHpBar.value = maxHp;
+        currentHp = maxHp;
+        playerHpBar.value = currentHp;
     }
 
     /// <summary>
@@ -23,9 +27,11 @@ public class PlayerHPBar : MonoBehaviour {
     /// （デバッグ用の処理。本番では不要）
     /// </summary>
     private float timeleft;
-    void Update() {
+    void Update()
+    {
         timeleft -= Time.deltaTime;
-        if (timeleft <= 0.0) {
+        if (timeleft <= 0.0)
+        {
             timeleft = 1.0f;
             ChangePlayerHpBar(10);
         }
@@ -36,15 +42,19 @@ public class PlayerHPBar : MonoBehaviour {
     /// damagePointの分だけ体力を減らす
     /// </summary>
     /// <param name="damagePoint"></param>
-    public void ChangePlayerHpBar(int damagePoint) {
-        if (playerHpBar.value <= damagePoint) {
+    public void ChangePlayerHpBar(int damagePoint)
+    {
+        // 現在のHPをdamagePoint分減らす
+        currentHp -= damagePoint;
+
+        // 現在のHPが0を下回っている場合は値を0とする
+        if (currentHp <= 0)
+        {
             playerHpBar.value = 0;
-            // ゲームオーバー処理
-
-
-        } else {
-            playerHpBar.value -= damagePoint;
         }
-        
+        else
+        {
+            playerHpBar.value = currentHp;
+        }
     }
 }
