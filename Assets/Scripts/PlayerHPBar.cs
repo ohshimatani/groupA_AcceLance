@@ -33,7 +33,7 @@ public class PlayerHPBar : MonoBehaviour {
 
     /// <summary>
     /// プレイヤーがダメージを受けた時の処理
-    /// 
+    /// damagePointの分だけ体力を減らす
     /// </summary>
     /// <param name="damagePoint"></param>
     public void playerDamaged(int damagePoint) {
