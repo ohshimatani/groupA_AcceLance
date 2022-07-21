@@ -860,7 +860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d61f0b0d4cd51e47bd1414a22aea1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHpBar: {fileID: 0}
 --- !u!114 &1933346833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 790810255072894104, guid: b99467d57c1437f4f9c6ee78dc567188, type: 3}
     - target: {fileID: 7410459254997126354, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
