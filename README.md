@@ -28,7 +28,7 @@ layerName
 #n(nはissue番号)_英単語
 ```
 
-#### 具体例\
+#### 具体例
 （issue番号1の「READMEを作成する」というissueの場合）
 ```
 #1_create_readme
