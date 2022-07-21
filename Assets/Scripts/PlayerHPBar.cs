@@ -10,7 +10,7 @@ public class PlayerHpBar : MonoBehaviour
     private int maxHp;
 
     // HPバーの描画用スライダー
-    private Slider playerHpBar;
+    private Slider hpBar;
 
     /// <summary>
     /// HPバー関連の初期設定
@@ -18,9 +18,9 @@ public class PlayerHpBar : MonoBehaviour
     public void InitializedHpBar(int hp)
     {
         maxHp = hp;
-        playerHpBar = GetComponent<Slider>();
-        playerHpBar.maxValue = maxHp;
-        playerHpBar.value = maxHp;
+        hpBar = GetComponent<Slider>();
+        hpBar.maxValue = maxHp;
+        hpBar.value = maxHp;
     }
 
     /// <summary>
@@ -30,6 +30,6 @@ public class PlayerHpBar : MonoBehaviour
     /// <param name="damagePoint"></param>
     public void SetPlayerHpBar(int hp)
     {
-        playerHpBar.value = hp;
+        hpBar.value = hp;
     }
 }
