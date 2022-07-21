@@ -69,12 +69,19 @@ public class Enemy : MonoBehaviour
             // 子要素を全て習得する
             for (int i = 0; i < transform.childCount; i++)
             {
-                // 子要素を全て取得する
-                // TODO: 複数の弾を発射させるか否かによって処理を変える
-                Transform shotPosition = transform.GetChild(i);
+                // 子要素のオブジェクト名を取得
+                string gameObjectName = transform.GetChild(i).gameObject.name;
 
-                // 弾をプレイやーと同じ位置/角度で生成
-                spaceShip.Shot(shotPosition);
+                // ShotPositionオブジェクトのみ、弾を生成する
+                if (gameObjectName.Contains("ShotPosition"))
+                {
+                    // 子要素を全て取得する
+                    // TODO: 複数の弾を発射させるか否かによって処理を変える
+                    Transform shotPosition = transform.GetChild(i);
+
+                    // 弾をプレイやーと同じ位置/角度で生成
+                    spaceShip.Shot(shotPosition);
+                }
             }
 
             // shotDelay秒待つ
