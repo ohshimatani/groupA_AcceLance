@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  shotDelay: 1
+  hp: 5
+  shotDelay: 1.9
   bullet: {fileID: 3790977683366407037, guid: cb600ed69f8f17e4f9b9276c1a0abfa0, type: 3}
   explosion: {fileID: 1359691145558163931, guid: 3519a532514da4049808bd11ab3d993c, type: 3}
