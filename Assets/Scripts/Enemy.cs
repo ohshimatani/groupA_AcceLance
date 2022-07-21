@@ -7,14 +7,20 @@ public class Enemy : MonoBehaviour
     // スクリプトSpaceShipのコンポーネントを格納する変数
     SpaceShip spaceShip;
 
+    // スクリプトScoreNumberのコンポーネントを格納する変数
+    ScoreNumber scoreNumber;
+
     /// <summary>
     /// ゲームスタート時の処理
     /// </summary>
     void Start()
     {
         spaceShip = GetComponent<SpaceShip>();
+        scoreNumber = GameObject.Find("ScoreNumber").GetComponent<ScoreNumber>();
+
         // 画面上から下に移動させる
         spaceShip.Move(transform.up * -1);
+
         // 弾の発射処理を実行
         StartCoroutine("Shot");
     }
@@ -42,6 +48,9 @@ public class Enemy : MonoBehaviour
             {
                 // 爆発処理
                 spaceShip.Explosion();
+
+                // Scoreの加算処理
+                scoreNumber.IncrementScoreNumber();
 
                 // 自身（エネミー）を削除
                 Destroy(gameObject);
