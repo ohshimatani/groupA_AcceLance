@@ -17,7 +17,7 @@ table = soup.find('table')
 td_list = table.find_all('td')
 
 # 保存用のjson
-json_dict = {}
+json_dict = {'kanjiInfos':[]}
 
 for tl in td_list:
     # 漢字の取得
@@ -49,12 +49,15 @@ for tl in td_list:
             kunyomi_list.append(yl)
     
     # jsonに追加
-    json_dict[kanji] = {
-        'onyomi': onyomi_list,
-        'kunyomi': kunyomi_list,
-        'kakusu': kakusu
-    }
+    json_dict['kanjiInfos'].append(
+        {
+            'kanji': kanji
+            , 'onyomi': onyomi_list
+            , 'kunyomi': kunyomi_list
+            , 'kakusu': kakusu
+        }
+    )
 
 # jsonデータのファイル出力
-with open('../Assets/Data/kanji.json', 'w') as file:
+with open('../Assets/Data/KanjiInfos.json', 'w') as file:
     json.dump(json_dict, file, ensure_ascii=False, indent=4)
