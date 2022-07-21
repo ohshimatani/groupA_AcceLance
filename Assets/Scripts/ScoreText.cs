@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour {
 
+    // フィールド
+    private Text scoreNumber;
+
     /// <summary>
     /// スコアの数字を０で初期化
     /// </summary>
     void Start() {
-        Text scoreNumber = GetComponent<Text>();
+        scoreNumber = GetComponent<Text>();
         scoreNumber.text = "0";
     }
 
@@ -23,7 +26,7 @@ public class ScoreText : MonoBehaviour {
         timeleft -= Time.deltaTime;
         if (timeleft <= 0.0) {
             timeleft = 1.0f;
-            IncrementScore();
+            IncrementScoreNumber();
         }
     }
 
@@ -31,22 +34,8 @@ public class ScoreText : MonoBehaviour {
     /// スコア（倒した数）をインクリメントするメソッド。
     /// 敵が倒されたときに呼ばれる想定
     /// </summary>
-    public void IncrementScore() {
-        Text scoreNumber = GetComponent<Text>();
-        int score = 0;
-
-        /// <summary>
-        /// scoreNubmerをintへキャスト。
-        /// 成功すればインクリメントし、Stringへ再度キャスト
-        /// </summary>
-        try {
-            score = Int32.Parse(scoreNumber.text);
-            score++;
-            scoreNumber.text = score.ToString();
-        } catch(FormatException) {
-            Debug.Log("error: from string to int at ScoreText.cs/IncrementScoreNumber");
-        }
+    public void IncrementScoreNumber() {
+        int currentScore = int.Parse(scoreNumber.text);
+        scoreNumber.text = (currentScore + 1).ToString();
     }
-
-    
 }
