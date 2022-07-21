@@ -27,7 +27,7 @@ public class PlayerHPBar : MonoBehaviour {
         timeleft -= Time.deltaTime;
         if (timeleft <= 0.0) {
             timeleft = 1.0f;
-            playerDamaged(10);
+            ChangePlayerHpBar(10);
         }
     }
 
@@ -36,7 +36,7 @@ public class PlayerHPBar : MonoBehaviour {
     /// damagePointの分だけ体力を減らす
     /// </summary>
     /// <param name="damagePoint"></param>
-    public void playerDamaged(int damagePoint) {
+    public void ChangePlayerHpBar(int damagePoint) {
         if (playerHpBar.value <= damagePoint) {
             playerHpBar.value = 0;
             // ゲームオーバー処理
