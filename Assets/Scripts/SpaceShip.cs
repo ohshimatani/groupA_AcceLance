@@ -13,6 +13,9 @@ public class SpaceShip : MonoBehaviour
     // オブジェクトの移動スピードを格納する変数
     public float speed;
 
+    // プレイヤー・敵のHP
+    public int hp;
+
     // 弾を撃つ間隔を格納する変数
     public float shotDelay;
 
