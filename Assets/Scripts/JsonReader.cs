@@ -7,34 +7,60 @@ public class JsonData
     public KanjiInfo[] kanjiInfos;
 }
 
+/// <summary>
+/// ï¿½Ç‚İï¿½ï¿½ï¿½JSONï¿½ÌƒLï¿½[ï¿½ê——
+/// ï¿½ï¿½ï¿½Ó“_ï¿½FJSONï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ÌƒLï¿½[ï¿½ï¿½ï¿½Æ•Ïï¿½ï¿½ï¿½ï¿½Í‘ï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+/// </summary>
 [System.Serializable]
 public class KanjiInfo
 {
-    // Š¿š
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID
+    public int kanji_id;
+
+    // ï¿½ï¿½ï¿½ï¿½
     public string kanji;
 
-    // ‰¹“Ç‚İ‚ÌƒŠƒXƒg
+    // ï¿½ï¿½ï¿½Ç‚İ‚Ìƒï¿½ï¿½Xï¿½g
     public string[] onyomi;
 
-    // ŒP“Ç‚İ‚ÌƒŠƒXƒg
+    // ï¿½Pï¿½Ç‚İ‚Ìƒï¿½ï¿½Xï¿½g
     public string[] kunyomi;
 
-    // Š¿š‚Ì‰æ”
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ì‰æ”
     public int kakusu;
+
+    // ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½Ìï¿½
+    public int defeat_count;
+
+    /// <summary>
+    /// ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½
+    /// </summary>
+    public void AddDefeatCount()
+    {
+        defeat_count++;
+    }
+
+    public override string ToString()
+    {
+        return "Info: " + kanji_id + " " + kanji + " " + defeat_count;
+    }
 }
 
 public class JsonReader : MonoBehaviour
 {
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì”zï¿½ï¿½
+    private KanjiInfo[] kanjiInfos { get; set; }
+
     /// <summary>
-    /// KanjiInfos.json‚ğ“Ç‚İ‚İAKanjiInfoƒNƒ‰ƒX”z—ñ‚Æ‚µ‚Ä•Ô‹p‚·‚é
+    /// KanjiInfos.jsonï¿½ï¿½Ç‚İï¿½ï¿½İAkanjiInfosï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     /// <returns>KanjiInfos[]</returns>
-    public KanjiInfo[] GetKanjiInfo()
+    private void InitKanjiInfo()
     {
-        // ResourcesƒtƒHƒ‹ƒ_‚©‚çKanjiInfos.json‚ğQÆ
+        // Resourcesï¿½tï¿½Hï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½KanjiInfos.jsonï¿½ï¿½ï¿½Qï¿½ï¿½
         string loadJson = Resources.Load<TextAsset>("KanjiInfos").ToString();
 
-        // JSONƒf[ƒ^ˆê——‚Ìæ“¾
+        // JSONï¿½fï¿½[ï¿½^ï¿½ê——ï¿½Ìæ“¾
         JsonData jsonData = new JsonData();
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
