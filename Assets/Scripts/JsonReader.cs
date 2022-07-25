@@ -8,32 +8,32 @@ public class JsonData
 }
 
 /// <summary>
-/// �ǂݍ���JSON�̃L�[�ꗗ
-/// ���ӓ_�FJSON�t�@�C���̃L�[���ƕϐ����͑�����K�v������
+/// 読み込みJSONのキー一覧
+/// 注意点：JSONファイルのキー名と変数名は揃える必要がある
 /// </summary>
 [System.Serializable]
 public class KanjiInfo
 {
-    // ������ID
+    // 漢字のID
     public int kanji_id;
 
-    // ����
+    // 漢字
     public string kanji;
 
-    // ���ǂ݂̃��X�g
+    // 音読みのリスト
     public string[] onyomi;
 
-    // �P�ǂ݂̃��X�g
+    // 訓読みのリスト
     public string[] kunyomi;
 
-    // �����̉搔
+    // 漢字の画数
     public int kakusu;
 
-    // �|�����G�̐�
+    // 倒した敵の数
     public int defeat_count;
 
     /// <summary>
-    /// �|�����G�̐������Z����
+    /// 倒した敵の数を加算する
     /// </summary>
     public void AddDefeatCount()
     {
@@ -48,22 +48,31 @@ public class KanjiInfo
 
 public class JsonReader : MonoBehaviour
 {
-    // �������̔z��
+    // 漢字情報の配列
     private KanjiInfo[] kanjiInfos { get; set; }
 
     /// <summary>
-    /// KanjiInfos.json��ǂݍ��݁AkanjiInfos�z�������������
+    /// KanjiInfos.jsonを読み込み、kanjiInfos配列を初期化する
     /// </summary>
     /// <returns>KanjiInfos[]</returns>
     private void InitKanjiInfo()
     {
-        // Resources�t�H���_����KanjiInfos.json���Q��
+        // ResourcesフォルダからKanjiInfos.jsonを参照
         string loadJson = Resources.Load<TextAsset>("KanjiInfos").ToString();
 
-        // JSON�f�[�^�ꗗ�̎擾
+        // JSONデータ一覧の取得
         JsonData jsonData = new JsonData();
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
-        return jsonData.kanjiInfos;
+        kanjiInfos = jsonData.kanjiInfos;
+    }
+
+    public void Start()
+    {
+        InitKanjiInfo();
+        foreach (KanjiInfo ki in kanjiInfos)
+        {
+            Debug.Log(ki.ToString());
+        }
     }
 }
