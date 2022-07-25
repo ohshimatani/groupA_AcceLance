@@ -4,36 +4,26 @@ using UnityEngine;
 
 public class TutorialSetActive: MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
+    
     public GameObject gameObject;
 
-    void Start()
-    {
-           
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ClickedButton()
     {
         if (gameObject.activeSelf)
         {
+            //ボタンが押されたらオブジェクトが非表示になる
             gameObject.SetActive(false);
         }
-        else { 
+        else {
+            //ボタンが押されたらオブジェクトが表示される
             gameObject.SetActive(true); 
         }
        
         
     }
-    //ボタンが押されたらオブジェクトが非表示になる
+    
 
 
-    //ボタンが押されたらオブジェクトが表示される
+    
 }
