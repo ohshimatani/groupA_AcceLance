@@ -5,22 +5,21 @@ using UnityEngine;
 public class TutorialSetActive: MonoBehaviour
 {
     
-    public GameObject gameObject;
+    public GameObject HowToOperaion1;//XDのチュートリアル1-1-1の要素
+    public GameObject HowToOpetaion2;//XDのチュートリアル1-1-2の要素
 
+    void Start()
+    {
+        HowToOpetaion2.SetActive(false);
+    }
 
     public void ClickedButton()
     {
-        if (gameObject.activeSelf)
-        {
-            //ボタンが押されたらオブジェクトが非表示になる
-            gameObject.SetActive(false);
-        }
-        else {
-            //ボタンが押されたらオブジェクトが表示される
-            gameObject.SetActive(true); 
-        }
-       
-        
+        //ボタンが押されたらオブジェクトが非表示になる
+        HowToOperaion1.SetActive(false);
+
+        //ボタンが押されたらオブジェクトが表示される
+        HowToOpetaion2.SetActive(true); 
     }
     
 
