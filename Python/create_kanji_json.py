@@ -19,7 +19,10 @@ td_list = table.find_all('td')
 # 保存用のjson
 json_dict = {'kanjiInfos':[]}
 
-for tl in td_list:
+for i, tl in enumerate(td_list):
+    # 漢字IDの割り当て
+    kanji_id = i + 1
+
     # 漢字の取得
     kanji = re.match(r'<td class="textpopup".*?>(.+?)<div class="yomi">', str(tl), re.MULTILINE | re.DOTALL).group(1)
     kanji = kanji.replace('\n', '')
@@ -51,13 +54,15 @@ for tl in td_list:
     # jsonに追加
     json_dict['kanjiInfos'].append(
         {
-            'kanji': kanji
+            'kanji_id': kanji_id
+            , 'kanji': kanji
             , 'onyomi': onyomi_list
             , 'kunyomi': kunyomi_list
             , 'kakusu': kakusu
+            , 'defeat_count': 0  # 倒した数は0で初期化
         }
     )
 
 # jsonデータのファイル出力
-with open('../Assets/Data/KanjiInfos.json', 'w') as file:
+with open('../Assets/Resources/KanjiInfos.json', 'w') as file:
     json.dump(json_dict, file, ensure_ascii=False, indent=4)
