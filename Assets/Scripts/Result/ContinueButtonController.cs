@@ -8,7 +8,7 @@ public class ContinueButtonController : MonoBehaviour {
     /// <summary>
     /// Gameシーンに遷移させる関数(Continueボタン押下時に発動)
     /// </summary>
-    public void SwitchGameScene() {
+    public void LoadGameScene() {
         SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 }
