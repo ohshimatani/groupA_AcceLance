@@ -17,6 +17,7 @@ public class ScoreViewController : MonoBehaviour {
         ReflectThisScore();
         ReflectBestScore();
 
+        // ベストスコアかどうか判定し、
         if (isBestScore()) {
             bestScoreNotation.SetActive(true);
         } else {
@@ -30,7 +31,7 @@ public class ScoreViewController : MonoBehaviour {
     /// </summary>
     private void ReflectThisScore() {
         // "thisScore"キーを参照。キー登録がなければデフォルトで"0"を取得
-        string thisScore = PlayerPrefs.GetString("thisScore", "22");
+        string thisScore = PlayerPrefs.GetString("thisScore", "0");
 
         // Textに反映
         thisScoreText.text = thisScore;
@@ -41,9 +42,25 @@ public class ScoreViewController : MonoBehaviour {
     /// </summary>
     private void ReflectBestScore() {
         // "bestScore"キーを参照。キー登録がなければデフォルトで"0"を取得
-        string bestScore = PlayerPrefs.GetString("bestScore", "111");
+        string bestScore = PlayerPrefs.GetString("bestScore", "0");
 
         // Textに反映
         bestScoreText.text = bestScore;
     }
+
+    /// <summary>
+    /// 今回のスコアがベストスコアかどうかを判定
+    /// </summary>
+    /// <returns></returns>
+    private bool isBestScore() {
+        int thisScore = int.Parse(thisScoreText.text);
+        int bestScore = int.Parse(bestScoreText.text);
+
+        if (thisScore >= bestScore) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
