@@ -2,7 +2,1154 @@
     "kanjiInfos": [
         {
             "kanji_id": 1,
+            "kanji": "一",
+            "gakunen": 1,
+            "onyomi": [
+                "イチ",
+                "イツ"
+            ],
+            "kunyomi": [
+                "ひと",
+                "ひと-つ"
+            ],
+            "kakusu": "1",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 2,
+            "kanji": "右",
+            "gakunen": 1,
+            "onyomi": [
+                "ウ",
+                "ユウ"
+            ],
+            "kunyomi": [
+                "みぎ"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 3,
+            "kanji": "雨",
+            "gakunen": 1,
+            "onyomi": [
+                "ウ"
+            ],
+            "kunyomi": [
+                "あめ",
+                "あま"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 4,
+            "kanji": "円",
+            "gakunen": 1,
+            "onyomi": [
+                "エン"
+            ],
+            "kunyomi": [
+                "まる-い"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 5,
+            "kanji": "王",
+            "gakunen": 1,
+            "onyomi": [
+                "オウ"
+            ],
+            "kunyomi": [],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 6,
+            "kanji": "音",
+            "gakunen": 1,
+            "onyomi": [
+                "オン",
+                "イン"
+            ],
+            "kunyomi": [
+                "おと",
+                "ね"
+            ],
+            "kakusu": "9",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 7,
+            "kanji": "下",
+            "gakunen": 1,
+            "onyomi": [
+                "カ",
+                "ゲ"
+            ],
+            "kunyomi": [
+                "した",
+                "しも",
+                "もと",
+                "さ-げる",
+                "さ-がる",
+                "くだ-る",
+                "くだ-す",
+                "くだ-さる",
+                "お-ろす",
+                "お-りる"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 8,
+            "kanji": "火",
+            "gakunen": 1,
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "ひ",
+                "ほ"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 9,
+            "kanji": "花",
+            "gakunen": 1,
+            "onyomi": [
+                "カ"
+            ],
+            "kunyomi": [
+                "はな"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 10,
+            "kanji": "貝",
+            "gakunen": 1,
+            "onyomi": [],
+            "kunyomi": [
+                "かい"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 11,
+            "kanji": "学",
+            "gakunen": 1,
+            "onyomi": [
+                "ガク"
+            ],
+            "kunyomi": [
+                "まな-ぶ"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 12,
+            "kanji": "気",
+            "gakunen": 1,
+            "onyomi": [
+                "キ",
+                "ケ"
+            ],
+            "kunyomi": [],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 13,
+            "kanji": "九",
+            "gakunen": 1,
+            "onyomi": [
+                "キュウ",
+                "ク"
+            ],
+            "kunyomi": [
+                "ここの",
+                "ここの-つ"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 14,
+            "kanji": "休",
+            "gakunen": 1,
+            "onyomi": [
+                "キュウ"
+            ],
+            "kunyomi": [
+                "やす-む",
+                "やす-まる",
+                "やす-める"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 15,
+            "kanji": "玉",
+            "gakunen": 1,
+            "onyomi": [
+                "ギョク"
+            ],
+            "kunyomi": [
+                "たま"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 16,
+            "kanji": "金",
+            "gakunen": 1,
+            "onyomi": [
+                "キン",
+                "コン"
+            ],
+            "kunyomi": [
+                "かね",
+                "かな"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 17,
+            "kanji": "空",
+            "gakunen": 1,
+            "onyomi": [
+                "クウ"
+            ],
+            "kunyomi": [
+                "そら",
+                "あ-く",
+                "あ-ける",
+                "から"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 18,
+            "kanji": "月",
+            "gakunen": 1,
+            "onyomi": [
+                "ゲツ",
+                "ガツ"
+            ],
+            "kunyomi": [
+                "つき"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 19,
+            "kanji": "犬",
+            "gakunen": 1,
+            "onyomi": [
+                "ケン"
+            ],
+            "kunyomi": [
+                "いぬ"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 20,
+            "kanji": "見",
+            "gakunen": 1,
+            "onyomi": [
+                "ケン"
+            ],
+            "kunyomi": [
+                "み-る",
+                "み-える",
+                "み-せる"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 21,
+            "kanji": "五",
+            "gakunen": 1,
+            "onyomi": [
+                "ゴ"
+            ],
+            "kunyomi": [
+                "いつ",
+                "いつ-つ"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 22,
+            "kanji": "口",
+            "gakunen": 1,
+            "onyomi": [
+                "コウ",
+                "ク"
+            ],
+            "kunyomi": [
+                "くち"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 23,
+            "kanji": "校",
+            "gakunen": 1,
+            "onyomi": [
+                "コウ"
+            ],
+            "kunyomi": [],
+            "kakusu": "10",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 24,
+            "kanji": "左",
+            "gakunen": 1,
+            "onyomi": [
+                "サ"
+            ],
+            "kunyomi": [
+                "ひだり"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 25,
+            "kanji": "三",
+            "gakunen": 1,
+            "onyomi": [
+                "サン"
+            ],
+            "kunyomi": [
+                "み",
+                "み-つ",
+                "みっ-つ"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 26,
+            "kanji": "山",
+            "gakunen": 1,
+            "onyomi": [
+                "サン"
+            ],
+            "kunyomi": [
+                "やま"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 27,
+            "kanji": "子",
+            "gakunen": 1,
+            "onyomi": [
+                "シ",
+                "ス"
+            ],
+            "kunyomi": [
+                "こ"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 28,
+            "kanji": "四",
+            "gakunen": 1,
+            "onyomi": [
+                "シ"
+            ],
+            "kunyomi": [
+                "よ",
+                "よ-つ",
+                "よっ-つ",
+                "よん"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 29,
+            "kanji": "糸",
+            "gakunen": 1,
+            "onyomi": [
+                "シ"
+            ],
+            "kunyomi": [
+                "いと"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 30,
+            "kanji": "字",
+            "gakunen": 1,
+            "onyomi": [
+                "ジ"
+            ],
+            "kunyomi": [
+                "あざ"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 31,
+            "kanji": "耳",
+            "gakunen": 1,
+            "onyomi": [
+                "ジ"
+            ],
+            "kunyomi": [
+                "みみ"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 32,
+            "kanji": "七",
+            "gakunen": 1,
+            "onyomi": [
+                "シチ"
+            ],
+            "kunyomi": [
+                "なな",
+                "なな-つ",
+                "なの"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 33,
+            "kanji": "車",
+            "gakunen": 1,
+            "onyomi": [
+                "シャ"
+            ],
+            "kunyomi": [
+                "くるま"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 34,
+            "kanji": "手",
+            "gakunen": 1,
+            "onyomi": [
+                "シュ"
+            ],
+            "kunyomi": [
+                "て",
+                "た"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 35,
+            "kanji": "十",
+            "gakunen": 1,
+            "onyomi": [
+                "ジュウ",
+                "ジッ"
+            ],
+            "kunyomi": [
+                "とお",
+                "と"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 36,
+            "kanji": "出",
+            "gakunen": 1,
+            "onyomi": [
+                "シュツ",
+                "スイ"
+            ],
+            "kunyomi": [
+                "で-る",
+                "だ-す"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 37,
+            "kanji": "女",
+            "gakunen": 1,
+            "onyomi": [
+                "ジョ",
+                "ニョ",
+                "ニョウ"
+            ],
+            "kunyomi": [
+                "おんな",
+                "め"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 38,
+            "kanji": "小",
+            "gakunen": 1,
+            "onyomi": [
+                "ショウ"
+            ],
+            "kunyomi": [
+                "ちい-さい",
+                "こ",
+                "お"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 39,
+            "kanji": "上",
+            "gakunen": 1,
+            "onyomi": [
+                "ジョウ",
+                "ショウ"
+            ],
+            "kunyomi": [
+                "うえ",
+                "うわ",
+                "かみ",
+                "あ-げる",
+                "あ-がる",
+                "のぼ-る",
+                "のぼ-せる",
+                "のぼ-す"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 40,
+            "kanji": "森",
+            "gakunen": 1,
+            "onyomi": [
+                "シン"
+            ],
+            "kunyomi": [
+                "もり"
+            ],
+            "kakusu": "12",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 41,
+            "kanji": "人",
+            "gakunen": 1,
+            "onyomi": [
+                "ジン",
+                "ニン"
+            ],
+            "kunyomi": [
+                "ひと"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 42,
+            "kanji": "水",
+            "gakunen": 1,
+            "onyomi": [
+                "スイ"
+            ],
+            "kunyomi": [
+                "みず"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 43,
+            "kanji": "正",
+            "gakunen": 1,
+            "onyomi": [
+                "セイ",
+                "ショウ"
+            ],
+            "kunyomi": [
+                "ただ-しい",
+                "ただ-す",
+                "まさ"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 44,
+            "kanji": "生",
+            "gakunen": 1,
+            "onyomi": [
+                "セイ",
+                "ショウ"
+            ],
+            "kunyomi": [
+                "い-きる",
+                "い-かす",
+                "い-ける",
+                "う-まれる",
+                "う-む",
+                "お-う",
+                "は-える",
+                "は-やす",
+                "き",
+                "なま"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 45,
+            "kanji": "青",
+            "gakunen": 1,
+            "onyomi": [
+                "セイ",
+                "ショウ"
+            ],
+            "kunyomi": [
+                "あお",
+                "あお-い"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 46,
+            "kanji": "夕",
+            "gakunen": 1,
+            "onyomi": [
+                "セキ"
+            ],
+            "kunyomi": [
+                "ゆう"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 47,
+            "kanji": "石",
+            "gakunen": 1,
+            "onyomi": [
+                "セキ",
+                "シャク",
+                "コク"
+            ],
+            "kunyomi": [
+                "いし"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 48,
+            "kanji": "赤",
+            "gakunen": 1,
+            "onyomi": [
+                "セキ",
+                "シャク"
+            ],
+            "kunyomi": [
+                "あか",
+                "あか-い",
+                "あか-らむ",
+                "あか-らめる"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 49,
+            "kanji": "千",
+            "gakunen": 1,
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "ち"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 50,
+            "kanji": "川",
+            "gakunen": 1,
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "かわ"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 51,
+            "kanji": "先",
+            "gakunen": 1,
+            "onyomi": [
+                "セン"
+            ],
+            "kunyomi": [
+                "さき"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 52,
+            "kanji": "早",
+            "gakunen": 1,
+            "onyomi": [
+                "ソウ",
+                "サッ"
+            ],
+            "kunyomi": [
+                "はや-い",
+                "はや-まる",
+                "はや-める"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 53,
+            "kanji": "草",
+            "gakunen": 1,
+            "onyomi": [
+                "ソウ"
+            ],
+            "kunyomi": [
+                "くさ"
+            ],
+            "kakusu": "9",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 54,
+            "kanji": "足",
+            "gakunen": 1,
+            "onyomi": [
+                "ソク"
+            ],
+            "kunyomi": [
+                "あし",
+                "た-りる",
+                "た-る",
+                "た-す"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 55,
+            "kanji": "村",
+            "gakunen": 1,
+            "onyomi": [
+                "ソン"
+            ],
+            "kunyomi": [
+                "むら"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 56,
+            "kanji": "大",
+            "gakunen": 1,
+            "onyomi": [
+                "タイ",
+                "ダイ"
+            ],
+            "kunyomi": [
+                "おお",
+                "おお-きい",
+                "おお-いに"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 57,
+            "kanji": "男",
+            "gakunen": 1,
+            "onyomi": [
+                "ダン",
+                "ナン"
+            ],
+            "kunyomi": [
+                "おとこ"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 58,
+            "kanji": "竹",
+            "gakunen": 1,
+            "onyomi": [
+                "チク"
+            ],
+            "kunyomi": [
+                "たけ"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 59,
+            "kanji": "中",
+            "gakunen": 1,
+            "onyomi": [
+                "チュウ",
+                "ジュウ"
+            ],
+            "kunyomi": [
+                "なか"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 60,
+            "kanji": "虫",
+            "gakunen": 1,
+            "onyomi": [
+                "チュウ"
+            ],
+            "kunyomi": [
+                "むし"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 61,
+            "kanji": "町",
+            "gakunen": 1,
+            "onyomi": [
+                "チョウ"
+            ],
+            "kunyomi": [
+                "まち"
+            ],
+            "kakusu": "7",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 62,
+            "kanji": "天",
+            "gakunen": 1,
+            "onyomi": [
+                "テン"
+            ],
+            "kunyomi": [
+                "あめ",
+                "あま"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 63,
+            "kanji": "田",
+            "gakunen": 1,
+            "onyomi": [
+                "デン"
+            ],
+            "kunyomi": [
+                "た"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 64,
+            "kanji": "土",
+            "gakunen": 1,
+            "onyomi": [
+                "ド",
+                "ト"
+            ],
+            "kunyomi": [
+                "つち"
+            ],
+            "kakusu": "3",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 65,
+            "kanji": "二",
+            "gakunen": 1,
+            "onyomi": [
+                "ニ"
+            ],
+            "kunyomi": [
+                "ふた",
+                "ふた-つ"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 66,
+            "kanji": "日",
+            "gakunen": 1,
+            "onyomi": [
+                "ニチ",
+                "ジツ"
+            ],
+            "kunyomi": [
+                "ひ",
+                "か"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 67,
+            "kanji": "入",
+            "gakunen": 1,
+            "onyomi": [
+                "ニュウ"
+            ],
+            "kunyomi": [
+                "い-る",
+                "い-れる",
+                "はい-る"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 68,
+            "kanji": "年",
+            "gakunen": 1,
+            "onyomi": [
+                "ネン"
+            ],
+            "kunyomi": [
+                "とし"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 69,
+            "kanji": "白",
+            "gakunen": 1,
+            "onyomi": [
+                "ハク",
+                "ビャク"
+            ],
+            "kunyomi": [
+                "しろ",
+                "しら",
+                "しろ-い"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 70,
+            "kanji": "八",
+            "gakunen": 1,
+            "onyomi": [
+                "ハチ"
+            ],
+            "kunyomi": [
+                "や",
+                "や-つ",
+                "やっ-つ",
+                "よう"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 71,
+            "kanji": "百",
+            "gakunen": 1,
+            "onyomi": [
+                "ヒャク"
+            ],
+            "kunyomi": [],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 72,
+            "kanji": "文",
+            "gakunen": 1,
+            "onyomi": [
+                "ブン",
+                "モン"
+            ],
+            "kunyomi": [
+                "ふみ"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 73,
+            "kanji": "木",
+            "gakunen": 1,
+            "onyomi": [
+                "ボク",
+                "モク"
+            ],
+            "kunyomi": [
+                "き",
+                "こ"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 74,
+            "kanji": "本",
+            "gakunen": 1,
+            "onyomi": [
+                "ホン"
+            ],
+            "kunyomi": [
+                "もと"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 75,
+            "kanji": "名",
+            "gakunen": 1,
+            "onyomi": [
+                "メイ",
+                "ミョウ"
+            ],
+            "kunyomi": [
+                "な"
+            ],
+            "kakusu": "6",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 76,
+            "kanji": "目",
+            "gakunen": 1,
+            "onyomi": [
+                "モク",
+                "ボク"
+            ],
+            "kunyomi": [
+                "め",
+                "ま"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 77,
+            "kanji": "立",
+            "gakunen": 1,
+            "onyomi": [
+                "リツ",
+                "リュウ"
+            ],
+            "kunyomi": [
+                "た-つ",
+                "た-てる"
+            ],
+            "kakusu": "5",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 78,
+            "kanji": "力",
+            "gakunen": 1,
+            "onyomi": [
+                "リョク",
+                "リキ"
+            ],
+            "kunyomi": [
+                "ちから"
+            ],
+            "kakusu": "2",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 79,
+            "kanji": "林",
+            "gakunen": 1,
+            "onyomi": [
+                "リン"
+            ],
+            "kunyomi": [
+                "はやし"
+            ],
+            "kakusu": "8",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 80,
+            "kanji": "六",
+            "gakunen": 1,
+            "onyomi": [
+                "ロク"
+            ],
+            "kunyomi": [
+                "む",
+                "む-つ",
+                "むっ-つ",
+                "むい"
+            ],
+            "kakusu": "4",
+            "defeat_count": 0
+        },
+        {
+            "kanji_id": 81,
             "kanji": "引",
+            "gakunen": 2,
             "onyomi": [
                 "イン"
             ],
@@ -14,8 +1161,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 2,
+            "kanji_id": 82,
             "kanji": "羽",
+            "gakunen": 2,
             "onyomi": [
                 "ウ"
             ],
@@ -27,8 +1175,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 3,
+            "kanji_id": 83,
             "kanji": "雲",
+            "gakunen": 2,
             "onyomi": [
                 "ウン"
             ],
@@ -39,8 +1188,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 4,
+            "kanji_id": 84,
             "kanji": "園",
+            "gakunen": 2,
             "onyomi": [
                 "エン"
             ],
@@ -51,8 +1201,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 5,
+            "kanji_id": 85,
             "kanji": "遠",
+            "gakunen": 2,
             "onyomi": [
                 "エン",
                 "オン"
@@ -64,8 +1215,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 6,
+            "kanji_id": 86,
             "kanji": "何",
+            "gakunen": 2,
             "onyomi": [
                 "カ"
             ],
@@ -77,8 +1229,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 7,
+            "kanji_id": 87,
             "kanji": "科",
+            "gakunen": 2,
             "onyomi": [
                 "カ"
             ],
@@ -87,8 +1240,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 8,
+            "kanji_id": 88,
             "kanji": "夏",
+            "gakunen": 2,
             "onyomi": [
                 "カ",
                 "ゲ"
@@ -100,8 +1254,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 9,
+            "kanji_id": 89,
             "kanji": "家",
+            "gakunen": 2,
             "onyomi": [
                 "カ",
                 "ケ"
@@ -114,8 +1269,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 10,
+            "kanji_id": 90,
             "kanji": "歌",
+            "gakunen": 2,
             "onyomi": [
                 "カ"
             ],
@@ -127,8 +1283,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 11,
+            "kanji_id": 91,
             "kanji": "画",
+            "gakunen": 2,
             "onyomi": [
                 "ガ",
                 "カク"
@@ -138,8 +1295,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 12,
+            "kanji_id": 92,
             "kanji": "回",
+            "gakunen": 2,
             "onyomi": [
                 "カイ",
                 "エ"
@@ -152,8 +1310,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 13,
+            "kanji_id": 93,
             "kanji": "会",
+            "gakunen": 2,
             "onyomi": [
                 "カイ",
                 "エ"
@@ -165,8 +1324,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 14,
+            "kanji_id": 94,
             "kanji": "海",
+            "gakunen": 2,
             "onyomi": [
                 "カイ"
             ],
@@ -177,8 +1337,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 15,
+            "kanji_id": 95,
             "kanji": "絵",
+            "gakunen": 2,
             "onyomi": [
                 "カイ",
                 "エ"
@@ -188,8 +1349,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 16,
+            "kanji_id": 96,
             "kanji": "外",
+            "gakunen": 2,
             "onyomi": [
                 "ガイ",
                 "ゲ"
@@ -204,8 +1366,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 17,
+            "kanji_id": 97,
             "kanji": "角",
+            "gakunen": 2,
             "onyomi": [
                 "カク"
             ],
@@ -217,8 +1380,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 18,
+            "kanji_id": 98,
             "kanji": "楽",
+            "gakunen": 2,
             "onyomi": [
                 "ガク",
                 "ラク"
@@ -231,8 +1395,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 19,
+            "kanji_id": 99,
             "kanji": "活",
+            "gakunen": 2,
             "onyomi": [
                 "カツ"
             ],
@@ -241,8 +1406,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 20,
+            "kanji_id": 100,
             "kanji": "間",
+            "gakunen": 2,
             "onyomi": [
                 "カン",
                 "ケン"
@@ -255,8 +1421,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 21,
+            "kanji_id": 101,
             "kanji": "丸",
+            "gakunen": 2,
             "onyomi": [
                 "ガン"
             ],
@@ -269,8 +1436,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 22,
+            "kanji_id": 102,
             "kanji": "岩",
+            "gakunen": 2,
             "onyomi": [
                 "ガン"
             ],
@@ -281,8 +1449,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 23,
+            "kanji_id": 103,
             "kanji": "顔",
+            "gakunen": 2,
             "onyomi": [
                 "ガン"
             ],
@@ -293,8 +1462,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 24,
+            "kanji_id": 104,
             "kanji": "汽",
+            "gakunen": 2,
             "onyomi": [
                 "キ"
             ],
@@ -303,8 +1473,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 25,
+            "kanji_id": 105,
             "kanji": "記",
+            "gakunen": 2,
             "onyomi": [
                 "キ"
             ],
@@ -315,8 +1486,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 26,
+            "kanji_id": 106,
             "kanji": "帰",
+            "gakunen": 2,
             "onyomi": [
                 "キ"
             ],
@@ -328,8 +1500,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 27,
+            "kanji_id": 107,
             "kanji": "弓",
+            "gakunen": 2,
             "onyomi": [
                 "キュウ"
             ],
@@ -340,8 +1513,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 28,
+            "kanji_id": 108,
             "kanji": "牛",
+            "gakunen": 2,
             "onyomi": [
                 "ギュウ"
             ],
@@ -352,8 +1526,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 29,
+            "kanji_id": 109,
             "kanji": "魚",
+            "gakunen": 2,
             "onyomi": [
                 "ギョ"
             ],
@@ -365,8 +1540,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 30,
+            "kanji_id": 110,
             "kanji": "京",
+            "gakunen": 2,
             "onyomi": [
                 "キョウ",
                 "ケイ"
@@ -376,8 +1552,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 31,
+            "kanji_id": 111,
             "kanji": "強",
+            "gakunen": 2,
             "onyomi": [
                 "キョウ",
                 "ゴウ"
@@ -392,8 +1569,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 32,
+            "kanji_id": 112,
             "kanji": "教",
+            "gakunen": 2,
             "onyomi": [
                 "キョウ"
             ],
@@ -405,8 +1583,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 33,
+            "kanji_id": 113,
             "kanji": "近",
+            "gakunen": 2,
             "onyomi": [
                 "キン"
             ],
@@ -417,8 +1596,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 34,
+            "kanji_id": 114,
             "kanji": "兄",
+            "gakunen": 2,
             "onyomi": [
                 "ケイ",
                 "キョウ"
@@ -430,8 +1610,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 35,
+            "kanji_id": 115,
             "kanji": "形",
+            "gakunen": 2,
             "onyomi": [
                 "ケイ",
                 "ギョウ"
@@ -444,8 +1625,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 36,
+            "kanji_id": 116,
             "kanji": "計",
+            "gakunen": 2,
             "onyomi": [
                 "ケイ"
             ],
@@ -457,8 +1639,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 37,
+            "kanji_id": 117,
             "kanji": "元",
+            "gakunen": 2,
             "onyomi": [
                 "ゲン",
                 "ガン"
@@ -470,8 +1653,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 38,
+            "kanji_id": 118,
             "kanji": "言",
+            "gakunen": 2,
             "onyomi": [
                 "ゲン",
                 "ゴン"
@@ -484,8 +1668,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 39,
+            "kanji_id": 119,
             "kanji": "原",
+            "gakunen": 2,
             "onyomi": [
                 "ゲン"
             ],
@@ -496,8 +1681,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 40,
+            "kanji_id": 120,
             "kanji": "戸",
+            "gakunen": 2,
             "onyomi": [
                 "コ"
             ],
@@ -508,8 +1694,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 41,
+            "kanji_id": 121,
             "kanji": "古",
+            "gakunen": 2,
             "onyomi": [
                 "コ"
             ],
@@ -521,8 +1708,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 42,
+            "kanji_id": 122,
             "kanji": "午",
+            "gakunen": 2,
             "onyomi": [
                 "ゴ"
             ],
@@ -531,8 +1719,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 43,
+            "kanji_id": 123,
             "kanji": "後",
+            "gakunen": 2,
             "onyomi": [
                 "ゴ",
                 "コウ"
@@ -547,8 +1736,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 44,
+            "kanji_id": 124,
             "kanji": "語",
+            "gakunen": 2,
             "onyomi": [
                 "ゴ"
             ],
@@ -560,8 +1750,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 45,
+            "kanji_id": 125,
             "kanji": "工",
+            "gakunen": 2,
             "onyomi": [
                 "コウ",
                 "ク"
@@ -571,8 +1762,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 46,
+            "kanji_id": 126,
             "kanji": "公",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -583,8 +1775,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 47,
+            "kanji_id": 127,
             "kanji": "広",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -599,8 +1792,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 48,
+            "kanji_id": 128,
             "kanji": "交",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -617,8 +1811,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 49,
+            "kanji_id": 129,
             "kanji": "光",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -630,8 +1825,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 50,
+            "kanji_id": 130,
             "kanji": "考",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -642,8 +1838,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 51,
+            "kanji_id": 131,
             "kanji": "行",
+            "gakunen": 2,
             "onyomi": [
                 "コウ",
                 "ギョウ",
@@ -658,8 +1855,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 52,
+            "kanji_id": 132,
             "kanji": "高",
+            "gakunen": 2,
             "onyomi": [
                 "コウ"
             ],
@@ -673,8 +1871,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 53,
+            "kanji_id": 133,
             "kanji": "黄",
+            "gakunen": 2,
             "onyomi": [
                 "コウ",
                 "オウ"
@@ -687,8 +1886,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 54,
+            "kanji_id": 134,
             "kanji": "合",
+            "gakunen": 2,
             "onyomi": [
                 "ゴウ",
                 "ガッ",
@@ -703,8 +1903,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 55,
+            "kanji_id": 135,
             "kanji": "谷",
+            "gakunen": 2,
             "onyomi": [
                 "コク"
             ],
@@ -715,8 +1916,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 56,
+            "kanji_id": 136,
             "kanji": "国",
+            "gakunen": 2,
             "onyomi": [
                 "コク"
             ],
@@ -727,8 +1929,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 57,
+            "kanji_id": 137,
             "kanji": "黒",
+            "gakunen": 2,
             "onyomi": [
                 "コク"
             ],
@@ -740,8 +1943,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 58,
+            "kanji_id": 138,
             "kanji": "今",
+            "gakunen": 2,
             "onyomi": [
                 "コン",
                 "キン"
@@ -753,8 +1957,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 59,
+            "kanji_id": 139,
             "kanji": "才",
+            "gakunen": 2,
             "onyomi": [
                 "サイ"
             ],
@@ -763,8 +1968,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 60,
+            "kanji_id": 140,
             "kanji": "細",
+            "gakunen": 2,
             "onyomi": [
                 "サイ"
             ],
@@ -778,8 +1984,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 61,
+            "kanji_id": 141,
             "kanji": "作",
+            "gakunen": 2,
             "onyomi": [
                 "サク",
                 "サ"
@@ -791,8 +1998,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 62,
+            "kanji_id": 142,
             "kanji": "算",
+            "gakunen": 2,
             "onyomi": [
                 "サン"
             ],
@@ -801,8 +2009,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 63,
+            "kanji_id": 143,
             "kanji": "止",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -814,8 +2023,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 64,
+            "kanji_id": 144,
             "kanji": "市",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -826,8 +2036,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 65,
+            "kanji_id": 145,
             "kanji": "矢",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -838,8 +2049,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 66,
+            "kanji_id": 146,
             "kanji": "姉",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -850,8 +2062,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 67,
+            "kanji_id": 147,
             "kanji": "思",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -862,8 +2075,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 68,
+            "kanji_id": 148,
             "kanji": "紙",
+            "gakunen": 2,
             "onyomi": [
                 "シ"
             ],
@@ -874,8 +2088,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 69,
+            "kanji_id": 149,
             "kanji": "寺",
+            "gakunen": 2,
             "onyomi": [
                 "ジ"
             ],
@@ -886,8 +2101,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 70,
+            "kanji_id": 150,
             "kanji": "自",
+            "gakunen": 2,
             "onyomi": [
                 "ジ",
                 "シ"
@@ -899,8 +2115,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 71,
+            "kanji_id": 151,
             "kanji": "時",
+            "gakunen": 2,
             "onyomi": [
                 "ジ"
             ],
@@ -911,8 +2128,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 72,
+            "kanji_id": 152,
             "kanji": "室",
+            "gakunen": 2,
             "onyomi": [
                 "シツ"
             ],
@@ -923,8 +2141,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 73,
+            "kanji_id": 153,
             "kanji": "社",
+            "gakunen": 2,
             "onyomi": [
                 "シャ"
             ],
@@ -935,8 +2154,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 74,
+            "kanji_id": 154,
             "kanji": "弱",
+            "gakunen": 2,
             "onyomi": [
                 "ジャク"
             ],
@@ -950,8 +2170,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 75,
+            "kanji_id": 155,
             "kanji": "首",
+            "gakunen": 2,
             "onyomi": [
                 "シュ"
             ],
@@ -962,8 +2183,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 76,
+            "kanji_id": 156,
             "kanji": "秋",
+            "gakunen": 2,
             "onyomi": [
                 "シュウ"
             ],
@@ -974,8 +2196,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 77,
+            "kanji_id": 157,
             "kanji": "週",
+            "gakunen": 2,
             "onyomi": [
                 "シュウ"
             ],
@@ -984,8 +2207,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 78,
+            "kanji_id": 158,
             "kanji": "春",
+            "gakunen": 2,
             "onyomi": [
                 "シュン"
             ],
@@ -996,8 +2220,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 79,
+            "kanji_id": 159,
             "kanji": "書",
+            "gakunen": 2,
             "onyomi": [
                 "ショ"
             ],
@@ -1008,8 +2233,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 80,
+            "kanji_id": 160,
             "kanji": "少",
+            "gakunen": 2,
             "onyomi": [
                 "ショウ"
             ],
@@ -1021,8 +2247,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 81,
+            "kanji_id": 161,
             "kanji": "場",
+            "gakunen": 2,
             "onyomi": [
                 "ジョウ"
             ],
@@ -1033,8 +2260,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 82,
+            "kanji_id": 162,
             "kanji": "色",
+            "gakunen": 2,
             "onyomi": [
                 "ショク",
                 "シキ"
@@ -1046,8 +2274,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 83,
+            "kanji_id": 163,
             "kanji": "食",
+            "gakunen": 2,
             "onyomi": [
                 "ショク",
                 "ジキ"
@@ -1061,8 +2290,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 84,
+            "kanji_id": 164,
             "kanji": "心",
+            "gakunen": 2,
             "onyomi": [
                 "シン"
             ],
@@ -1073,8 +2303,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 85,
+            "kanji_id": 165,
             "kanji": "新",
+            "gakunen": 2,
             "onyomi": [
                 "シン"
             ],
@@ -1087,8 +2318,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 86,
+            "kanji_id": 166,
             "kanji": "親",
+            "gakunen": 2,
             "onyomi": [
                 "シン"
             ],
@@ -1101,8 +2333,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 87,
+            "kanji_id": 167,
             "kanji": "図",
+            "gakunen": 2,
             "onyomi": [
                 "ズ",
                 "ト"
@@ -1114,8 +2347,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 88,
+            "kanji_id": 168,
             "kanji": "数",
+            "gakunen": 2,
             "onyomi": [
                 "スウ",
                 "ス"
@@ -1128,8 +2362,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 89,
+            "kanji_id": 169,
             "kanji": "西",
+            "gakunen": 2,
             "onyomi": [
                 "セイ",
                 "サイ"
@@ -1141,8 +2376,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 90,
+            "kanji_id": 170,
             "kanji": "声",
+            "gakunen": 2,
             "onyomi": [
                 "セイ",
                 "ショウ"
@@ -1155,8 +2391,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 91,
+            "kanji_id": 171,
             "kanji": "星",
+            "gakunen": 2,
             "onyomi": [
                 "セイ",
                 "ショウ"
@@ -1168,8 +2405,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 92,
+            "kanji_id": 172,
             "kanji": "晴",
+            "gakunen": 2,
             "onyomi": [
                 "セイ"
             ],
@@ -1181,8 +2419,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 93,
+            "kanji_id": 173,
             "kanji": "切",
+            "gakunen": 2,
             "onyomi": [
                 "セツ",
                 "サイ"
@@ -1195,8 +2434,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 94,
+            "kanji_id": 174,
             "kanji": "雪",
+            "gakunen": 2,
             "onyomi": [
                 "セツ"
             ],
@@ -1207,8 +2447,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 95,
+            "kanji_id": 175,
             "kanji": "船",
+            "gakunen": 2,
             "onyomi": [
                 "セン"
             ],
@@ -1220,8 +2461,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 96,
+            "kanji_id": 176,
             "kanji": "線",
+            "gakunen": 2,
             "onyomi": [
                 "セン"
             ],
@@ -1230,8 +2472,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 97,
+            "kanji_id": 177,
             "kanji": "前",
+            "gakunen": 2,
             "onyomi": [
                 "ゼン"
             ],
@@ -1242,8 +2485,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 98,
+            "kanji_id": 178,
             "kanji": "組",
+            "gakunen": 2,
             "onyomi": [
                 "ソ"
             ],
@@ -1255,8 +2499,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 99,
+            "kanji_id": 179,
             "kanji": "走",
+            "gakunen": 2,
             "onyomi": [
                 "ソウ"
             ],
@@ -1267,8 +2512,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 100,
+            "kanji_id": 180,
             "kanji": "多",
+            "gakunen": 2,
             "onyomi": [
                 "タ"
             ],
@@ -1279,8 +2525,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 101,
+            "kanji_id": 181,
             "kanji": "太",
+            "gakunen": 2,
             "onyomi": [
                 "タイ",
                 "タ"
@@ -1293,8 +2540,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 102,
+            "kanji_id": 182,
             "kanji": "体",
+            "gakunen": 2,
             "onyomi": [
                 "タイ",
                 "テイ"
@@ -1306,8 +2554,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 103,
+            "kanji_id": 183,
             "kanji": "台",
+            "gakunen": 2,
             "onyomi": [
                 "ダイ",
                 "タイ"
@@ -1317,8 +2566,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 104,
+            "kanji_id": 184,
             "kanji": "地",
+            "gakunen": 2,
             "onyomi": [
                 "チ",
                 "ジ"
@@ -1328,8 +2578,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 105,
+            "kanji_id": 185,
             "kanji": "池",
+            "gakunen": 2,
             "onyomi": [
                 "チ"
             ],
@@ -1340,8 +2591,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 106,
+            "kanji_id": 186,
             "kanji": "知",
+            "gakunen": 2,
             "onyomi": [
                 "チ"
             ],
@@ -1352,8 +2604,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 107,
+            "kanji_id": 187,
             "kanji": "茶",
+            "gakunen": 2,
             "onyomi": [
                 "チャ",
                 "サ"
@@ -1363,8 +2616,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 108,
+            "kanji_id": 188,
             "kanji": "昼",
+            "gakunen": 2,
             "onyomi": [
                 "チュウ"
             ],
@@ -1375,8 +2629,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 109,
+            "kanji_id": 189,
             "kanji": "長",
+            "gakunen": 2,
             "onyomi": [
                 "チョウ"
             ],
@@ -1387,8 +2642,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 110,
+            "kanji_id": 190,
             "kanji": "鳥",
+            "gakunen": 2,
             "onyomi": [
                 "チョウ"
             ],
@@ -1399,8 +2655,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 111,
+            "kanji_id": 191,
             "kanji": "朝",
+            "gakunen": 2,
             "onyomi": [
                 "チョウ"
             ],
@@ -1411,8 +2668,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 112,
+            "kanji_id": 192,
             "kanji": "直",
+            "gakunen": 2,
             "onyomi": [
                 "チョク",
                 "ジキ"
@@ -1426,8 +2684,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 113,
+            "kanji_id": 193,
             "kanji": "通",
+            "gakunen": 2,
             "onyomi": [
                 "ツウ",
                 "ツ"
@@ -1441,8 +2700,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 114,
+            "kanji_id": 194,
             "kanji": "弟",
+            "gakunen": 2,
             "onyomi": [
                 "テイ",
                 "ダイ",
@@ -1455,8 +2715,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 115,
+            "kanji_id": 195,
             "kanji": "店",
+            "gakunen": 2,
             "onyomi": [
                 "テン"
             ],
@@ -1467,8 +2728,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 116,
+            "kanji_id": 196,
             "kanji": "点",
+            "gakunen": 2,
             "onyomi": [
                 "テン"
             ],
@@ -1477,8 +2739,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 117,
+            "kanji_id": 197,
             "kanji": "電",
+            "gakunen": 2,
             "onyomi": [
                 "デン"
             ],
@@ -1487,8 +2750,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 118,
+            "kanji_id": 198,
             "kanji": "刀",
+            "gakunen": 2,
             "onyomi": [
                 "トウ"
             ],
@@ -1499,8 +2763,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 119,
+            "kanji_id": 199,
             "kanji": "冬",
+            "gakunen": 2,
             "onyomi": [
                 "トウ"
             ],
@@ -1511,8 +2776,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 120,
+            "kanji_id": 200,
             "kanji": "当",
+            "gakunen": 2,
             "onyomi": [
                 "トウ"
             ],
@@ -1524,8 +2790,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 121,
+            "kanji_id": 201,
             "kanji": "東",
+            "gakunen": 2,
             "onyomi": [
                 "トウ"
             ],
@@ -1536,8 +2803,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 122,
+            "kanji_id": 202,
             "kanji": "答",
+            "gakunen": 2,
             "onyomi": [
                 "トウ"
             ],
@@ -1549,8 +2817,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 123,
+            "kanji_id": 203,
             "kanji": "頭",
+            "gakunen": 2,
             "onyomi": [
                 "トウ",
                 "ズ",
@@ -1564,8 +2833,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 124,
+            "kanji_id": 204,
             "kanji": "同",
+            "gakunen": 2,
             "onyomi": [
                 "ドウ"
             ],
@@ -1576,8 +2846,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 125,
+            "kanji_id": 205,
             "kanji": "道",
+            "gakunen": 2,
             "onyomi": [
                 "ドウ",
                 "トウ"
@@ -1589,8 +2860,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 126,
+            "kanji_id": 206,
             "kanji": "読",
+            "gakunen": 2,
             "onyomi": [
                 "ドク",
                 "トク",
@@ -1603,8 +2875,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 127,
+            "kanji_id": 207,
             "kanji": "内",
+            "gakunen": 2,
             "onyomi": [
                 "ナイ",
                 "ダイ"
@@ -1616,8 +2889,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 128,
+            "kanji_id": 208,
             "kanji": "南",
+            "gakunen": 2,
             "onyomi": [
                 "ナン",
                 "ナ"
@@ -1629,8 +2903,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 129,
+            "kanji_id": 209,
             "kanji": "肉",
+            "gakunen": 2,
             "onyomi": [
                 "ニク"
             ],
@@ -1639,8 +2914,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 130,
+            "kanji_id": 210,
             "kanji": "馬",
+            "gakunen": 2,
             "onyomi": [
                 "バ"
             ],
@@ -1652,8 +2928,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 131,
+            "kanji_id": 211,
             "kanji": "売",
+            "gakunen": 2,
             "onyomi": [
                 "バイ"
             ],
@@ -1665,8 +2942,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 132,
+            "kanji_id": 212,
             "kanji": "買",
+            "gakunen": 2,
             "onyomi": [
                 "バイ"
             ],
@@ -1677,8 +2955,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 133,
+            "kanji_id": 213,
             "kanji": "麦",
+            "gakunen": 2,
             "onyomi": [
                 "バク"
             ],
@@ -1689,8 +2968,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 134,
+            "kanji_id": 214,
             "kanji": "半",
+            "gakunen": 2,
             "onyomi": [
                 "ハン"
             ],
@@ -1701,8 +2981,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 135,
+            "kanji_id": 215,
             "kanji": "番",
+            "gakunen": 2,
             "onyomi": [
                 "バン"
             ],
@@ -1711,8 +2992,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 136,
+            "kanji_id": 216,
             "kanji": "父",
+            "gakunen": 2,
             "onyomi": [
                 "フ"
             ],
@@ -1723,8 +3005,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 137,
+            "kanji_id": 217,
             "kanji": "風",
+            "gakunen": 2,
             "onyomi": [
                 "フウ",
                 "フ"
@@ -1737,8 +3020,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 138,
+            "kanji_id": 218,
             "kanji": "分",
+            "gakunen": 2,
             "onyomi": [
                 "ブン",
                 "フン",
@@ -1754,8 +3038,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 139,
+            "kanji_id": 219,
             "kanji": "聞",
+            "gakunen": 2,
             "onyomi": [
                 "ブン",
                 "モン"
@@ -1768,8 +3053,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 140,
+            "kanji_id": 220,
             "kanji": "米",
+            "gakunen": 2,
             "onyomi": [
                 "ベイ",
                 "マイ"
@@ -1781,8 +3067,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 141,
+            "kanji_id": 221,
             "kanji": "歩",
+            "gakunen": 2,
             "onyomi": [
                 "ホ",
                 "ブ",
@@ -1796,8 +3083,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 142,
+            "kanji_id": 222,
             "kanji": "母",
+            "gakunen": 2,
             "onyomi": [
                 "ボ"
             ],
@@ -1808,8 +3096,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 143,
+            "kanji_id": 223,
             "kanji": "方",
+            "gakunen": 2,
             "onyomi": [
                 "ホウ"
             ],
@@ -1820,8 +3109,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 144,
+            "kanji_id": 224,
             "kanji": "北",
+            "gakunen": 2,
             "onyomi": [
                 "ホク"
             ],
@@ -1832,8 +3122,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 145,
+            "kanji_id": 225,
             "kanji": "毎",
+            "gakunen": 2,
             "onyomi": [
                 "マイ"
             ],
@@ -1842,8 +3133,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 146,
+            "kanji_id": 226,
             "kanji": "妹",
+            "gakunen": 2,
             "onyomi": [
                 "マイ"
             ],
@@ -1854,8 +3146,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 147,
+            "kanji_id": 227,
             "kanji": "万",
+            "gakunen": 2,
             "onyomi": [
                 "マン",
                 "バン"
@@ -1865,8 +3158,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 148,
+            "kanji_id": 228,
             "kanji": "明",
+            "gakunen": 2,
             "onyomi": [
                 "メイ",
                 "ミョウ"
@@ -1886,8 +3180,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 149,
+            "kanji_id": 229,
             "kanji": "鳴",
+            "gakunen": 2,
             "onyomi": [
                 "メイ"
             ],
@@ -1900,8 +3195,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 150,
+            "kanji_id": 230,
             "kanji": "毛",
+            "gakunen": 2,
             "onyomi": [
                 "モウ"
             ],
@@ -1912,8 +3208,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 151,
+            "kanji_id": 231,
             "kanji": "門",
+            "gakunen": 2,
             "onyomi": [
                 "モン"
             ],
@@ -1924,8 +3221,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 152,
+            "kanji_id": 232,
             "kanji": "夜",
+            "gakunen": 2,
             "onyomi": [
                 "ヤ"
             ],
@@ -1937,8 +3235,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 153,
+            "kanji_id": 233,
             "kanji": "野",
+            "gakunen": 2,
             "onyomi": [
                 "ヤ"
             ],
@@ -1949,8 +3248,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 154,
+            "kanji_id": 234,
             "kanji": "友",
+            "gakunen": 2,
             "onyomi": [
                 "ユウ"
             ],
@@ -1961,8 +3261,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 155,
+            "kanji_id": 235,
             "kanji": "用",
+            "gakunen": 2,
             "onyomi": [
                 "ヨウ"
             ],
@@ -1973,8 +3274,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 156,
+            "kanji_id": 236,
             "kanji": "曜",
+            "gakunen": 2,
             "onyomi": [
                 "ヨウ"
             ],
@@ -1983,8 +3285,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 157,
+            "kanji_id": 237,
             "kanji": "来",
+            "gakunen": 2,
             "onyomi": [
                 "ライ"
             ],
@@ -1997,8 +3300,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 158,
+            "kanji_id": 238,
             "kanji": "里",
+            "gakunen": 2,
             "onyomi": [
                 "リ"
             ],
@@ -2009,8 +3313,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 159,
+            "kanji_id": 239,
             "kanji": "理",
+            "gakunen": 2,
             "onyomi": [
                 "リ"
             ],
@@ -2019,8 +3324,9 @@
             "defeat_count": 0
         },
         {
-            "kanji_id": 160,
+            "kanji_id": 240,
             "kanji": "話",
+            "gakunen": 2,
             "onyomi": [
                 "ワ"
             ],
