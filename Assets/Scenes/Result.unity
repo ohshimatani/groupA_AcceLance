@@ -290,7 +290,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 513748418}
         m_TargetAssemblyTypeName: ExitButtonController, Assembly-CSharp
-        m_MethodName: SwitchTitleScene
+        m_MethodName: LoadTitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -437,7 +437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 766700256}
         m_TargetAssemblyTypeName: ContinueButtonController, Assembly-CSharp
-        m_MethodName: SwitchGameScene
+        m_MethodName: LoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
