@@ -20,6 +20,9 @@ public class KanjiInfo
     // 漢字
     public string kanji;
 
+    // 学年
+    public int gakunen;
+
     // 音読みのリスト
     public string[] onyomi;
 
