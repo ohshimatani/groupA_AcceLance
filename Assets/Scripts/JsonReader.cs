@@ -112,6 +112,16 @@ public class JsonReader : MonoBehaviour
     }
 
     /// <summary>
+    /// 漢字IDに該当する
+    /// </summary>
+    /// <param name="kanjiId"></param>
+    public void UpdateDefeatCountByKanjiInfo(KanjiInfo kanjiInfo)
+    {
+        int index = Array.IndexOf(kanjiInfos, kanjiInfo);
+        kanjiInfos[index].IncrementDefeatCount();
+    }
+
+    /// <summary>
     /// 学年に該当するKanjiInfo配列を取得し、返却する
     /// </summary>
     /// <param name="gakunen"></param>
