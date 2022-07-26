@@ -1,6 +1,10 @@
+using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 public class JsonData
 {
@@ -74,7 +78,15 @@ public class KanjiInfo
         return false;
     }
 
+    /// <summary>
+    /// Equalsがtrueを返すときに同じ値を返す
+    /// </summary>
+    /// <returns></returns>
     public override int GetHashCode()
+    {
+        return this.kanji_id;
+    }
+
     public override string ToString()
     {
         return "Info: " + kanji_id + " " + kanji + " " + defeat_count;
@@ -96,6 +108,9 @@ public class JsonReader : MonoBehaviour
     // 読み込むJSONファイルの名前
     private const string JSON_FILE_NAME = "KanjiInfos";
 
+    // JSONファイルの書き出し先
+    private const string JSON_FILE_PATH = "Assets/Resources/" + JSON_FILE_NAME + ".json";
+
     // 漢字情報の配列
     private KanjiInfo[] kanjiInfos;
 
@@ -113,6 +128,23 @@ public class JsonReader : MonoBehaviour
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
         return jsonData.kanjiInfos;
+    }
+
+    /// <summary>
+    /// JSONファイルの書き出し
+    /// </summary>
+    public void WriteJsonData()
+    {
+        // 書き込むKanjiInfo配列を初期化する
+        JsonData jsonData = new JsonData();
+        jsonData.kanjiInfos = (KanjiInfo[])kanjiInfos.Clone();
+
+        // 書き込み処理
+        string json = JsonUtility.ToJson(jsonData, true);
+        StreamWriter streamWriter = new StreamWriter(JSON_FILE_PATH);
+        streamWriter.Write(json);
+        streamWriter.Flush();
+        streamWriter.Close();
     }
 
     /// <summary>
