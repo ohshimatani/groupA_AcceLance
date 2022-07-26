@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class ScoreViewController : MonoBehaviour {
 
+    // 今回のスコアのText
     private Text thisScoreText;
+    // ベストスコアのText
     private Text bestScoreText;
+    // 「さい高記ろく！」の表示Text
     [SerializeField] GameObject bestScoreNotation;
     
 
@@ -15,42 +18,24 @@ public class ScoreViewController : MonoBehaviour {
         thisScoreText = GameObject.Find("ThisScoreNumber").GetComponent<Text>();
         bestScoreText = GameObject.Find("BestScoreNumber").GetComponent<Text>();
 
-        ReflectThisScore();
-        ReflectBestScore();
+        // それぞれのキーを参照。キー登録がなければデフォルトで"0"を取得
+        string thisScore = PlayerPrefs.GetString("thisScore", "0");
+        string bestScore = PlayerPrefs.GetString("bestScore", "0");
+
+        // Textに反映
+        thisScoreText.text = thisScore;
+        bestScoreText.text = bestScore;
 
         // ベストスコアかどうか判定し、Notationの表示/非表示を選択
         if (isBestScore()) {
             // 今回のスコアがベストスコアなら、PlayerPrefsのbestScoreも更新する
             PlayerPrefs.SetString("bestScore", thisScoreText.text);
+            PlayerPrefs.Save();
             bestScoreNotation.SetActive(true);
         } else {
             bestScoreNotation.SetActive(false);
         }
 
-    }
-
-
-    /// <summary>
-    /// PlayerPrefsから今回のスコアを参照し、Textに反映
-    /// </summary>
-    private void ReflectThisScore() {
-        // "thisScore"キーを参照。キー登録がなければデフォルトで"0"を取得
-        string thisScore = PlayerPrefs.GetString("thisScore", "0");
-
-        // Textに反映
-        thisScoreText.text = thisScore;
-    }
-
-
-    /// <summary>
-    /// PlayerPrefsからベストスコアを参照し、Textに反映
-    /// </summary>
-    private void ReflectBestScore() {
-        // "bestScore"キーを参照。キー登録がなければデフォルトで"0"を取得
-        string bestScore = PlayerPrefs.GetString("bestScore", "0");
-
-        // Textに反映
-        bestScoreText.text = bestScore;
     }
 
 
