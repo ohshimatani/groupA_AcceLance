@@ -40,6 +40,37 @@ public class KanjiInfo
         defeat_count++;
     }
 
+    /// <summary>
+    /// objと自分自身が等価の時はTrueを返す
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns>bool</returns>
+    public override bool Equals(object obj)
+    {
+        // objがnullの場合はfalseを返す
+        if (obj == null)
+        {
+            return false;
+        }
+
+        // 型が違う場合はfalseを返す
+        if (this.GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        // KanjiInfo型にキャスト
+        KanjiInfo kanjiInfo = (KanjiInfo)obj;
+
+        // 漢字IDが同じである場合はtrueを返す
+        if (this.kanji_id == kanjiInfo.kanji_id)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public override string ToString()
     {
         return "Info: " + kanji_id + " " + kanji + " " + defeat_count;
