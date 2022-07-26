@@ -74,6 +74,7 @@ public class KanjiInfo
         return false;
     }
 
+    public override int GetHashCode()
     public override string ToString()
     {
         return "Info: " + kanji_id + " " + kanji + " " + defeat_count;
