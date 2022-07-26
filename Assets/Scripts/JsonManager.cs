@@ -103,7 +103,7 @@ public enum StageMode
     GAKUNEN_2 = 2
 }
 
-public class JsonReader : MonoBehaviour
+public class JsonManager : MonoBehaviour
 {
     // 読み込むJSONファイルの名前
     private const string JSON_FILE_NAME = "KanjiInfos";
@@ -115,10 +115,9 @@ public class JsonReader : MonoBehaviour
     private KanjiInfo[] kanjiInfos;
 
     /// <summary>
-    /// KanjiInfos.jsonを読み込み、中身の値を返却する
+    /// KanjiInfos.jsonを読み込み、kanjiInfosを初期化する
     /// </summary>
-    /// <returns>KanjiInfo[]</returns>
-    private KanjiInfo[] ReadJsonData()
+    public void InitJsonData()
     {
         // ResourcesフォルダからKanjiInfos.jsonを参照
         string loadJson = Resources.Load<TextAsset>(JSON_FILE_NAME).ToString();
@@ -127,7 +126,7 @@ public class JsonReader : MonoBehaviour
         JsonData jsonData = new JsonData();
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
-        return jsonData.kanjiInfos;
+        kanjiInfos = jsonData.kanjiInfos;
     }
 
     /// <summary>
@@ -145,6 +144,9 @@ public class JsonReader : MonoBehaviour
         streamWriter.Write(json);
         streamWriter.Flush();
         streamWriter.Close();
+
+        // kanjiInfosの初期化処理
+        InitJsonData();
     }
 
     /// <summary>
@@ -192,12 +194,8 @@ public class JsonReader : MonoBehaviour
         }
     }
 
-    public void Start()
+    void Awake()
     {
-        InitKanjiInfo();
-        foreach (KanjiInfo ki in kanjiInfos)
-        {
-            Debug.Log(ki.ToString());
-        }
+        InitJsonData();
     }
 }
