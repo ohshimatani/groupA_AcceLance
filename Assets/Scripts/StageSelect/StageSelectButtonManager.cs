@@ -43,9 +43,18 @@ public class StageSelectButtonManager : MonoBehaviour
     ///
     public void OnClickAllButton()
     {
-        //public staticの変数に1年生ENUMを代入
+        //public staticの変数にAllのENUMを代入
         stageMode = StageMode.ALL;
         SceneManager.LoadScene("Game");
+    }
+
+    /// <summary>
+    /// タイトル画面に戻るボタン
+    /// </summary>
+    ///
+    public void OnClickTitleButton()
+    {
+        SceneManager.LoadScene("Title");
     }
 
 }
