@@ -18,8 +18,10 @@ public class ScoreViewController : MonoBehaviour {
         ReflectThisScore();
         ReflectBestScore();
 
-        // ベストスコアかどうか判定し、
+        // ベストスコアかどうか判定し、Notationの表示/非表示を選択
         if (isBestScore()) {
+            // 今回のスコアがベストスコアなら、PlayerPrefsのbestScoreも更新する
+            PlayerPrefs.SetString("bestScore", thisScoreText.text);
             bestScoreNotation.SetActive(true);
         } else {
             bestScoreNotation.SetActive(false);
