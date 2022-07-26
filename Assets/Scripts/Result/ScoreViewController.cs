@@ -7,8 +7,10 @@ public class ScoreViewController : MonoBehaviour {
 
     // 今回のスコアのText
     private Text thisScoreText;
+
     // ベストスコアのText
     private Text bestScoreText;
+
     // 「さい高記ろく！」の表示Text
     [SerializeField] GameObject bestScoreNotation;
     

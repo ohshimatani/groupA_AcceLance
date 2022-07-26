@@ -27,7 +27,7 @@ public class PlanetImageController : MonoBehaviour {
         planetNameText = GameObject.Find("PlanetNameText").GetComponent<Text>();
 
         // スコアを取得
-        PlayerPrefs.SetString("thisScore", "2");
+        PlayerPrefs.SetString("thisScore", "11");
         thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
 
         // ランクを判断
@@ -43,7 +43,7 @@ public class PlanetImageController : MonoBehaviour {
         planetSprite = Resources.Load<Sprite>("Planets/" + planetName);
 
         // Textに反映
-        planetNameText.text = planetNameJ + "までとうたつ！";
+        planetNameText.text = planetNameJ + " まで とうたつ！";
 
         // 画像を反映
         planetImage.sprite = planetSprite;
