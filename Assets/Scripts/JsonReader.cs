@@ -58,23 +58,26 @@ public enum StageMode
 
 public class JsonReader : MonoBehaviour
 {
+    // 読み込むJSONファイルの名前
+    private const string JSON_FILE_NAME = "KanjiInfos";
+
     // 漢字情報の配列
-    private KanjiInfo[] kanjiInfos { get; set; }
+    private KanjiInfo[] kanjiInfos;
 
     /// <summary>
-    /// KanjiInfos.jsonを読み込み、kanjiInfos配列を初期化する
+    /// KanjiInfos.jsonを読み込み、中身の値を返却する
     /// </summary>
-    /// <returns>KanjiInfos[]</returns>
-    private void InitKanjiInfo()
+    /// <returns>KanjiInfo[]</returns>
+    private KanjiInfo[] ReadJsonData()
     {
         // ResourcesフォルダからKanjiInfos.jsonを参照
-        string loadJson = Resources.Load<TextAsset>("KanjiInfos").ToString();
+        string loadJson = Resources.Load<TextAsset>(JSON_FILE_NAME).ToString();
 
         // JSONデータ一覧の取得
         JsonData jsonData = new JsonData();
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
-        kanjiInfos = jsonData.kanjiInfos;
+        return jsonData.kanjiInfos;
     }
 
     public void Start()
