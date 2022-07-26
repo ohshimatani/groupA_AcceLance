@@ -9,6 +9,7 @@ public class ScoreViewController : MonoBehaviour {
     private Text bestScoreText;
     [SerializeField] GameObject bestScoreNotation;
     
+
     private void Start() {
         // 該当GameObjectをそれぞれGetComponent
         thisScoreText = GameObject.Find("ThisScoreNumber").GetComponent<Text>();
@@ -26,6 +27,7 @@ public class ScoreViewController : MonoBehaviour {
 
     }
 
+
     /// <summary>
     /// PlayerPrefsから今回のスコアを参照し、Textに反映
     /// </summary>
@@ -37,6 +39,7 @@ public class ScoreViewController : MonoBehaviour {
         thisScoreText.text = thisScore;
     }
 
+
     /// <summary>
     /// PlayerPrefsからベストスコアを参照し、Textに反映
     /// </summary>
@@ -47,6 +50,7 @@ public class ScoreViewController : MonoBehaviour {
         // Textに反映
         bestScoreText.text = bestScore;
     }
+
 
     /// <summary>
     /// 今回のスコアがベストスコアかどうかを判定
