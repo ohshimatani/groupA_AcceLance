@@ -80,6 +80,41 @@ public class JsonReader : MonoBehaviour
         return jsonData.kanjiInfos;
     }
 
+    /// <summary>
+    /// 学年に該当するKanjiInfo配列を取得し、返却する
+    /// </summary>
+    /// <param name="gakunen"></param>
+    /// <returns>KanjiInfo[]</returns>
+    private KanjiInfo[] GetKanjiInfoByGakunen(int gakunen)
+    {
+        List<KanjiInfo> kanjiInfoList = kanjiInfos.ToList();
+        return kanjiInfoList.FindAll(x => x.gakunen == gakunen).ToArray();
+    }
+
+    /// <summary>
+    /// 指定された学年に該当する配列要素のみを抽出する
+    /// </summary>
+    /// <param name="gakunen">学年</param>
+    /// <returns></returns>
+    public KanjiInfo[] GetKanjiInfoByStageMode(StageMode stageMode)
+    {
+        switch (stageMode)
+        {
+            // 小学1年生&2年生の配列を返却
+            case StageMode.ALL:
+                return kanjiInfos;
+            // 小学1年生の配列を返却
+            case StageMode.GAKUNEN_1:
+                return GetKanjiInfoByGakunen((int)stageMode);
+            // 小学2年生の配列を返却
+            case StageMode.GAKUNEN_2:
+                return GetKanjiInfoByGakunen((int)stageMode);
+            // 例外処理
+            default:
+                throw new Exception("引数がEnum:StageModeに該当しません");
+        }
+    }
+
     public void Start()
     {
         InitKanjiInfo();
