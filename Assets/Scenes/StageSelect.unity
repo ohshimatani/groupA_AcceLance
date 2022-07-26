@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 1325810737}
   - component: {fileID: 1325810736}
   m_Layer: 5
-  m_Name: FirstSecondText
+  m_Name: AllText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 1430926643}
   - component: {fileID: 1430926644}
   m_Layer: 0
-  m_Name: FirstSecondButton
+  m_Name: AllButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
