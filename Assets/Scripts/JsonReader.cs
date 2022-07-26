@@ -38,7 +38,7 @@ public class KanjiInfo
     /// <summary>
     /// 倒した敵の数を加算する
     /// </summary>
-    public void AddDefeatCount()
+    public void IncrementDefeatCount()
     {
         defeat_count++;
     }
