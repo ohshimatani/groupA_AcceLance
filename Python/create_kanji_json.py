@@ -32,7 +32,7 @@ for gakunen in [1, 2]:
         kanji_info = re.match(r'<div class="yomi">(.+?)</div>', kanji_info, re.MULTILINE | re.DOTALL).group(1)
 
         # 画数を取得する
-        kakusu = re.match(r'.+?画数：(\d+)画.+', kanji_info, re.MULTILINE | re.DOTALL).group(1)
+        kakusu = int (re.match(r'.+?画数：(\d+)画.+', kanji_info, re.MULTILINE | re.DOTALL).group(1))
 
         # 読みを取得する
         yomi = re.match(r'(.+?)画数.+', kanji_info, re.MULTILINE | re.DOTALL).group(1)
