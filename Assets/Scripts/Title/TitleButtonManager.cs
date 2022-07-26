@@ -11,7 +11,7 @@ public class TitleButtonManager : MonoBehaviour
     /// <returns></returns>
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("SelectStage");
+        SceneManager.LoadScene("StageSelect");
     }
 
     /// <summary>
@@ -20,7 +20,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <returns></returns>
     public void OnClickTutorialButton()
     {
-        //‚ ‚»‚Ñ‚©‚½‰æ–Ê‚ÌScene–¼‚É‡‚í‚¹‚é
         SceneManager.LoadScene("Tutorial");
     }
 
@@ -30,7 +29,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <returns></returns>
     public void OnClickParantsButton()
     {
-        //•ÛŒìÒŒü‚¯‰æ–Ê‚ÌScene–¼‚É‡‚í‚¹‚éi¡‚Í‰¼’u‚«j
         SceneManager.LoadScene("Parents");
     }
 
