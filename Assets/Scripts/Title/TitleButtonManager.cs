@@ -20,7 +20,7 @@ public class TitleButtonManager : MonoBehaviour
     /// <returns></returns>
     public void OnClickTutorialButton()
     {
-        //—V‚Ñ•û‰æ–Ê‚ÌScene–¼‚É‡‚í‚¹‚éi¡‚Í‰¼’u‚«j
+        //‚ ‚»‚Ñ‚©‚½‰æ–Ê‚ÌScene–¼‚É‡‚í‚¹‚é
         SceneManager.LoadScene("Tutorial");
     }
 
