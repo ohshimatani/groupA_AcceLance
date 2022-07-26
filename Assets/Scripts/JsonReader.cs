@@ -46,6 +46,16 @@ public class KanjiInfo
     }
 }
 
+/// <summary>
+/// StageModeのEnum
+/// </summary>
+public enum StageMode
+{
+    ALL,
+    GAKUNEN_1 = 1,
+    GAKUNEN_2 = 2
+}
+
 public class JsonReader : MonoBehaviour
 {
     // 漢字情報の配列
