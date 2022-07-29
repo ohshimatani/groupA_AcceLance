@@ -32,4 +32,13 @@ public class TitleButtonManager : MonoBehaviour
         SceneManager.LoadScene("Parents");
     }
 
+    /// <summary>
+    /// コレクションボタン
+    /// </summary>
+    /// <returns></returns>
+    public void OnClickCollectionButton()
+    {
+        SceneManager.LoadScene("Collection");
+    }
+
 }
