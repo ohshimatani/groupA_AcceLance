@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ParentsButtonManager : MonoBehaviour
 {
     /// <summary>
-    /// 遊び方ボタン
+    /// タイトルに戻るボタン
     /// </summary>
     public void OnClickTitleButton()
     {
