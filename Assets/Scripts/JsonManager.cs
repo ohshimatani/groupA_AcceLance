@@ -112,12 +112,12 @@ public class JsonManager : MonoBehaviour
     private const string JSON_FILE_PATH = "Assets/Resources/" + JSON_FILE_NAME + ".json";
 
     // 漢字情報の配列
-    private KanjiInfo[] kanjiInfos;
+    private static KanjiInfo[] kanjiInfos;
 
     /// <summary>
     /// KanjiInfos.jsonを読み込み、kanjiInfosを初期化する
     /// </summary>
-    public void InitJsonData()
+    public KanjiInfo[] ReadJsonData()
     {
         // ResourcesフォルダからKanjiInfos.jsonを参照
         string loadJson = Resources.Load<TextAsset>(JSON_FILE_NAME).ToString();
@@ -126,7 +126,7 @@ public class JsonManager : MonoBehaviour
         JsonData jsonData = new JsonData();
         JsonUtility.FromJsonOverwrite(loadJson, jsonData);
 
-        kanjiInfos = jsonData.kanjiInfos;
+        return jsonData.kanjiInfos;
     }
 
     /// <summary>
@@ -144,9 +144,6 @@ public class JsonManager : MonoBehaviour
         streamWriter.Write(json);
         streamWriter.Flush();
         streamWriter.Close();
-
-        // kanjiInfosの初期化処理
-        InitJsonData();
     }
 
     /// <summary>
@@ -196,6 +193,6 @@ public class JsonManager : MonoBehaviour
 
     void Awake()
     {
-        InitJsonData();
+        kanjiInfos = ReadJsonData();
     }
 }

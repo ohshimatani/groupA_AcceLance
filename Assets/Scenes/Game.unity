@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 2029129757}
   - component: {fileID: 2029129756}
   m_Layer: 0
-  m_Name: JsonReader
+  m_Name: JsonManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
