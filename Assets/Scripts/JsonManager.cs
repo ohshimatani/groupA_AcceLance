@@ -11,16 +11,7 @@ public class JsonData
     public KanjiInfo[] kanjiInfos;
 }
 
-/// <summary>
-/// StageModeのEnum
-/// TODO: 髙田のステージ選択画面をマージし次第、削除する
-/// </summary>
-public enum StageMode
-{
-    ALL,
-    GAKUNEN_1 = 1,
-    GAKUNEN_2 = 2
-}
+
 
 public class JsonManager : MonoBehaviour
 {
