@@ -15,7 +15,7 @@ public class PlanetImageController : MonoBehaviour {
     private Text planetNameText;
 
     // ランクを表す数字
-    private int rank;
+    private Planet planet;
 
     // 今回のスコア
     private int thisScore;
@@ -27,23 +27,21 @@ public class PlanetImageController : MonoBehaviour {
         planetNameText = GameObject.Find("PlanetNameText").GetComponent<Text>();
 
         // スコアを取得
+        // TODO:前画面からスコアを取得する
         PlayerPrefs.SetString("thisScore", "11");
         thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
 
         // ランクを判断
         ScoreManager scoreManager = new ScoreManager();
-        rank = scoreManager.judgeRank(thisScore);
-        Debug.Log(rank);
-
-        // ランクから惑星の名前（英語・日本語）をそれぞれ得る
-        string planetName = scoreManager.getRankName(rank);
-        string planetNameJ = scoreManager.getRankNameJ(rank);
+        planet = scoreManager.judgeRank(thisScore);
+        Debug.Log(thisScore);
+        Debug.Log(planet.NameJ);
 
         // Resoucesファイルからスコアに応じた画像を取得
-        planetSprite = Resources.Load<Sprite>("Planets/" + planetName);
+        planetSprite = Resources.Load<Sprite>("Planets/" + planet.NameE);
 
         // Textに反映
-        planetNameText.text = planetNameJ + " まで とうたつ！";
+        planetNameText.text = planet.NameJ + " まで とうたつ！";
 
         // 画像を反映
         planetImage.sprite = planetSprite;
