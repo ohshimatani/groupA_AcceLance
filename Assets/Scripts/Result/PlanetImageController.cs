@@ -34,8 +34,6 @@ public class PlanetImageController : MonoBehaviour {
         // ランクを判断
         ScoreManager scoreManager = new ScoreManager();
         planet = scoreManager.judgeRank(thisScore);
-        Debug.Log(thisScore);
-        Debug.Log(planet.NameJ);
 
         // Resoucesファイルからスコアに応じた画像を取得
         planetSprite = Resources.Load<Sprite>("Planets/" + planet.NameE);

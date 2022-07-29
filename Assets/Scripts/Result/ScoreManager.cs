@@ -46,7 +46,6 @@ public class ScoreManager : MonoBehaviour {
             Planet planet = planetArray[i];
             // 今回のスコアがどの惑星に該当するかを順番に確かめる
             if (planet.ScoreMin <= thisScore && thisScore <= planet.ScoreMax) {
-                Debug.Log("in");
                 return planet;
             }
         }
