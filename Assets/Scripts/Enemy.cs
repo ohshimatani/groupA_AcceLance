@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     // スクリプトSpaceShipのコンポーネントを格納する変数
-    SpaceShip spaceShip;
+    private SpaceShip spaceShip;
 
     // スクリプトScoreNumberのコンポーネントを格納する変数
-    ScoreNumber scoreNumber;
+    private ScoreNumber scoreNumber;
+
+    public KanjiInfo kanjiInfo;
 
     /// <summary>
     /// ゲームスタート時の処理
@@ -23,6 +26,14 @@ public class Enemy : MonoBehaviour
 
         // 弾の発射処理を実行
         StartCoroutine("Shot");
+    }
+
+    public void SetKanjiText(KanjiInfo kanjiInfo)
+    {
+        this.kanjiInfo = kanjiInfo;
+        GameObject canvasObject = gameObject.transform.Find("Canvas").gameObject;
+        GameObject textObject = canvasObject.transform.Find("Text").gameObject;
+        textObject.GetComponent<Text>().text = kanjiInfo.kanji;
     }
 
     /// <summary>
@@ -51,6 +62,12 @@ public class Enemy : MonoBehaviour
 
                 // Scoreの加算処理
                 scoreNumber.IncrementScoreNumber();
+
+                // Json情報の上書き
+                // TODO: リザルト画面への移行タイミングでまとめて行なっても良い
+                JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
+                jsonManager.UpdateDefeatCountByKanjiInfo(kanjiInfo);
+                jsonManager.WriteJsonData();
 
                 // 自身（エネミー）を削除
                 Destroy(gameObject);
