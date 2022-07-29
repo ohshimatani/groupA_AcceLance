@@ -40,6 +40,7 @@ public class EnemyGenerator : MonoBehaviour
         // TODO: ステージ選択画面から受け取ったEnumの値をもとに取得できるようにする
         // TODO: ひとまず今はGAKUNEN_1から受け取れるようにしている
         kanjiInfos = jsonManager.GetKanjiInfoByStageMode(StageMode.GAKUNEN_1);
+
         // ランダムソートの実行
         kanjiInfos = kanjiInfos.OrderBy(i => Guid.NewGuid()).ToArray();
     }
