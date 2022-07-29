@@ -10,7 +10,6 @@ public class ExitButtonController : MonoBehaviour {
     /// </summary>
     public void LoadTitleScene() {
         // [TODO]TitleƒV[ƒ“‚ª‚Å‚«Ÿ‘æA‘æˆêˆø”‚ğ”½‰f‚³‚¹‚é
-        // SceneManager.LoadScene("Title", LoadSceneMode.Single);
-        Debug.Log("Todo");
+        SceneManager.LoadScene("Title", LoadSceneMode.Single);
     }
 }
