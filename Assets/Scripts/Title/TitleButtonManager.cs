@@ -8,7 +8,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <summary>
     /// スタートボタン
     /// </summary>
-    /// <returns></returns>
     public void OnClickStartButton()
     {
         SceneManager.LoadScene("StageSelect");
@@ -17,7 +16,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <summary>
     /// 遊び方ボタン
     /// </summary>
-    /// <returns></returns>
     public void OnClickTutorialButton()
     {
         SceneManager.LoadScene("Tutorial");
@@ -26,7 +24,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <summary>
     /// 保護者向けボタン
     /// </summary>
-    /// <returns></returns>
     public void OnClickParantsButton()
     {
         SceneManager.LoadScene("Parents");
@@ -35,7 +32,6 @@ public class TitleButtonManager : MonoBehaviour
     /// <summary>
     /// コレクションボタン
     /// </summary>
-    /// <returns></returns>
     public void OnClickCollectionButton()
     {
         SceneManager.LoadScene("Collection");

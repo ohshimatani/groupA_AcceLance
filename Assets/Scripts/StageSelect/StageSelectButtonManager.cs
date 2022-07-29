@@ -18,7 +18,6 @@ public class StageSelectButtonManager : MonoBehaviour
     /// <summary>
     /// 1年生の漢字ボタン
     /// </summary>
-    ///
     public void OnClickFirstButton()
     {
         //public staticの変数に1年生ENUMを代入
@@ -29,7 +28,6 @@ public class StageSelectButtonManager : MonoBehaviour
     /// <summary>
     /// 2年生の漢字ボタン
     /// </summary>
-    ///
     public void OnClickSecondButton()
     {
         //public staticの変数に1年生ENUMを代入
@@ -40,7 +38,6 @@ public class StageSelectButtonManager : MonoBehaviour
     /// <summary>
     /// 1年生と2年生の漢字ボタン
     /// </summary>
-    ///
     public void OnClickAllButton()
     {
         //public staticの変数にAllのENUMを代入
@@ -51,7 +48,6 @@ public class StageSelectButtonManager : MonoBehaviour
     /// <summary>
     /// タイトル画面に戻るボタン
     /// </summary>
-    ///
     public void OnClickTitleButton()
     {
         SceneManager.LoadScene("Title");
