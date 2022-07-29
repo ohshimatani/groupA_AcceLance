@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class PlanetImageController : MonoBehaviour {
 
-    // Resourcesファイル内のPlanet Image
-    private Sprite planetSprite;
-
     // 枠内のImage
     private Image planetImage;
 
@@ -20,7 +17,6 @@ public class PlanetImageController : MonoBehaviour {
     // 今回のスコア
     private int thisScore;
 
-
     void Start() {
         // 各種コンポーネントを取得
         planetImage = GetComponent<Image>();
@@ -32,17 +28,14 @@ public class PlanetImageController : MonoBehaviour {
         thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
 
         // ランクを判断
-        ScoreManager scoreManager = new ScoreManager();
+        ScoreManager scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         planet = scoreManager.JudgeRank(thisScore);
-
-        // Resoucesファイルからスコアに応じた画像を取得
-        planetSprite = Resources.Load<Sprite>("Planets/" + planet.NameE);
 
         // Textに反映
         planetNameText.text = planet.NameJ + " まで とうたつ！";
 
         // 画像を反映
-        planetImage.sprite = planetSprite;
+        planetImage.sprite = planet.Sprite;
     }
 
 

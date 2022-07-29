@@ -13,14 +13,14 @@ public class ScoreManager : MonoBehaviour {
     /// <returns>‘¾—zŒn‚Ì‡”Ô‚Å˜f¯‚Ì—v‘f‚ğ‚Â”z—ñ</returns>
     private void Start() {
         planets = new Planet[] {
-            new Planet("Mercury", "…¯", 0),
-            new Planet("Venus", "‹à¯", 4),
-            new Planet("Earth", "’n‹…", 8),
-            new Planet("Mars", "‰Î¯", 11),
-            new Planet("Jupiter", "–Ø¯", 16),
-            new Planet("Saturn", "“y¯", 21),
-            new Planet("Uranus", "“V‰¤¯", 31),
-            new Planet("Neptune", "ŠC‰¤¯", 51)
+            new Planet("Mercury", "…¯", 0)
+            , new Planet("Venus", "‹à¯", 4)
+            , new Planet("Earth", "’n‹…", 8)
+            , new Planet("Mars", "‰Î¯", 11)
+            , new Planet("Jupiter", "–Ø¯", 16)
+            , new Planet("Saturn", "“y¯", 21)
+            , new Planet("Uranus", "“V‰¤¯", 31)
+            , new Planet("Neptune", "ŠC‰¤¯", 51)
         };
 
     }
@@ -36,8 +36,8 @@ public class ScoreManager : MonoBehaviour {
         Planet planet = planets.First();
 
         for (int i = planets.Length - 1; i >= 0; i--) {
+            planet = planets[i];
             if (thisScore >= planet.ScoreMin) {
-                planet = planets[i];
                 break;
             }
         }

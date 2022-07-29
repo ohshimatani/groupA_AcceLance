@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Planet {
-    // 惑星の名前（日本語）
-    private string nameJ;
-
     // 惑星の名前（英語）
     private string nameE;
+
+    // 惑星の名前（日本語）
+    private string nameJ;
 
     // スコアのMax値とMin値
     private int scoreMin;
 
-    public Planet(string nameJ, string nameE, int scoreMin) {
-        this.nameJ = nameJ;
+    // プラネットの画像（スプライト）
+    private Sprite sprite;
+
+    public Planet(string nameE, string nameJ, int scoreMin) {
         this.nameE = nameE;
+        this.nameJ = nameJ;
         this.scoreMin = scoreMin;
+        this.sprite = Resources.Load<Sprite>("Planets/" + NameE);
     }
 
     /// <summary>
@@ -51,6 +55,18 @@ public class Planet {
         }
         set {
             scoreMin = value;
+        }
+    }
+
+    /// <summary>
+    /// planetSpriteのアクセッサ
+    /// </summary>
+    public Sprite Sprite {
+        get {
+            return sprite;
+        }
+        set {
+            sprite = value;
         }
     }
 
