@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour {
+public class Planet {
     // 惑星の名前（日本語）
     private string nameJ;
 
@@ -10,8 +10,13 @@ public class Planet : MonoBehaviour {
     private string nameE;
 
     // スコアのMax値とMin値
-    private int scoreMax;
     private int scoreMin;
+
+    public Planet(string nameJ, string nameE, int scoreMin) {
+        this.nameJ = nameJ;
+        this.nameE = nameE;
+        this.scoreMin = scoreMin;
+    }
 
     /// <summary>
     /// nameJのアクセッサ
@@ -34,18 +39,6 @@ public class Planet : MonoBehaviour {
         }
         set {
             nameE = value;
-        }
-    }
-
-    /// <summary>
-    /// scoreMaxのアクセッサ
-    /// </summary>
-    public int ScoreMax {
-        get {
-            return scoreMax;
-        }
-        set {
-            scoreMax = value;
         }
     }
 

@@ -11,7 +11,7 @@ public class PlanetImageController : MonoBehaviour {
     // 枠内のImage
     private Image planetImage;
 
-    // 「〇〇クラス！」のText
+    // 「〇〇 まで とうたつ！」のText
     private Text planetNameText;
 
     // ランクを表す数字
@@ -33,7 +33,7 @@ public class PlanetImageController : MonoBehaviour {
 
         // ランクを判断
         ScoreManager scoreManager = new ScoreManager();
-        planet = scoreManager.judgeRank(thisScore);
+        planet = scoreManager.JudgeRank(thisScore);
 
         // Resoucesファイルからスコアに応じた画像を取得
         planetSprite = Resources.Load<Sprite>("Planets/" + planet.NameE);

@@ -5,52 +5,44 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
+    private Planet[] planets;
+
     /// <summary>
     /// 太陽系の順番で惑星の要素を持つ配列を作成
     /// </summary>
     /// <returns>太陽系の順番で惑星の要素を持つ配列</returns>
-    private Planet[] createPlanetArray() {
-        // 各惑星クラスの名前
-        string[] planetNamesE = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
+    private void Start() {
+        planets = new Planet[] {
+            new Planet("Mercury", "水星", 0),
+            new Planet("Venus", "金星", 4),
+            new Planet("Earth", "地球", 8),
+            new Planet("Mars", "火星", 11),
+            new Planet("Jupiter", "木星", 16),
+            new Planet("Saturn", "土星", 21),
+            new Planet("Uranus", "天王星", 31),
+            new Planet("Neptune", "海王星", 51)
+        };
 
-        // 各惑星クラスの名前（日本語名）
-        string[] planetNamesJ = { "水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星" };
-
-        // 各惑星クラスの閾値（i番目の要素がランクiの最大値）
-        // TODO:数字は仮置き。相談の上決定する
-        // 海王星（最高ランク）のScoreMaxは便宜上9999としたが、これでいいのか...?
-        int[] planetThresholds = { -1, 3, 7, 10, 15, 20, 30, 50, 9999 };
-
-        // 順番にPlanetの要素を配列に格納
-        Planet[] planetArray = new Planet[planetNamesE.Length];
-        for (int i = 0; i < planetNamesE.Length; i++) {
-            Planet planet = new Planet();
-            planet.NameE = planetNamesE[i];
-            planet.NameJ = planetNamesJ[i];
-            planet.ScoreMin = planetThresholds[i] + 1;
-            planet.ScoreMax = planetThresholds[i + 1];
-            planetArray[i] = planet;
-        }
-
-        return planetArray;
     }
 
-    public Planet judgeRank(int thisScore) {
+    /// <summary>
+    /// スコアに応じた惑星クラスを返す関数
+    /// TODO:Gameシーンからランクを受け取る実装に変更する可能性あり
+    /// </summary>
+    /// <param name="thisScore">今回のスコア</param>
+    /// <returns>スコアに応じた惑星クラス</returns>
+    public Planet JudgeRank(int thisScore) {
         
-        // 惑星の配列
-        Planet[] planetArray = createPlanetArray();
-        // 最高ランク（海王星）
-        Planet neptune = planetArray.Last();
+        Planet planet = planets.First();
 
-        for (int i = 0; i < planetArray.Length; i++) {
-            Planet planet = planetArray[i];
-            // 今回のスコアがどの惑星に該当するかを順番に確かめる
-            if (planet.ScoreMin <= thisScore && thisScore <= planet.ScoreMax) {
-                return planet;
+        for (int i = planets.Length - 1; i >= 0; i--) {
+            if (thisScore >= planet.ScoreMin) {
+                planet = planets[i];
+                break;
             }
         }
 
-        return neptune;
+        return planet;
     }
 
     
