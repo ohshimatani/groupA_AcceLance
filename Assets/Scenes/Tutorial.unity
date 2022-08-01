@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70719828}
   m_Layer: 0
-  m_Name: HowToGetRank1
+  m_Name: 3_Rank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1393,7 +1393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580268831}
   m_Layer: 0
-  m_Name: HowToDamage5
+  m_Name: 2_Damage5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1589,7 +1589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607916747}
   m_Layer: 0
-  m_Name: HowToDamage1
+  m_Name: 2_Damage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627388373}
   m_Layer: 0
-  m_Name: HowToDamage4
+  m_Name: 2_Damage4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1744,7 +1744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647459393}
   m_Layer: 0
-  m_Name: HowToDamage2
+  m_Name: 2_Damage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1965,7 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691775218}
   m_Layer: 0
-  m_Name: HowToOperation1
+  m_Name: 1_Operation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2189,7 +2189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721272818}
   m_Layer: 0
-  m_Name: HowToGetRank2
+  m_Name: 3_Rank2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2315,7 +2315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765197448}
   m_Layer: 0
-  m_Name: HowToOperation2
+  m_Name: 1_Operation2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5153,7 +5153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473592959}
   m_Layer: 0
-  m_Name: HowToDamage3
+  m_Name: 2_Damage3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
