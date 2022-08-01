@@ -959,7 +959,7 @@
                 "はい-る"
             ],
             "kakusu": 2,
-            "defeat_count": 0
+            "defeat_count": 10
         },
         {
             "kanji_id": 68,
@@ -1029,7 +1029,7 @@
                 "ふみ"
             ],
             "kakusu": 4,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 73,
@@ -1115,7 +1115,7 @@
                 "ちから"
             ],
             "kakusu": 2,
-            "defeat_count": 0
+            "defeat_count": 2
         },
         {
             "kanji_id": 79,
@@ -1128,7 +1128,7 @@
                 "はやし"
             ],
             "kakusu": 8,
-            "defeat_count": 0
+            "defeat_count": 3
         },
         {
             "kanji_id": 80,
