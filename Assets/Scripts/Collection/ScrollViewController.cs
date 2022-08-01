@@ -18,13 +18,19 @@ public class ScrollViewController : MonoBehaviour
     {
         // 漢字データをJSONファイルから取得
         JsonManager jsonManager = new JsonManager();
-        KanjiInfo[] kanjiInfo = jsonManager.ReadJsonData();
+        KanjiInfo[] kanjiInfo = jsonManager.GetKanjiInfoByStageMode(StageMode.ALL);
 
+        DisposeKanjiCell(kanjiInfo);
+    }
+
+    private void DisposeKanjiCell(KanjiInfo[] kanjiInfo)
+    {
         // 取得した漢字の数だけKanjiCellを生成し、ScrollView内にGrid配置
         for (int i = 0; i < kanjiInfo.Length; i++)
         {
             GameObject kanjiCell = Instantiate(buttonCell, contentRectTransform);
             kanjiCell.GetComponentInChildren<Text>().text = kanjiInfo[i].kanji;
+            
         }
     }
 }
