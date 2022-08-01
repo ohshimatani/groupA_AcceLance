@@ -12,15 +12,18 @@ public class ScrollViewController : MonoBehaviour
     [SerializeField] GameObject buttonCell;
 
     /// <summary>
-    /// 【仮置き】80個KanjiCellを生成し、配置
-    /// Cellの中身（Text）は1~80の数字
+    /// 漢字データをJSONファイルから取得し、それぞれボタンのTextに反映する。
     /// </summary>
     private void Start()
     {
-        for (int i = 1; i <= 80; i++)
+        // 漢字データをJSONファイルから取得
+        JsonManager jsonManager = new JsonManager();
+        KanjiInfo[] kanjiInfo = jsonManager.ReadJsonData();
+
+        for (int i = 0; i < kanjiInfo.Length; i++)
         {
             GameObject kanjiCell = Instantiate(buttonCell, contentRectTransform);
-            kanjiCell.GetComponentInChildren<Text>().text = i.ToString();
+            kanjiCell.GetComponentInChildren<Text>().text = kanjiInfo[i].kanji;
         }
     }
 }
