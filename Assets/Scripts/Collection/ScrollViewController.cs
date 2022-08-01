@@ -20,6 +20,7 @@ public class ScrollViewController : MonoBehaviour
         JsonManager jsonManager = new JsonManager();
         KanjiInfo[] kanjiInfo = jsonManager.ReadJsonData();
 
+        // æ“¾‚µ‚½Š¿š‚Ì”‚¾‚¯KanjiCell‚ğ¶¬‚µAScrollView“à‚ÉGrid”z’u
         for (int i = 0; i < kanjiInfo.Length; i++)
         {
             GameObject kanjiCell = Instantiate(buttonCell, contentRectTransform);
