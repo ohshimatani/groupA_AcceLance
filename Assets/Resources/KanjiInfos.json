@@ -27,7 +27,7 @@
                 "みぎ"
             ],
             "kakusu": 5,
-            "defeat_count": 0
+            "defeat_count": 3
         },
         {
             "kanji_id": 3,
@@ -41,7 +41,7 @@
                 "あま"
             ],
             "kakusu": 8,
-            "defeat_count": 0
+            "defeat_count": 5
         },
         {
             "kanji_id": 4,
@@ -80,7 +80,7 @@
                 "ね"
             ],
             "kakusu": 9,
-            "defeat_count": 0
+            "defeat_count": 6
         },
         {
             "kanji_id": 7,
@@ -117,7 +117,7 @@
                 "ほ"
             ],
             "kakusu": 4,
-            "defeat_count": 0
+            "defeat_count": 2
         },
         {
             "kanji_id": 9,
@@ -130,7 +130,7 @@
                 "はな"
             ],
             "kakusu": 7,
-            "defeat_count": 0
+            "defeat_count": 7
         },
         {
             "kanji_id": 10,
