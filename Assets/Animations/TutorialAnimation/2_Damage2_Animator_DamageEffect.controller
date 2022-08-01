@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DamageEffect
+  m_Name: 2_Damage2_Animator_DamageEffect
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
