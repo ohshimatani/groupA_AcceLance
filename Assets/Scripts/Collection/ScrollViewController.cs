@@ -5,15 +5,22 @@ using UnityEngine.UI;
 
 public class ScrollViewController : MonoBehaviour
 {
+    // 
     [SerializeField] private RectTransform contentRectTransform;
-    [SerializeField] private Button buttonCell;
 
+    // KanjiCellのPrefabを設定
+    [SerializeField] private GameObject buttonCell;
+
+    /// <summary>
+    /// 【仮置き】80個KanjiCellを生成し、配置
+    /// Cellの中身（Text）は1~80の数字
+    /// </summary>
     private void Start()
     {
         for (int i = 1; i <= 80; i++)
         {
-            var obj = Instantiate(buttonCell, contentRectTransform);
-            obj.GetComponentInChildren<Text>().text = i.ToString();
+            GameObject kanjiCell = Instantiate(buttonCell, contentRectTransform);
+            kanjiCell.GetComponentInChildren<Text>().text = i.ToString();
         }
     }
 }
