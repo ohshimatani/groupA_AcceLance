@@ -24,7 +24,7 @@ public class PlanetImageController : MonoBehaviour {
 
         // スコアを取得
         // TODO:前画面からスコアを取得する
-        PlayerPrefs.SetString("thisScore", "11");
+        //PlayerPrefs.SetString("thisScore", "11");
         thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
 
         // ランクを判断

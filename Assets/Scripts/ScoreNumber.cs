@@ -25,4 +25,13 @@ public class ScoreNumber : MonoBehaviour {
         int currentScore = int.Parse(scoreNumber.text);
         scoreNumber.text = (currentScore + 1).ToString();
     }
+
+    /// <summary>
+    /// TODO: リファクタリングする予定
+    /// </summary>
+    /// <returns></returns>
+    public String GetScoreNumber()
+    {
+        return scoreNumber.text;
+    }
 }
