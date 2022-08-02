@@ -24,7 +24,7 @@ public class TitleButtonManager : MonoBehaviour
     /// <summary>
     /// •ÛŒìŽÒŒü‚¯ƒ{ƒ^ƒ“
     /// </summary>
-    public void OnClickParantsButton()
+    public void OnClickParentsButton()
     {
         SceneManager.LoadScene("Parents");
     }

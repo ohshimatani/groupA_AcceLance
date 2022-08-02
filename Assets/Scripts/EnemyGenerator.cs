@@ -30,9 +30,6 @@ public class EnemyGenerator : MonoBehaviour
     /// </summary>
     void Start()
     {
-        // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
-        InvokeRepeating("Spawn", startTime, interval);
-
         // スクリプトJsonManagerコンポーネントを取得
         jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
 
@@ -43,6 +40,9 @@ public class EnemyGenerator : MonoBehaviour
 
         // ランダムソートの実行
         kanjiInfos = kanjiInfos.OrderBy(i => Guid.NewGuid()).ToArray();
+
+        // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
+        InvokeRepeating("Spawn", startTime, interval);
     }
 
     /// <summary>
@@ -57,15 +57,16 @@ public class EnemyGenerator : MonoBehaviour
             , transform.position.z
         );
 
+        // スクリプトEnemyのkanjiInfoを初期化
+        // 注意点：Instantiateを行う前に初期化しないとエラーとなる
+        enemyPrefab.GetComponent<Enemy>().SetKanjiText(kanjiInfos[arrayNumber]);
+
         //enemyをインスタンス化する
         Instantiate(
             enemyPrefab// 生成する敵オブジェクト
             , spawnPosition// 生成する場所
             , transform.rotation// 生成時の向き
         );
-
-        // スクリプトEnemyのkanjiInfoを初期化
-        enemyPrefab.GetComponent<Enemy>().SetKanjiText(kanjiInfos[arrayNumber]);
 
         // 漢字をセットする度にarrayNumberをインクリメントし、
         // kanjiInfos配列の要素数よりも上回った時点で再度0で初期化する
