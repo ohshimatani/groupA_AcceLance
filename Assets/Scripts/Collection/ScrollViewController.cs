@@ -25,7 +25,7 @@ public class ScrollViewController : MonoBehaviour
         KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByStageMode(StageMode.ALL);
 
         // 引数に渡した漢字の情報をもとに、漢字のセル or ハテナのセルを配置
-        DisposeKanjiCell(kanjiInfoArray);
+        ArrangementKanjiCell(kanjiInfoArray);
     }
 
 
@@ -33,7 +33,7 @@ public class ScrollViewController : MonoBehaviour
     /// 引数の情報をもとに、漢字のセル or ハテナのセルを配置する。
     /// </summary>
     /// <param name="kanjiInfoArray"></param>
-    private void DisposeKanjiCell(KanjiInfo[] kanjiInfoArray)
+    private void ArrangementKanjiCell(KanjiInfo[] kanjiInfoArray)
     {
         // 取得した漢字の数だけKanjiCellを生成し、ScrollView内にGrid配置
         for (int i = 0; i < kanjiInfoArray.Length; i++)
@@ -42,12 +42,9 @@ public class ScrollViewController : MonoBehaviour
             {
                 // 倒された数が１より大きいとき、その漢字Cellを表示
                 GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
+
+                // セル内の情報を反映させるメソッドを発動
                 kanjiCell.GetComponent<KanjiCell>().InitKanjiStatus(kanjiInfoArray[i]);
-
-                // [TODO]
-                // kanjiCell.GetComponentInChildren<Text>().text = kanjiInfoArray[i].kanji;
-                // kanjiCell.GetComponent<KanjiCell>().kanjiInfo = kanjiInfoArray[i];
-
             } else
             {
                 // 倒されていない漢字のとき、ハテナを表示

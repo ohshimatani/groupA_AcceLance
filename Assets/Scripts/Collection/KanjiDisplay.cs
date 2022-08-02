@@ -17,11 +17,11 @@ public class KanjiDisplay : MonoBehaviour
         this.kanjiInfo = kanjiInfo;
 
         // ŠeŽí’l‚ð”½‰f
-        GameObject.Find("TitleKanji").GetComponent<Text>().text = kanjiInfo.kanji;
-        GameObject.Find("OnyomiText").GetComponent<Text>().text = string.Join(", ", kanjiInfo.onyomi);
-        GameObject.Find("KunyomiText").GetComponent<Text>().text = string.Join(", ", kanjiInfo.kunyomi);
-        GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = kanjiInfo.kakusu.ToString();
-        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = kanjiInfo.defeat_count.ToString();
+        GameObject.Find("TitleKanji").GetComponent<Text>().text = this.kanjiInfo.kanji;
+        GameObject.Find("OnyomiText").GetComponent<Text>().text = string.Join(", ", this.kanjiInfo.onyomi);
+        GameObject.Find("KunyomiText").GetComponent<Text>().text = string.Join(", ", this.kanjiInfo.kunyomi);
+        GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = this.kanjiInfo.kakusu.ToString();
+        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = this.kanjiInfo.defeat_count.ToString();
     }
 
 }
