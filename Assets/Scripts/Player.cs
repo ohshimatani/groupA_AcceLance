@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -68,8 +69,18 @@ public class Player : MonoBehaviour
                 // 爆発処理
                 spaceShip.Explosion();
 
+                // PlayerPrefsに最終スコアを格納
+                GameObject canvasObject = GameObject.Find("Canvas").gameObject;
+                GameObject textObject = canvasObject.transform.Find("ScoreNumber").gameObject;
+                string thisScore = textObject.GetComponent<ScoreNumber>().GetScoreNumber();
+
+                PlayerPrefs.SetString("thisScore", thisScore);
+
                 // プレイヤーを削除
                 Destroy(gameObject);
+
+                // リザルト画面に遷移
+                SceneManager.LoadScene("Result");
             }
         }
     }
