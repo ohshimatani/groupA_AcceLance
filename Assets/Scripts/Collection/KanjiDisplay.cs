@@ -12,7 +12,7 @@ public class KanjiDisplay : MonoBehaviour
     /// 引数に与えられた漢字の情報を反映
     /// </summary>
     /// <param name="kanjiInfo"></param>
-    public void Display(KanjiInfo kanjiInfo)
+    public void DisplayKanji(KanjiInfo kanjiInfo)
     {
         this.kanjiInfo = kanjiInfo;
 
@@ -22,6 +22,19 @@ public class KanjiDisplay : MonoBehaviour
         GameObject.Find("KunyomiText").GetComponent<Text>().text = string.Join(", ", this.kanjiInfo.kunyomi);
         GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = this.kanjiInfo.kakusu.ToString();
         GameObject.Find("DefeatNumberText").GetComponent<Text>().text = this.kanjiInfo.defeat_count.ToString();
+    }
+
+    public void DisplayHatena()
+    {
+        // ハテナマーク
+        const string HATENA = "？";
+
+        // 各種値を反映
+        GameObject.Find("TitleKanji").GetComponent<Text>().text = HATENA;
+        GameObject.Find("OnyomiText").GetComponent<Text>().text = HATENA;
+        GameObject.Find("KunyomiText").GetComponent<Text>().text = HATENA;
+        GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = HATENA;
+        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = HATENA;
     }
 
 }

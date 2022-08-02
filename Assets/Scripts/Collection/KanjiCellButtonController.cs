@@ -5,7 +5,8 @@ using UnityEngine;
 public class KanjiCellButtonController : MonoBehaviour
 {
     /// <summary>
-    /// クリックされたときに、漢字の情報を受け取り、左画面に反映させる
+    /// クリックされたときに発動するメソッド。
+    /// 漢字の情報を受け取り、左画面に反映させる
     /// </summary>
     public void OnClickShowDisplay()
     {
@@ -13,6 +14,6 @@ public class KanjiCellButtonController : MonoBehaviour
         KanjiInfo kanjiInfo = gameObject.GetComponent<KanjiCell>().kanjiInfo;
 
         // 左のコンテナにアタッチされているKanjiDisplayをgetし、値を反映させる関数を呼ぶ
-        GameObject.Find("LeftContainer").GetComponent<KanjiDisplay>().Display(kanjiInfo);
+        GameObject.Find("LeftContainer").GetComponent<KanjiDisplay>().DisplayKanji(kanjiInfo);
     }
 }
