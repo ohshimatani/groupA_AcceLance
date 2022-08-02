@@ -9,18 +9,50 @@ public class ScrollViewController : MonoBehaviour
     [SerializeField] RectTransform contentRectTransform;
 
     // KanjiCellのPrefabを設定
-    [SerializeField] GameObject buttonCell;
+    [SerializeField] GameObject kanjiCellPrefab;
+
+    // SecretCellのPrefabを設定
+    [SerializeField] GameObject secretCellPrefab;
+
 
     /// <summary>
-    /// 【仮置き】80個KanjiCellを生成し、配置
-    /// Cellの中身（Text）は1~80の数字
+    /// 漢字データをJSONファイルから取得し、それぞれボタンのTextに反映する。
     /// </summary>
     private void Start()
     {
-        for (int i = 1; i <= 80; i++)
+        // 漢字データをJSONファイルから取得
+        JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
+        KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByStageMode(StageMode.ALL);
+
+        // 引数に渡した漢字の情報をもとに、漢字のセル or ハテナのセルを配置
+        ArrangementKanjiCell(kanjiInfoArray);
+    }
+
+
+    /// <summary>
+    /// 引数の情報をもとに、漢字のセル or ハテナのセルを配置する。
+    /// </summary>
+    /// <param name="kanjiInfoArray"></param>
+    private void ArrangementKanjiCell(KanjiInfo[] kanjiInfoArray)
+    {
+        // 取得した漢字の数だけKanjiCellを生成し、ScrollView内にGrid配置
+        for (int i = 0; i < kanjiInfoArray.Length; i++)
         {
-            GameObject kanjiCell = Instantiate(buttonCell, contentRectTransform);
-            kanjiCell.GetComponentInChildren<Text>().text = i.ToString();
+            if (kanjiInfoArray[i].defeat_count >= 1)
+            {
+                // 倒された数が１より大きいとき、その漢字Cellを表示
+                GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
+
+                // セル内の情報を反映させるメソッドを発動
+                kanjiCell.GetComponent<KanjiCell>().InitKanjiStatus(kanjiInfoArray[i]);
+            } else
+            {
+                // 倒されていない漢字のとき、ハテナを表示
+                GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
+
+                // セル内の情報を反映させるメソッドを発動
+                secretCell.GetComponent<SecretCell>().InitKanjiStatus(kanjiInfoArray[i]);
+            }
         }
     }
 }
