@@ -9,7 +9,7 @@ public class KanjiDisplay : MonoBehaviour
     public KanjiInfo kanjiInfo { get; private set; }
 
     /// <summary>
-    /// 引数に与えられた漢字の情報を反映
+    /// 左画面に、引数として与えられた漢字の情報を反映
     /// </summary>
     /// <param name="kanjiInfo"></param>
     public void DisplayKanji(KanjiInfo kanjiInfo)
@@ -24,7 +24,11 @@ public class KanjiDisplay : MonoBehaviour
         GameObject.Find("DefeatNumberText").GetComponent<Text>().text = this.kanjiInfo.defeat_count.ToString();
     }
 
-    public void DisplayHatena()
+    /// <summary>
+    /// 左画面に？を反映
+    /// 「たおした数」だけ"0"に
+    /// </summary>
+    public void DisplayHatena(KanjiInfo kanjiInfo)
     {
         // ハテナマーク
         const string HATENA = "？";
@@ -34,7 +38,7 @@ public class KanjiDisplay : MonoBehaviour
         GameObject.Find("OnyomiText").GetComponent<Text>().text = HATENA;
         GameObject.Find("KunyomiText").GetComponent<Text>().text = HATENA;
         GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = HATENA;
-        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = HATENA;
+        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = kanjiInfo.defeat_count.ToString();
     }
 
 }

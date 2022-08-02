@@ -48,7 +48,10 @@ public class ScrollViewController : MonoBehaviour
             } else
             {
                 // 倒されていない漢字のとき、ハテナを表示
-                Instantiate(secretCellPrefab, contentRectTransform);
+                GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
+
+                // セル内の情報を反映させるメソッドを発動
+                secretCell.GetComponent<SecretCell>().InitKanjiStatus(kanjiInfoArray[i]);
             }
         }
     }

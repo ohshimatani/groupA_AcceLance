@@ -10,7 +10,10 @@ public class SecretCellButtonController : MonoBehaviour
     /// </summary>
     public void OnClickShowDisplay()
     {
+        // セルから漢字の情報を所得
+        KanjiInfo kanjiInfo = gameObject.GetComponent<SecretCell>().kanjiInfo;
+
         // 左のコンテナにアタッチされているKanjiDisplayをgetし、値を反映させる関数を呼ぶ
-        GameObject.Find("LeftContainer").GetComponent<KanjiDisplay>().DisplayHatena();
+        GameObject.Find("LeftContainer").GetComponent<KanjiDisplay>().DisplayHatena(kanjiInfo);
     }
 }
