@@ -10,6 +10,7 @@ public class PlayButtonManager: MonoBehaviour
 {
     public void OnClickPlayButton()
     {
+
         SceneManager.LoadScene("StageSelect");
     }
 }
