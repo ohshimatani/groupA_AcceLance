@@ -3,56 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneButtonController : BaseButtonController
+public class LoadSceneButtonController : MonoBehaviour
 {
-    protected override void OnClick(string objectName)
-    {
-        Debug.Log("objectName" + objectName);
-        switch (objectName)
-        {
-            case "StartButton":
-                LoadStageSelectScene();
-                break;
-            case "TutorialButton":
-                LoadTutorialScene();
-                break;
-            case "CollectionButton":
-                LoadCollectionScene();
-                break;
-            case "ParentsButton":
-                LoadParentsScene();
-                break;
-            default:
-                throw new System.Exception("implement‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ");
-        }
-    }
-
-    private void LoadTitleScene()
+    public void OnClickLoadTitleScene()
     {
         SceneManager.LoadScene("Title");
     }
 
-    private void LoadStageSelectScene()
+    public void OnClickLoadStageSelectScene()
     {
         SceneManager.LoadScene("StageSelect");
     }
 
-    private void LoadTutorialScene()
+    public void OnClickLoadTutorialScene()
     {
         SceneManager.LoadScene("Tutorial");
     }
 
-    private void LoadCollectionScene()
+    public void OnClickLoadCollectionScene()
     {
         SceneManager.LoadScene("Collection");
     }
 
-    private void LoadGameScene()
+    public void OnClickLoadGameScene()
     {
         SceneManager.LoadScene("Game");
     }
 
-    private void LoadParentsScene()
+    public void OnClickLoadParentsScene()
     {
         SceneManager.LoadScene("Parents");
     }
