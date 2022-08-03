@@ -340,8 +340,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 341731938}
-        m_TargetAssemblyTypeName: BaseButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadCollectionScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -380,10 +380,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 341731932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b839b6b45807344a802d1d8cfa719c, type: 3}
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseButtonController: {fileID: 603581532}
 --- !u!1 &398772064
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,51 +631,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &603581529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 603581531}
-  - component: {fileID: 603581532}
-  m_Layer: 0
-  m_Name: LoadSceneButtonController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &603581531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603581529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2525548, y: -0.12754188, z: 4.7993217}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &603581532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603581529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseButtonController: {fileID: 0}
 --- !u!1 &776841515
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,8 +732,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776841521}
-        m_TargetAssemblyTypeName: BaseButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadTutorialScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -850,10 +804,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 776841515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b839b6b45807344a802d1d8cfa719c, type: 3}
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseButtonController: {fileID: 603581532}
 --- !u!1 &778345940
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,8 +940,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 778345946}
-        m_TargetAssemblyTypeName: BaseButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadParentsScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1027,10 +980,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 778345940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b839b6b45807344a802d1d8cfa719c, type: 3}
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseButtonController: {fileID: 603581532}
 --- !u!1 &846880305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,8 +1302,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 938060330}
-        m_TargetAssemblyTypeName: BaseButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadStageSelectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1390,10 +1342,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 938060323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b839b6b45807344a802d1d8cfa719c, type: 3}
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseButtonController: {fileID: 603581532}
 --- !u!1 &1078617563
 GameObject:
   m_ObjectHideFlags: 0
