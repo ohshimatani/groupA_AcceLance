@@ -13,14 +13,14 @@ public class ScoreManager : MonoBehaviour {
     /// <returns>‘¾—zŒn‚Ì‡”Ô‚Å˜f¯‚Ì—v‘f‚ğ‚Â”z—ñ</returns>
     private void Start() {
         planets = new Planet[] {
-            new Planet("Mercury", "…¯", 0)
-            , new Planet("Venus", "‹à¯", 4)
-            , new Planet("Earth", "’n‹…", 8)
-            , new Planet("Mars", "‰Î¯", 11)
-            , new Planet("Jupiter", "–Ø¯", 16)
-            , new Planet("Saturn", "“y¯", 21)
-            , new Planet("Uranus", "“V‰¤¯", 31)
-            , new Planet("Neptune", "ŠC‰¤¯", 51)
+            new Planet("Mercury", "…¯", 0, -5.4f)
+            , new Planet("Venus", "‹à¯", 4, -4.33f)
+            , new Planet("Earth", "’n‹…", 8, -3f)
+            , new Planet("Mars", "‰Î¯", 11, -1.7f)
+            , new Planet("Jupiter", "–Ø¯", 16, 0f)
+            , new Planet("Saturn", "“y¯", 21, 2.73f)
+            , new Planet("Uranus", "“V‰¤¯", 31, 4.87f)
+            , new Planet("Neptune", "ŠC‰¤¯", 51, 6.35f)
         };
 
     }
@@ -45,6 +45,10 @@ public class ScoreManager : MonoBehaviour {
         return planet;
     }
 
+    public float judgePosition()
+    {
+
+    }
     
 
 

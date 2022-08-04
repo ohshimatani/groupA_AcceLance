@@ -15,11 +15,15 @@ public class Planet {
     // プラネットの画像（スプライト）
     private Sprite sprite;
 
-    public Planet(string nameE, string nameJ, int scoreMin) {
+    private float position;
+
+    public Planet(string nameE, string nameJ, int scoreMin, float position)
+    {
         this.nameE = nameE;
         this.nameJ = nameJ;
         this.scoreMin = scoreMin;
         this.sprite = Resources.Load<Sprite>("Planets/" + NameE);
+        this.position = position;
     }
 
     /// <summary>

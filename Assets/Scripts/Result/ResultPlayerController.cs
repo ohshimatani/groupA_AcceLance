@@ -9,8 +9,28 @@ using UnityEngine;
 /// </summary>
 public class ResultPlayerController : MonoBehaviour
 {
+    // プレイヤーのポジション（PlanetImageControllerからsetされる）
+    private float playerPosition;
+
     private void Start()
     {
+        ScoreManager scoreManager = new ScoreManager();
+        ScoreManager
         this.transform.DOMoveX(-1.7f, 2f);
+    }
+
+    /// <summary>
+    /// playerPositionのアクセッサ
+    /// </summary>
+    public float PlayerPosition
+    {
+        get
+        {
+            return playerPosition;
+        }
+        set
+        {
+            playerPosition = value;
+        }
     }
 }
