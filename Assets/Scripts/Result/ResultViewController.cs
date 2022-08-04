@@ -6,37 +6,17 @@ using UnityEngine.UI;
 public class ResultViewController : MonoBehaviour
 {
     // 枠内のImage
-    private Image planetImage;
+    [SerializeField] Image planetImage;
 
     // 「〇〇 まで とうたつ！」のText
-    private Text planetNameText;
+    [SerializeField] Text planetNameText;
 
-    // ランクを表す数字
-    private Planet planet;
-
-    // 今回のスコア
-    private int thisScore;
-
-    void Start()
+    /// <summary>
+    /// ImageとTextを反映させる
+    /// </summary>
+    /// <param name="planet"></param>
+    public void ReflectView(Planet planet)
     {
-        // 各種コンポーネントを取得
-        planetImage = GetComponent<Image>();
-        planetNameText = GameObject.Find("PlanetNameText").GetComponent<Text>();
-
-        // スコアを取得
-        // TODO:前画面からスコアを取得する
-        PlayerPrefs.SetString("thisScore", "33");
-        thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
-
-        // ランクを判断
-        // TODO: ランクの初期化もGame画面からしたい
-        ScoreManager scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-        planet = scoreManager.JudgeRank(thisScore);
-
-        // Playerの位置（アニメーションの終点）をResultPlayerControllerに指定
-        ResultPlayerAnimator resultPlayerAnimator = GameObject.Find("Player").GetComponent<ResultPlayerAnimator>();
-        resultPlayerAnimator.Animate(planet.positionX);
-
         // Textに反映
         planetNameText.text = planet.nameJ + " まで とうたつ！";
 
