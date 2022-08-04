@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlanetImageController : MonoBehaviour {
-
+public class ResultViewController : MonoBehaviour
+{
     // 枠内のImage
     private Image planetImage;
 
@@ -17,7 +17,8 @@ public class PlanetImageController : MonoBehaviour {
     // 今回のスコア
     private int thisScore;
 
-    void Start() {
+    void Start()
+    {
         // 各種コンポーネントを取得
         planetImage = GetComponent<Image>();
         planetNameText = GameObject.Find("PlanetNameText").GetComponent<Text>();
@@ -43,7 +44,4 @@ public class PlanetImageController : MonoBehaviour {
         planetImage.sprite = planet.sprite;
 
     }
-
-
-
 }
