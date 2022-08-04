@@ -36,6 +36,30 @@ public class Player : MonoBehaviour
         // xとyの入力値を正規化し、directionに渡す
         Vector2 direction = new Vector2(x, y).normalized;
         spaceShip.Move(direction);
+
+        // 自機の移動制限処理を実行
+        RestrictPlayerMovement();
+    }
+
+    /// <summary>
+    /// 自機の移動制限処理
+    /// </summary>
+    void RestrictPlayerMovement()
+    {
+        // 自機の移動座標最小値をビューポートから取得（最小値は0,0）
+        Vector2 minCoord = Camera.main.ViewportToWorldPoint(new Vector2(0.05f, 0.1f));
+        // 自機の移動座標最大値ををビューポートから取得（最大値は1,1）
+        Vector2 maxCoord = Camera.main.ViewportToWorldPoint(new Vector2(0.95f, 0.85f));
+
+        // 自機の座標を取得してベクトル position に格納
+        Vector2 position = transform.position;
+        // position.x の値を最小値 min 最大値 max の範囲に制限する
+        position.x = Mathf.Clamp(position.x, minCoord.x, maxCoord.x);
+        // position.y の値を最小値 min 最大値 max の範囲に制限する
+        position.y = Mathf.Clamp(position.y, minCoord.y, maxCoord.y);
+
+        // 自機の移動範囲を pos の最小値と最大値の範囲に制限する
+        transform.position = position;
     }
 
     /// <summary>
