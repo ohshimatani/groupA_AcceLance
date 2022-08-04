@@ -80,7 +80,7 @@
                 "ね"
             ],
             "kakusu": 9,
-            "defeat_count": 6
+            "defeat_count": 7
         },
         {
             "kanji_id": 7,
@@ -181,7 +181,7 @@
                 "ここの-つ"
             ],
             "kakusu": 2,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 14,
@@ -196,7 +196,7 @@
                 "やす-める"
             ],
             "kakusu": 6,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 15,
@@ -240,7 +240,7 @@
                 "から"
             ],
             "kakusu": 8,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 18,
@@ -362,7 +362,7 @@
                 "やま"
             ],
             "kakusu": 3,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 27,
@@ -555,7 +555,7 @@
                 "のぼ-す"
             ],
             "kakusu": 3,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 40,
@@ -733,7 +733,7 @@
                 "さき"
             ],
             "kakusu": 6,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 52,
@@ -915,7 +915,7 @@
                 "つち"
             ],
             "kakusu": 3,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 65,
@@ -944,7 +944,7 @@
                 "か"
             ],
             "kakusu": 4,
-            "defeat_count": 0
+            "defeat_count": 2
         },
         {
             "kanji_id": 67,
@@ -1029,7 +1029,7 @@
                 "ふみ"
             ],
             "kakusu": 4,
-            "defeat_count": 1
+            "defeat_count": 2
         },
         {
             "kanji_id": 73,
@@ -1086,7 +1086,7 @@
                 "ま"
             ],
             "kakusu": 5,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 77,
@@ -1266,7 +1266,7 @@
                 "や"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 90,
@@ -1280,7 +1280,7 @@
                 "うた-う"
             ],
             "kakusu": 14,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 91,
@@ -1392,7 +1392,7 @@
                 "たの-しむ"
             ],
             "kakusu": 13,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 99,
@@ -1497,7 +1497,7 @@
                 "かえ-す"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 107,
@@ -1678,7 +1678,7 @@
                 "はら"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 120,
@@ -1759,7 +1759,7 @@
             ],
             "kunyomi": [],
             "kakusu": 3,
-            "defeat_count": 0
+            "defeat_count": 2
         },
         {
             "kanji_id": 126,
@@ -1995,7 +1995,7 @@
                 "つく-る"
             ],
             "kakusu": 7,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 142,
@@ -2020,7 +2020,7 @@
                 "と-める"
             ],
             "kakusu": 4,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 144,
@@ -2138,7 +2138,7 @@
                 "むろ"
             ],
             "kakusu": 9,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 153,
@@ -2167,7 +2167,7 @@
                 "よわ-める"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 155,
@@ -2230,7 +2230,7 @@
                 "か-く"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 160,
@@ -2315,7 +2315,7 @@
                 "にい"
             ],
             "kakusu": 13,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 166,
@@ -2330,7 +2330,7 @@
                 "した-しむ"
             ],
             "kakusu": 16,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 167,
@@ -2359,7 +2359,7 @@
                 "かぞ-える"
             ],
             "kakusu": 13,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 169,
@@ -2444,7 +2444,7 @@
                 "ゆき"
             ],
             "kakusu": 11,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 175,
@@ -2509,7 +2509,7 @@
                 "はし-る"
             ],
             "kakusu": 7,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 180,
@@ -2639,7 +2639,7 @@
                 "なが-い"
             ],
             "kakusu": 8,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 190,
@@ -2697,7 +2697,7 @@
                 "かよ-う"
             ],
             "kakusu": 10,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 194,
@@ -2736,7 +2736,7 @@
             ],
             "kunyomi": [],
             "kakusu": 9,
-            "defeat_count": 0
+            "defeat_count": 2
         },
         {
             "kanji_id": 197,
@@ -2857,7 +2857,7 @@
                 "みち"
             ],
             "kakusu": 12,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 206,
@@ -2939,7 +2939,7 @@
                 "う-れる"
             ],
             "kakusu": 7,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 212,
@@ -2989,7 +2989,7 @@
             ],
             "kunyomi": [],
             "kakusu": 12,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 216,
@@ -3080,7 +3080,7 @@
                 "あゆ-む"
             ],
             "kakusu": 8,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 222,
@@ -3155,7 +3155,7 @@
             ],
             "kunyomi": [],
             "kakusu": 3,
-            "defeat_count": 0
+            "defeat_count": 1
         },
         {
             "kanji_id": 228,
