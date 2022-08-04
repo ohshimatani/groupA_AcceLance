@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class EnemyBigVer : MonoBehaviour
 {
@@ -37,7 +38,34 @@ public class EnemyBigVer : MonoBehaviour
         //spaceShip.Move(transform.up * -1);
 
         // 斜め右下に移動（垂直方向にに対しやや鋭角）
-        spaceShip.Move(new Vector2(-1f, -0.7f));
+        //spaceShip.Move(new Vector2(-1f, -0.7f));
+
+        EnemyDirection enemyDirection = new EnemyDirection();
+
+        // 0～2（方向の種類）の乱数を生成
+        System.Random r = new System.Random();
+        int randNum = r.Next(0, 3);
+
+        Vector2 direction = enemyDirection.StraightDirection();
+        switch(randNum)
+        {
+            case 0:
+                // 真下へ移動
+                direction = enemyDirection.StraightDirection();
+                break;
+            case 1:
+                // 左下へ移動
+                direction = enemyDirection.LowerLeftDirection();
+                break;
+            case 2:
+                // 右下へ移動
+                direction = enemyDirection.LowerRightDirection();
+                break;
+            default:
+                break;
+        }
+        spaceShip.Move(direction);
+
 
 
 
