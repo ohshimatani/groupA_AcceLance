@@ -35,8 +35,8 @@ public class EnemyGenerator : MonoBehaviour
 
         // 漢字配列を初期化し、ランダムにソートする
         // TODO: ステージ選択画面から受け取ったEnumの値をもとに取得できるようにする
-        // TODO: ひとまず今はGAKUNEN_1から受け取れるようにしている
-        kanjiInfos = jsonManager.GetKanjiInfoByStageMode(StageMode.GAKUNEN_1);
+        // TODO: ひとまず今はFIRSTから受け取れるようにしている
+        kanjiInfos = jsonManager.GetKanjiInfoByGradeType(GradeType.FIRST);
 
         // ランダムソートの実行
         kanjiInfos = kanjiInfos.OrderBy(i => Guid.NewGuid()).ToArray();

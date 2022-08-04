@@ -83,22 +83,22 @@ public class JsonManager : MonoBehaviour
     /// </summary>
     /// <param name="gakunen">学年</param>
     /// <returns></returns>
-    public KanjiInfo[] GetKanjiInfoByStageMode(StageMode stageMode)
+    public KanjiInfo[] GetKanjiInfoByGradeType(GradeType gradeType)
     {
-        switch (stageMode)
+        switch (gradeType)
         {
             // 小学1年生&2年生の配列を返却
-            case StageMode.ALL:
+            case GradeType.ALL:
                 return kanjiInfos;
             // 小学1年生の配列を返却
-            case StageMode.GAKUNEN_1:
-                return GetKanjiInfoByGakunen((int)stageMode);
+            case GradeType.FIRST:
+                return GetKanjiInfoByGakunen((int)gradeType);
             // 小学2年生の配列を返却
-            case StageMode.GAKUNEN_2:
-                return GetKanjiInfoByGakunen((int)stageMode);
+            case GradeType.SECOND:
+                return GetKanjiInfoByGakunen((int)gradeType);
             // 例外処理
             default:
-                throw new Exception("引数がEnum:StageModeに該当しません");
+                throw new Exception("引数がEnum:GradeTypeに該当しません");
         }
     }
 
