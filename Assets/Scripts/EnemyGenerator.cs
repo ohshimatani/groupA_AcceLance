@@ -43,6 +43,8 @@ public class EnemyGenerator : MonoBehaviour
 
         // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
         InvokeRepeating("Spawn", startTime, interval);
+
+        Debug.Log(enemyPrefab.GetComponent<SpriteRenderer>().bounds.size.x);
     }
 
     /// <summary>
@@ -50,9 +52,14 @@ public class EnemyGenerator : MonoBehaviour
     /// </summary>
     private void Spawn()
     {
+        // 自機の移動座標最小値をビューポートから取得して、Enemyオブジェクトの大きさ分変更する（最小値は0,0）
+        Vector2 minCoord = Camera.main.ViewportToWorldPoint(new Vector2(0.08f, 0.08f));
+        // 自機の移動座標最大値ををビューポートから取得（最大値は1,1）
+        Vector2 maxCoord = Camera.main.ViewportToWorldPoint(new Vector2(0.92f, 0.92f));
+
         // 生成位置（x軸）をランダムに設定
         Vector3 spawnPosition = new Vector3(
-            UnityEngine.Random.Range(-9.0f, 9.0f)// 生成するx軸の範囲。今回のゲーム画面の横幅の座標に対応
+            UnityEngine.Random.Range(minCoord.x, maxCoord.x)// 生成するx軸の範囲。今回のゲーム画面の横幅の座標に対応
             , transform.position.y
             , transform.position.z
         );
