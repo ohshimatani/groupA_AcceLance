@@ -28,7 +28,7 @@ public class JsonManager : MonoBehaviour
     /// <summary>
     /// KanjiInfos.jsonを読み込み、kanjiInfosを初期化する
     /// </summary>
-    public KanjiInfo[] ReadJsonData()
+    private KanjiInfo[] ReadJsonData()
     {
         // ResourcesフォルダからKanjiInfos.jsonを参照
         string loadJson = Resources.Load<TextAsset>(JSON_FILE_NAME).ToString();
