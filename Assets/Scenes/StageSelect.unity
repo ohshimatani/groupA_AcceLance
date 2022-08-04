@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 574894411}
   - component: {fileID: 574894410}
   - component: {fileID: 574894409}
-  - component: {fileID: 574894408}
+  - component: {fileID: 574894412}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -323,18 +323,6 @@ Transform:
   m_Father: {fileID: 2106762519}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &574894408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574894406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 343639d8f62d6b64eae177ef854c219a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &574894409
 Animator:
   serializedVersion: 4
@@ -399,9 +387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 574894408}
-        m_TargetAssemblyTypeName: StageSelectButtonManager, Assembly-CSharp
-        m_MethodName: OnClickTitleButton
+      - m_Target: {fileID: 574894412}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadTitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -463,6 +451,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &574894412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574894406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &668721430
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +556,8 @@ GameObject:
   - component: {fileID: 761380320}
   - component: {fileID: 761380319}
   - component: {fileID: 761380321}
+  - component: {fileID: 761380322}
+  - component: {fileID: 761380323}
   m_Layer: 0
   m_Name: SecondGradeButton
   m_TagString: Untagged
@@ -675,9 +677,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761380320}
-        m_TargetAssemblyTypeName: StageSelectButtonManager, Assembly-CSharp
-        m_MethodName: OnClickSecondButton
+      - m_Target: {fileID: 761380322}
+        m_TargetAssemblyTypeName: StageSelectButtonController, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 761380323}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -719,6 +733,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761380322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761380316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc40ea67581b6ee4db3e7b480c1e4489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &761380323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761380316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067147565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,8 +1078,10 @@ GameObject:
   - component: {fileID: 1430926646}
   - component: {fileID: 1430926645}
   - component: {fileID: 1430926647}
+  - component: {fileID: 1430926648}
+  - component: {fileID: 1430926649}
   m_Layer: 0
-  m_Name: AllButton
+  m_Name: AllGradeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,9 +1199,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1430926646}
-        m_TargetAssemblyTypeName: StageSelectButtonManager, Assembly-CSharp
-        m_MethodName: OnClickAllButton
+      - m_Target: {fileID: 1430926648}
+        m_TargetAssemblyTypeName: StageSelectButtonController, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1430926649}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1203,6 +1255,74 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1430926648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430926642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc40ea67581b6ee4db3e7b480c1e4489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1430926649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430926642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1548608237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548608239}
+  - component: {fileID: 1548608238}
+  m_Layer: 0
+  m_Name: StageSelectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1548608238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548608237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ad1ecd5fbf6cb4ba3e919fe0ee234f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1548608239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548608237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3326106, y: 0.18001796, z: 4.782392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584164247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,6 +1576,8 @@ GameObject:
   - component: {fileID: 1837530151}
   - component: {fileID: 1837530150}
   - component: {fileID: 1837530152}
+  - component: {fileID: 1837530153}
+  - component: {fileID: 1837530154}
   m_Layer: 0
   m_Name: FirstGradeButton
   m_TagString: Untagged
@@ -1575,9 +1697,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1837530151}
-        m_TargetAssemblyTypeName: StageSelectButtonManager, Assembly-CSharp
-        m_MethodName: OnClickFirstButton
+      - m_Target: {fileID: 1837530153}
+        m_TargetAssemblyTypeName: StageSelectButtonController, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1837530154}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1619,6 +1753,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1837530153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837530147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc40ea67581b6ee4db3e7b480c1e4489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1837530154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837530147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1869755426
 GameObject:
   m_ObjectHideFlags: 0

@@ -706,8 +706,8 @@ GameObject:
   - component: {fileID: 929788388}
   - component: {fileID: 929788392}
   - component: {fileID: 929788391}
-  - component: {fileID: 929788390}
   - component: {fileID: 929788389}
+  - component: {fileID: 929788393}
   m_Layer: 0
   m_Name: ExitButton
   m_TagString: Untagged
@@ -751,18 +751,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &929788390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929788387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d00567d24db8147bff9713509fbcfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &929788391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,9 +795,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 929788390}
-        m_TargetAssemblyTypeName: ExitButtonController, Assembly-CSharp
-        m_MethodName: LoadTitleScene
+      - m_Target: {fileID: 929788393}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadTitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -871,6 +859,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &929788393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929788387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &972739305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,9 +1991,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2042991697}
   - component: {fileID: 2042991701}
-  - component: {fileID: 2042991700}
   - component: {fileID: 2042991699}
   - component: {fileID: 2042991698}
+  - component: {fileID: 2042991702}
   m_Layer: 0
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -2081,9 +2081,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042991700}
-        m_TargetAssemblyTypeName: ContinueButtonController, Assembly-CSharp
-        m_MethodName: LoadGameScene
+      - m_Target: {fileID: 2042991702}
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2093,18 +2093,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2042991700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042991696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad08858d76f206b4e9547dd89183f094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2042991701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2157,6 +2145,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2042991702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042991696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2097067139
 GameObject:
   m_ObjectHideFlags: 0
