@@ -4616,8 +4616,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1356194226}
-        m_TargetAssemblyTypeName: PlayButtonManager, Assembly-CSharp
-        m_MethodName: OnClickPlayButton
+        m_TargetAssemblyTypeName: LoadSceneButtonController, Assembly-CSharp
+        m_MethodName: OnClickLoadStageSelectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4674,7 +4674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1356194221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c911273e9710f4a830bede1c63b6df, type: 3}
+  m_Script: {fileID: 11500000, guid: 986b86b509bc45545bce6b65bb0cc403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1391122631
