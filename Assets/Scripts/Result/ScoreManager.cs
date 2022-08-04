@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour {
 
         for (int i = planets.Length - 1; i >= 0; i--) {
             planet = planets[i];
-            if (thisScore >= planet.ScoreMin) {
+            if (thisScore >= planet.scoreMin) {
                 break;
             }
         }

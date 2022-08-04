@@ -24,25 +24,24 @@ public class PlanetImageController : MonoBehaviour {
 
         // スコアを取得
         // TODO:前画面からスコアを取得する
-        PlayerPrefs.SetString("thisScore", "25");
+        PlayerPrefs.SetString("thisScore", "33");
         thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
 
         // ランクを判断
+        // TODO: ランクの初期化もGame画面からしたい
         ScoreManager scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         planet = scoreManager.JudgeRank(thisScore);
 
         // Playerの位置（アニメーションの終点）をResultPlayerControllerに指定
-        ResultPlayerController player = GameObject.Find("Player").GetComponent<ResultPlayerController>();
-        player.PlayerPosition = planet.PlayerPosition;
+        ResultPlayerAnimator resultPlayerAnimator = GameObject.Find("Player").GetComponent<ResultPlayerAnimator>();
+        resultPlayerAnimator.Animate(planet.positionX);
 
         // Textに反映
-        planetNameText.text = planet.NameJ + " まで とうたつ！";
+        planetNameText.text = planet.nameJ + " まで とうたつ！";
 
         // 画像を反映
-        planetImage.sprite = planet.Sprite;
+        planetImage.sprite = planet.sprite;
 
-        // Playerのアニメーションを発動を呼び出す
-        player.Animate();
     }
 
 
