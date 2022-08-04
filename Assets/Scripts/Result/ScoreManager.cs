@@ -44,12 +44,6 @@ public class ScoreManager : MonoBehaviour {
 
         return planet;
     }
-
-    public float judgePosition()
-    {
-
-    }
     
-
 
 }

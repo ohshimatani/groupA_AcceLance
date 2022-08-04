@@ -15,15 +15,15 @@ public class Planet {
     // プラネットの画像（スプライト）
     private Sprite sprite;
 
-    private float position;
+    private float playerPosition;
 
-    public Planet(string nameE, string nameJ, int scoreMin, float position)
+    public Planet(string nameE, string nameJ, int scoreMin, float playerPosition)
     {
         this.nameE = nameE;
         this.nameJ = nameJ;
         this.scoreMin = scoreMin;
         this.sprite = Resources.Load<Sprite>("Planets/" + NameE);
-        this.position = position;
+        this.playerPosition = playerPosition;
     }
 
     /// <summary>
@@ -71,6 +71,21 @@ public class Planet {
         }
         set {
             sprite = value;
+        }
+    }
+
+    /// <summary>
+    /// playerPositionのアクセッサ
+    /// </summary>
+    public float PlayerPosition
+    {
+        get
+        {
+            return playerPosition;
+        }
+        set
+        {
+            playerPosition = value;
         }
     }
 

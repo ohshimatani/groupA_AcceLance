@@ -10,13 +10,17 @@ using UnityEngine;
 public class ResultPlayerController : MonoBehaviour
 {
     // プレイヤーのポジション（PlanetImageControllerからsetされる）
-    private float playerPosition;
+    private float playerPosition = -5.4f;
 
-    private void Start()
+    // アニメーションの時間（秒）
+    private float duration = 2f;
+
+    /// <summary>
+    /// Playerをランクに応じてアニメーションさせる
+    /// </summary>
+    public void Animate()
     {
-        ScoreManager scoreManager = new ScoreManager();
-        ScoreManager
-        this.transform.DOMoveX(-1.7f, 2f);
+        this.transform.DOMoveX(playerPosition, duration);
     }
 
     /// <summary>
