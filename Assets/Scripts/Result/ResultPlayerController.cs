@@ -10,31 +10,37 @@ using UnityEngine;
 public class ResultPlayerController : MonoBehaviour
 {
     // プレイヤーのポジション（PlanetImageControllerからsetされる）
-    private float playerPosition = -5.4f;
+    private float playerPositionX;
 
     // アニメーションの時間（秒）
-    private float duration = 2f;
+    private const float DURATION = 2f;
+
+    private void Start()
+    {
+        Transform transForm = GameObject.Find("Player").transform;
+        playerPositionX = transForm.position.x;
+    }
 
     /// <summary>
     /// Playerをランクに応じてアニメーションさせる
     /// </summary>
     public void Animate()
     {
-        this.transform.DOMoveX(playerPosition, duration);
+        this.transform.DOMoveX(playerPositionX, DURATION);
     }
 
     /// <summary>
     /// playerPositionのアクセッサ
     /// </summary>
-    public float PlayerPosition
+    public float PlayerPositionX
     {
         get
         {
-            return playerPosition;
+            return playerPositionX;
         }
         set
         {
-            playerPosition = value;
+            playerPositionX = value;
         }
     }
 }
