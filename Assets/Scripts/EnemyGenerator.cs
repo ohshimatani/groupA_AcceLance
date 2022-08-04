@@ -19,6 +19,9 @@ public class EnemyGenerator : MonoBehaviour
     // スクリプトJsonManagerのコンポーネントを格納する変数
     private JsonManager jsonManager;
 
+    // 出現させる学年の漢字
+    private GradeType gradeType;
+
     // 漢字配列
     private KanjiInfo[] kanjiInfos;
 
@@ -33,12 +36,10 @@ public class EnemyGenerator : MonoBehaviour
         // スクリプトJsonManagerコンポーネントを取得
         jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
 
-        // 漢字配列を初期化し、ランダムにソートする
-        // TODO: ステージ選択画面から受け取ったEnumの値をもとに取得できるようにする
-        // TODO: ひとまず今はFIRSTから受け取れるようにしている
-        kanjiInfos = jsonManager.GetKanjiInfoByGradeType(GradeType.FIRST);
-
-        // ランダムソートの実行
+        // StageSelect画面で選択された学年の取得
+        gradeType = StageSelectManager.gradeType;
+        //学年に応じた漢字配列を取得し、ランダムにソートする
+        kanjiInfos = jsonManager.GetKanjiInfoByGradeType(gradeType);
         kanjiInfos = kanjiInfos.OrderBy(i => Guid.NewGuid()).ToArray();
 
         // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
