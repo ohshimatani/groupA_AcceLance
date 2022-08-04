@@ -5,52 +5,52 @@ using UnityEngine.UI;
 
 public class ScrollViewController : MonoBehaviour
 {
-    // Content‚ğƒAƒ^ƒbƒ`
+    // Contentï¿½ï¿½ï¿½Aï¿½^ï¿½bï¿½`
     [SerializeField] RectTransform contentRectTransform;
 
-    // KanjiCell‚ÌPrefab‚ğİ’è
+    // KanjiCellï¿½ï¿½Prefabï¿½ï¿½İ’ï¿½
     [SerializeField] GameObject kanjiCellPrefab;
 
-    // SecretCell‚ÌPrefab‚ğİ’è
+    // SecretCellï¿½ï¿½Prefabï¿½ï¿½İ’ï¿½
     [SerializeField] GameObject secretCellPrefab;
 
 
     /// <summary>
-    /// Š¿šƒf[ƒ^‚ğJSONƒtƒ@ƒCƒ‹‚©‚çæ“¾‚µA‚»‚ê‚¼‚êƒ{ƒ^ƒ“‚ÌText‚É”½‰f‚·‚éB
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^ï¿½ï¿½JSONï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ê‚¼ï¿½ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½Textï¿½É”ï¿½ï¿½fï¿½ï¿½ï¿½ï¿½B
     /// </summary>
     private void Start()
     {
-        // Š¿šƒf[ƒ^‚ğJSONƒtƒ@ƒCƒ‹‚©‚çæ“¾
+        // ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^ï¿½ï¿½JSONï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾
         JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
-        KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByStageMode(StageMode.ALL);
+        KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByGradeType(GradeType.ALL);
 
-        // ˆø”‚É“n‚µ‚½Š¿š‚Ìî•ñ‚ğ‚à‚Æ‚ÉAŠ¿š‚ÌƒZƒ‹ or ƒnƒeƒi‚ÌƒZƒ‹‚ğ”z’u
+        // ï¿½ï¿½ï¿½ï¿½ï¿½É“nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ÉAï¿½ï¿½ï¿½ï¿½ï¿½ÌƒZï¿½ï¿½ or ï¿½nï¿½eï¿½iï¿½ÌƒZï¿½ï¿½ï¿½ï¿½zï¿½u
         ArrangementKanjiCell(kanjiInfoArray);
     }
 
 
     /// <summary>
-    /// ˆø”‚Ìî•ñ‚ğ‚à‚Æ‚ÉAŠ¿š‚ÌƒZƒ‹ or ƒnƒeƒi‚ÌƒZƒ‹‚ğ”z’u‚·‚éB
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ÉAï¿½ï¿½ï¿½ï¿½ï¿½ÌƒZï¿½ï¿½ or ï¿½nï¿½eï¿½iï¿½ÌƒZï¿½ï¿½ï¿½ï¿½zï¿½uï¿½ï¿½ï¿½ï¿½B
     /// </summary>
     /// <param name="kanjiInfoArray"></param>
     private void ArrangementKanjiCell(KanjiInfo[] kanjiInfoArray)
     {
-        // æ“¾‚µ‚½Š¿š‚Ì”‚¾‚¯KanjiCell‚ğ¶¬‚µAScrollView“à‚ÉGrid”z’u
+        // ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½KanjiCellï¿½ğ¶ï¿½ï¿½ï¿½ï¿½AScrollViewï¿½ï¿½ï¿½ï¿½Gridï¿½zï¿½u
         for (int i = 0; i < kanjiInfoArray.Length; i++)
         {
             if (kanjiInfoArray[i].defeat_count >= 1)
             {
-                // “|‚³‚ê‚½”‚ª‚P‚æ‚è‘å‚«‚¢‚Æ‚«A‚»‚ÌŠ¿šCell‚ğ•\¦
+                // ï¿½|ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ï¿½ï¿½Pï¿½ï¿½ï¿½å‚«ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Aï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½Cellï¿½ï¿½\ï¿½ï¿½
                 GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
 
-                // ƒZƒ‹“à‚Ìî•ñ‚ğ”½‰f‚³‚¹‚éƒƒ\ƒbƒh‚ğ”­“®
+                // ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ğ”½‰fï¿½ï¿½ï¿½ï¿½ï¿½éƒï¿½\ï¿½bï¿½hï¿½ğ”­“ï¿½
                 kanjiCell.GetComponent<KanjiCell>().InitKanjiStatus(kanjiInfoArray[i]);
             } else
             {
-                // “|‚³‚ê‚Ä‚¢‚È‚¢Š¿š‚Ì‚Æ‚«Aƒnƒeƒi‚ğ•\¦
+                // ï¿½|ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½Aï¿½nï¿½eï¿½iï¿½ï¿½\ï¿½ï¿½
                 GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
 
-                // ƒZƒ‹“à‚Ìî•ñ‚ğ”½‰f‚³‚¹‚éƒƒ\ƒbƒh‚ğ”­“®
+                // ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ğ”½‰fï¿½ï¿½ï¿½ï¿½ï¿½éƒï¿½\ï¿½bï¿½hï¿½ğ”­“ï¿½
                 secretCell.GetComponent<SecretCell>().InitKanjiStatus(kanjiInfoArray[i]);
             }
         }

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StageMode
+public enum GradeType
 {
     ALL,
-    GAKUNEN_1 = 1,
-    GAKUNEN_2 = 2
+    FIRST = 1,
+    SECOND = 2
 }
 
 public class StageSelectManager : MonoBehaviour
 {
-    public static StageMode stageMode { get; set; }
+    public static GradeType gradeType { get; set; }
 }

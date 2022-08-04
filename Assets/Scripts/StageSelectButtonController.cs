@@ -9,30 +9,30 @@ public class StageSelectButtonController : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
-        // ©g‚ÌƒIƒuƒWƒFƒNƒg–¼
+        // ï¿½ï¿½ï¿½gï¿½ÌƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½
         string buttonName = gameObject.name;
 
         GameObject obj = GameObject.Find("StageSelectManager");
         StageSelectManager stageSelectManager = obj.GetComponent<StageSelectManager>();
         
-        // ¬Šw1”N¶‚ÌŠ¿šƒXƒe[ƒW‚ª‘I‘ğ‚³‚ê‚½‚Æ‚«
+        // ï¿½ï¿½ï¿½w1ï¿½Nï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½ï¿½Xï¿½eï¿½[ï¿½Wï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Æ‚ï¿½
         if ("FirstGradeButton".Equals(buttonName))
         {
-            StageSelectManager.stageMode = StageMode.GAKUNEN_1;
+            StageSelectManager.gradeType = GradeType.FIRST;
             return;
         }
 
-        // ¬Šw2”N¶‚ÌŠ¿šƒXƒe[ƒW‚ª‘I‘ğ‚³‚ê‚½‚Æ‚«
+        // ï¿½ï¿½ï¿½w2ï¿½Nï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½ï¿½Xï¿½eï¿½[ï¿½Wï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Æ‚ï¿½
         if ("SecondGradeButton".Equals(buttonName))
         {
-            StageSelectManager.stageMode = StageMode.GAKUNEN_2;
+            StageSelectManager.gradeType = GradeType.SECOND;
             return;
         }
 
-        // ¬Šw1”N¶&2”N¶‚ÌŠ¿šƒXƒe[ƒW‚ª‘I‘ğ‚³‚ê‚½‚Æ‚«
+        // ï¿½ï¿½ï¿½w1ï¿½Nï¿½ï¿½&2ï¿½Nï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½ï¿½Xï¿½eï¿½[ï¿½Wï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Æ‚ï¿½
         if ("AllGradeButton".Equals(buttonName))
         {
-            StageSelectManager.stageMode = StageMode.ALL;
+            StageSelectManager.gradeType = GradeType.ALL;
             return;
         }
     }

@@ -6,12 +6,13 @@ using UnityEngine;
 using System.Linq;
 
 
+/// <summary>
+/// 読み込んだJSON情報を格納するクラス
+/// </summary>
 public class JsonData
 {
     public KanjiInfo[] kanjiInfos;
 }
-
-
 
 public class JsonManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class JsonManager : MonoBehaviour
     /// <summary>
     /// KanjiInfos.jsonを読み込み、kanjiInfosを初期化する
     /// </summary>
-    public KanjiInfo[] ReadJsonData()
+    private KanjiInfo[] ReadJsonData()
     {
         // ResourcesフォルダからKanjiInfos.jsonを参照
         string loadJson = Resources.Load<TextAsset>(JSON_FILE_NAME).ToString();
@@ -82,22 +83,22 @@ public class JsonManager : MonoBehaviour
     /// </summary>
     /// <param name="gakunen">学年</param>
     /// <returns></returns>
-    public KanjiInfo[] GetKanjiInfoByStageMode(StageMode stageMode)
+    public KanjiInfo[] GetKanjiInfoByGradeType(GradeType gradeType)
     {
-        switch (stageMode)
+        switch (gradeType)
         {
             // 小学1年生&2年生の配列を返却
-            case StageMode.ALL:
+            case GradeType.ALL:
                 return kanjiInfos;
             // 小学1年生の配列を返却
-            case StageMode.GAKUNEN_1:
-                return GetKanjiInfoByGakunen((int)stageMode);
+            case GradeType.FIRST:
+                return GetKanjiInfoByGakunen((int)gradeType);
             // 小学2年生の配列を返却
-            case StageMode.GAKUNEN_2:
-                return GetKanjiInfoByGakunen((int)stageMode);
+            case GradeType.SECOND:
+                return GetKanjiInfoByGakunen((int)gradeType);
             // 例外処理
             default:
-                throw new Exception("引数がEnum:StageModeに該当しません");
+                throw new Exception("引数がEnum:GradeTypeに該当しません");
         }
     }
 
