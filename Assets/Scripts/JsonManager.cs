@@ -6,12 +6,13 @@ using UnityEngine;
 using System.Linq;
 
 
+/// <summary>
+/// 読み込んだJSON情報を格納するクラス
+/// </summary>
 public class JsonData
 {
     public KanjiInfo[] kanjiInfos;
 }
-
-
 
 public class JsonManager : MonoBehaviour
 {
