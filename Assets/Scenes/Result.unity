@@ -651,9 +651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4300618cb72894485e96c05e3a8674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetImage: {fileID: 0}
-  planetNameText: {fileID: 0}
-  thisScore: 0
 --- !u!1 &851367014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1849,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 376c942bb83e89a4593ef30432e17a1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

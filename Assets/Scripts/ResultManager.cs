@@ -28,7 +28,7 @@ public class ResultManager : MonoBehaviour
 
         // ImageとTextを反映する
         ResultViewController resultViewController = GameObject.Find("ResultViewController").GetComponent<ResultViewController>();
-        resultViewController.ReflectView(planet);
+        resultViewController.SetViewPropertyByPlanet(planet);
 
         // アニメーションを行う
         ResultPlayerAnimator resultPlayerAnimator = GameObject.Find("Player").GetComponent<ResultPlayerAnimator>();

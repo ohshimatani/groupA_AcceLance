@@ -15,7 +15,7 @@ public class ResultViewController : MonoBehaviour
     /// Image‚ÆText‚ğ”½‰f‚³‚¹‚é
     /// </summary>
     /// <param name="planet"></param>
-    public void ReflectView(Planet planet)
+    public void SetViewPropertyByPlanet(Planet planet)
     {
         // Text‚É”½‰f
         planetNameText.text = planet.nameJ + " ‚Ü‚Å ‚Æ‚¤‚½‚ÂI";
