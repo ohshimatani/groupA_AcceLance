@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u6797"
+  m_Text: "\u571F"
 --- !u!1 &1635145217407281762
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,9 +414,9 @@ GameObject:
   - component: {fileID: 6241576097399065259}
   - component: {fileID: 714376774747014227}
   - component: {fileID: 8998406390148764281}
-  - component: {fileID: 5417848247993171970}
   - component: {fileID: 3057515283696387837}
   - component: {fileID: 8872992668179227842}
+  - component: {fileID: -5817721327855792678}
   m_Layer: 7
   m_Name: EnemyBigVer
   m_TagString: Untagged
@@ -590,28 +590,6 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -1.385}
       - {x: 0.32999998, y: -1.235}
       - {x: 0.5, y: -1.155}
---- !u!114 &5417848247993171970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6241576097399065258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 051b4b5ddb9b9a644b6a85975f4b1292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kanjiInfo:
-    kanji_id: 79
-    kanji: "\u6797"
-    gakunen: 1
-    onyomi:
-    - "\u30EA\u30F3"
-    kunyomi:
-    - "\u306F\u3084\u3057"
-    kakusu: 8
-    defeat_count: 0
 --- !u!95 &3057515283696387837
 Animator:
   serializedVersion: 4
@@ -649,6 +627,26 @@ MonoBehaviour:
   shotDelay: 2.05
   bullet: {fileID: 3790977683366407037, guid: cb600ed69f8f17e4f9b9276c1a0abfa0, type: 3}
   explosion: {fileID: 1359691145558163931, guid: 3519a532514da4049808bd11ab3d993c, type: 3}
+--- !u!114 &-5817721327855792678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241576097399065258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfa57369c4244c4891d799fb51ab0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kanjiInfo:
+    kanji_id: 0
+    kanji: 
+    gakunen: 0
+    onyomi: []
+    kunyomi: []
+    kakusu: 0
+    defeat_count: 0
 --- !u!1 &8866008120699315531
 GameObject:
   m_ObjectHideFlags: 0
