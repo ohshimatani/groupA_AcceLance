@@ -46,8 +46,6 @@ public class EnemyGenerator : MonoBehaviour
 
         // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
         InvokeRepeating("Spawn", startTime, interval);
-
-        Debug.Log(enemyPrefab.GetComponent<SpriteRenderer>().bounds.size.x);
     }
 
     /// <summary>
