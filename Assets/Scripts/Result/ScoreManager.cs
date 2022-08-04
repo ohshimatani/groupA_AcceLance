@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour {
+public class ScoreManager
+{
 
     private Planet[] planets;
 
     /// <summary>
+    /// コンストラクタ：
     /// 太陽系の順番で惑星の要素を持つ配列を作成
     /// </summary>
     /// <returns>太陽系の順番で惑星の要素を持つ配列</returns>
-    private void Start() {
+    public ScoreManager()
+    {
         planets = new Planet[] {
             new Planet("Mercury", "水星", 0, -5.4f)
             , new Planet("Venus", "金星", 4, -4.33f)
@@ -31,19 +34,21 @@ public class ScoreManager : MonoBehaviour {
     /// </summary>
     /// <param name="thisScore">今回のスコア</param>
     /// <returns>スコアに応じた惑星クラス</returns>
-    public Planet JudgeRank(int thisScore) {
-        
+    public Planet JudgeRank(int thisScore)
+    {
         Planet planet = planets.First();
 
-        for (int i = planets.Length - 1; i >= 0; i--) {
+        for (int i = planets.Length - 1; i >= 0; i--)
+        {
             planet = planets[i];
-            if (thisScore >= planet.scoreMin) {
+            if (thisScore >= planet.scoreMin)
+            {
                 break;
             }
         }
 
         return planet;
     }
-    
+
 
 }

@@ -23,15 +23,15 @@ public class ResultManager : MonoBehaviour
 
         // ランクを判断
         // TODO: ランクの初期化もGame画面からしたい
-        ScoreManager scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        ScoreManager scoreManager = new ScoreManager();
         planet = scoreManager.JudgeRank(thisScore);
 
         // ImageとTextを反映する
-        ResultViewController resultViewController = new ResultViewController();
+        ResultViewController resultViewController = GameObject.Find("ResultViewManager").GetComponent<ResultViewController>();
         resultViewController.ReflectView(planet);
 
         // アニメーションを行う
-        ResultPlayerAnimator resultPlayerAnimator = new ResultPlayerAnimator();
+        ResultPlayerAnimator resultPlayerAnimator = GameObject.Find("Player").GetComponent<ResultPlayerAnimator>();
         resultPlayerAnimator.Animate(planet.positionX);
     }
 }
