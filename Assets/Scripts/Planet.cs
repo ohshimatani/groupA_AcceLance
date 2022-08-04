@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet {
+public class Planet
+{
     // ˜f¯‚Ì–¼‘Oi‰pŒêj
     public string nameE { get; set; }
 
