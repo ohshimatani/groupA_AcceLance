@@ -41,7 +41,7 @@ public class PlanetImageController : MonoBehaviour {
         // 画像を反映
         planetImage.sprite = planet.Sprite;
 
-        // Playerのアニメーションを発動
+        // Playerのアニメーションを発動を呼び出す
         player.Animate();
     }
 
