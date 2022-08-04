@@ -27,7 +27,7 @@ public class ResultManager : MonoBehaviour
         planet = scoreManager.JudgeRank(thisScore);
 
         // ImageとTextを反映する
-        ResultViewController resultViewController = GameObject.Find("ResultViewManager").GetComponent<ResultViewController>();
+        ResultViewController resultViewController = GameObject.Find("ResultViewController").GetComponent<ResultViewController>();
         resultViewController.ReflectView(planet);
 
         // アニメーションを行う
