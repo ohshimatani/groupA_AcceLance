@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StageSelectButtonController : MonoBehaviour
 {
+    /// <summary>
+    /// クリックされたボタンに応じてStageMode（Enum）の値をセットする
+    /// </summary>
     public void OnClick()
     {
         // 自身のオブジェクト名
