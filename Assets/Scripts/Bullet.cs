@@ -18,8 +18,5 @@ public class Bullet : MonoBehaviour
     {
         // ƒ[ƒJƒ‹À•W‚ÌY²•ûŒü‚ÉˆÚ“®‚·‚é
         GetComponent<Rigidbody2D>().velocity = transform.up.normalized * speed;
-
-        // lifeTime•bŒã‚Éíœ
-        Destroy(gameObject, lifeTime);
     }
 }
