@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // ƒXƒRƒA‚ğ0‚Å‰Šú‰»
         score = 0;
 
         scoreText = scoreTextObject.GetComponent<ScoreText>();
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
             if (score == planet.scoreMin)
             {
                 currentPlanet = planet;
+                return;
             }
         }
     }
