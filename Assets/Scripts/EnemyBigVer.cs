@@ -46,22 +46,24 @@ public class EnemyBigVer : MonoBehaviour
         System.Random r = new System.Random();
         int randNum = r.Next(0, 3);
 
-        Vector2 direction = enemyDirection.StraightDirection();
+        // ランダムに宇宙船の進行方向を決定
+        Vector2 direction;
         switch(randNum)
         {
-            case 0:
+            case (int)EnemyDirection.DIRECTION_TYPE.Straight:
                 // 真下へ移動
                 direction = enemyDirection.StraightDirection();
                 break;
-            case 1:
+            case (int)EnemyDirection.DIRECTION_TYPE.LowerLeft:
                 // 左下へ移動
                 direction = enemyDirection.LowerLeftDirection();
                 break;
-            case 2:
+            case (int)EnemyDirection.DIRECTION_TYPE.LowerRight:
                 // 右下へ移動
                 direction = enemyDirection.LowerRightDirection();
                 break;
             default:
+                direction = enemyDirection.StraightDirection();
                 break;
         }
         spaceShip.Move(direction);
