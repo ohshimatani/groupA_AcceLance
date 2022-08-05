@@ -2,9 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Enemy : MonoBehaviour
 {
+    public enum DIRECTION_TYPE
+    {
+        STRAIGHT
+        , LOWER_LEFT
+        , LOWER_RIGHT
+    }
+
     // スクリプトSpaceShipのコンポーネントを格納する変数
     private SpaceShip spaceShip;
 
@@ -32,6 +40,30 @@ public class Enemy : MonoBehaviour
 
         // 画面上から下に移動させる
         spaceShip.Move(transform.up * -1);
+
+        // 方向をランダムに決定
+        System.Random random = new System.Random();
+
+        // Enumの項目数を取得
+        int directionTypeLength = Enum.GetNames(typeof(DIRECTION_TYPE)).Length;
+        DIRECTION_TYPE directionType = (DIRECTION_TYPE)random.Next(directionTypeLength);
+
+        Vector2 direction;
+        switch (directionType)
+        {
+            case DIRECTION_TYPE.STRAIGHT:
+                direction = new Vector2(0, -1f);
+                break;
+            case DIRECTION_TYPE.LOWER_LEFT:
+                direction = new Vector2(-0.7f, -1f);
+                break;
+            case DIRECTION_TYPE.LOWER_RIGHT:
+                direction = new Vector2(0.7f, -1f);
+                break;
+            default:
+                throw new Exception("引数がEnum:DIRECTION_TYPEに該当しません");
+        }
+        spaceShip.Move(direction);
 
         // 弾の発射処理を実行
         StartCoroutine("Shot");
