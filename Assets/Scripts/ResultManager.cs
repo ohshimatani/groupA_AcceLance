@@ -24,7 +24,10 @@ public class ResultManager : MonoBehaviour
         // 最高スコアの更新された場合、bestScoreを上書きし、「さい高記ろく！」を画面上に表示する
         if (thisScore > bestScore)
         {
+            // PlayerPrefsを更新および保存
             PlayerPrefs.SetInt(BEST_SCORE_PREFS_KEY, thisScore);
+            PlayerPrefs.Save();
+
             resultViewController.SetActiveBestScoreNotation(true);
         }
         else
