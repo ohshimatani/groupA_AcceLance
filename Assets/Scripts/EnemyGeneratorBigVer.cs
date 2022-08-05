@@ -14,7 +14,7 @@ public class EnemyGeneratorBigVer : MonoBehaviour
     [SerializeField] float startTime = 1f;
 
     // スポーンの時間間隔
-    [SerializeField] float interval = 6f;
+    [SerializeField] float interval = 2.3f;
 
     // スクリプトJsonManagerのコンポーネントを格納する変数
     private JsonManager jsonManager;
