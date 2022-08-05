@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 6241576097399065258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: 3.7443, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4105027160129694695}
@@ -644,9 +644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e250745047e3264fae517ba73c2ecb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  hp: 5
-  shotDelay: 2.05
+  speed: 0.85
+  hp: 4
+  shotDelay: 2.1
   bullet: {fileID: 3790977683366407037, guid: cb600ed69f8f17e4f9b9276c1a0abfa0, type: 3}
   explosion: {fileID: 1359691145558163931, guid: 3519a532514da4049808bd11ab3d993c, type: 3}
 --- !u!1 &8866008120699315531
@@ -686,8 +686,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.016666664, y: 1}
-  m_SizeDelta: {x: 77.28, y: 27.1971}
+  m_AnchoredPosition: {x: 0, y: 0.93}
+  m_SizeDelta: {x: 77.28, y: 20.622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768424328482290041
 MonoBehaviour:

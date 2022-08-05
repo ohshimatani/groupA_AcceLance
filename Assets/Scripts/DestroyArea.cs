@@ -5,13 +5,28 @@ using UnityEngine;
 public class DestroyArea : MonoBehaviour
 {
     /// <summary>
-    /// トリガーから出た時の処理
-    /// 衝突した相手の Collider2D コンポーネントを引数 c に格納
+    /// レイヤー名がDestroyArea以外のオブジェクトはDestroyする
     /// </summary>
-    /// <param name="c"></param>
-    void OnTriggerExit2D(Collider2D c)
+    /// <param name="other"></param>
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // 引数 c に格納されたコンポーネント（オブジェクト）を削除
-        Destroy(c.gameObject);
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if ("DestroyArea".Equals(layerName))
+        {
+            return;
+        }
+
+        // UpperDestoryAreaでDestoryするのはPlayerBulletのみとする
+        if ("UpperDestroyArea".Equals(gameObject.name))
+        {
+            if ("PlayerBullet".Equals(layerName))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
