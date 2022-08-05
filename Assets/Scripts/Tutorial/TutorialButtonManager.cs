@@ -16,7 +16,7 @@ public class TutorialButtonManager: MonoBehaviour
 
     // ページ数の最大値と最小値
     private const int MIN_PAGE_NUM = 0;
-    private const int MAX_PAGE_NUM = 8;
+    private const int MAX_PAGE_NUM = 6;
 
 
     void Start()
