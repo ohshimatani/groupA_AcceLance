@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u5B57"
+  m_Text: "\u8A18"
 --- !u!1 &1635145217407281762
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e250745047e3264fae517ba73c2ecb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  hp: 5
-  shotDelay: 2
+  speed: 0.85
+  hp: 4
+  shotDelay: 2.1
   bullet: {fileID: 3790977683366407037, guid: cb600ed69f8f17e4f9b9276c1a0abfa0, type: 3}
   explosion: {fileID: 1359691145558163931, guid: 3519a532514da4049808bd11ab3d993c, type: 3}
 --- !u!114 &-5817721327855792678
@@ -640,15 +640,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiInfo:
-    kanji_id: 30
-    kanji: "\u5B57"
-    gakunen: 1
+    kanji_id: 105
+    kanji: "\u8A18"
+    gakunen: 2
     onyomi:
-    - "\u30B8"
+    - "\u30AD"
     kunyomi:
-    - "\u3042\u3056"
-    kakusu: 6
-    defeat_count: 1
+    - "\u3057\u308B-\u3059"
+    kakusu: 10
+    defeat_count: 0
 --- !u!1 &8866008120699315531
 GameObject:
   m_ObjectHideFlags: 0

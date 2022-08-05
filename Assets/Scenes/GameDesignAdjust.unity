@@ -968,7 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6241576097399065258, guid: d60543798bcadf04a92d47afba4accea, type: 3}
   startTime: 1
-  interval: 6
+  interval: 2.3
 --- !u!1 &1733580648
 GameObject:
   m_ObjectHideFlags: 0
