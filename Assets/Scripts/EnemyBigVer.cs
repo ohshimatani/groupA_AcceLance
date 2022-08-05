@@ -34,17 +34,19 @@ public class EnemyBigVer : MonoBehaviour
 
         //-----次の移動処理を多様化する
 
+        // <<< Enemy.cs
+        //
         // 画面上から下に移動させる
         //spaceShip.Move(transform.up * -1);
-
-        // 斜め右下に移動（垂直方向にに対しやや鋭角）
-        //spaceShip.Move(new Vector2(-1f, -0.7f));
-
+        //
+        //-----
+        // >>> EnemyBigVer.cs
         EnemyDirection enemyDirection = new EnemyDirection();
 
         // 0～2（方向の種類）の乱数を生成
         System.Random randomGenerator = new System.Random();
-        int randomNumber = randomGenerator.Next(0, 3);
+        int directionTypeNumber = 2;
+        int randomNumber = randomGenerator.Next(0, directionTypeNumber);
 
         // ランダムに宇宙船の進行方向を決定
         Vector2 direction;
@@ -63,12 +65,11 @@ public class EnemyBigVer : MonoBehaviour
                 direction = enemyDirection.LowerRightDirection();
                 break;
             default:
+                // デフォルトは真下へ移動
                 direction = enemyDirection.StraightDirection();
                 break;
         }
         spaceShip.Move(direction);
-
-
 
 
 
