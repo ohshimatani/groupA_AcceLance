@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject scoreTextObject;
     private ScoreText scoreText;
 
+    // ゲーム画面上の惑星画像を制御するクラス
+    private GamePlanetViewController gamePlanetViewController;
+
     // 惑星の配列
     private Planet[] planets;
 
@@ -38,6 +41,10 @@ public class GameManager : MonoBehaviour
 
         // 現在のランクの初期値は水星とする
         currentPlanet = planets[0];
+
+        // 惑星の画像をセットする
+        gamePlanetViewController = GameObject.Find("GamePlanetViewController").GetComponent<GamePlanetViewController>();
+        gamePlanetViewController.InitCurrentPlanetImage(currentPlanet);
     }
 
     /// <summary>
@@ -57,9 +64,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
-        // PlayerPrefsに現在のスコアを追加
-        PlayerPrefs.SetString("thisScore", score.ToString());
-
         // リザルト画面に遷移
         SceneManager.LoadScene("Result");
     }
@@ -79,7 +83,12 @@ public class GameManager : MonoBehaviour
         {
             if (score == planet.scoreMin)
             {
+                // 惑星の画像を更新
                 currentPlanet = planet;
+                
+                // 惑星の画像をチェンジする
+                gamePlanetViewController.ChangeNextPlanet(currentPlanet);
+
                 return;
             }
         }

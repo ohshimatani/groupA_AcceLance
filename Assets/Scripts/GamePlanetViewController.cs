@@ -20,14 +20,6 @@ public class GamePlanetViewController : MonoBehaviour
     // アニメーションの時間（秒）
     private const float DURATION = 2f;
 
-    void Start()
-    {
-        Planet planet1 = new Planet("Mercury", "水星", 0, -5.4f);
-        Planet planet2 = new Planet("Uranus", "天王星", 31, 4.87f);
-        InitCurrentPlanetImage(planet1);
-        ChangeNextPlanet(planet2);
-    }
-
     /// <summary>
     /// 現在ゲーム画面上に表示されているPlanetイメージに惑星の画像をセットする
     /// </summary>
