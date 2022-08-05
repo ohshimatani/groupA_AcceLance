@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     // スクリプトSpaceShipのコンポーネントを格納する変数
     private SpaceShip spaceShip;
 
-    // スクリプトScoreNumberのコンポーネントを格納する変数
-    private ScoreNumber scoreNumber;
+    // スクリプトGameManagerのコンポーネントを格納する変数
+    private GameManager gameManager;
 
     public KanjiInfo kanjiInfo;
 
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         spaceShip = GetComponent<SpaceShip>();
-        scoreNumber = GameObject.Find("ScoreNumber").GetComponent<ScoreNumber>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // HPバーの初期設定
         // TODO; えねみーHPBarを後で作る
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
                 spaceShip.Explosion();
 
                 // Scoreの加算処理
-                scoreNumber.IncrementScoreNumber();
+                gameManager.IncrementScore();
 
                 // Json情報の上書き
                 // TODO: リザルト画面への移行タイミングでまとめて行なっても良い

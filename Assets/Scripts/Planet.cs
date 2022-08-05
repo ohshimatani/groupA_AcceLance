@@ -10,7 +10,7 @@ public class Planet
     // 惑星の名前（日本語）
     public string nameJ { get; set; }
 
-    // スコアのMax値とMin値
+    // スコアのMin値
     public int scoreMin { get; set; }
 
     // プラネットの画像（スプライト）

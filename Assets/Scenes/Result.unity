@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &63330644
 SpriteRenderer:
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 78992278}
   - component: {fileID: 78992277}
   m_Layer: 0
-  m_Name: PlanetViewNew
+  m_Name: PlanetContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,7 +289,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487952576
 GameObject:
@@ -401,7 +401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &584775177
 SpriteRenderer:
@@ -466,10 +466,8 @@ GameObject:
   - component: {fileID: 623304742}
   - component: {fileID: 623304745}
   - component: {fileID: 623304744}
-  - component: {fileID: 623304743}
-  - component: {fileID: 623304746}
   m_Layer: 5
-  m_Name: BestScoreNumber
+  m_Name: BestScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,18 +493,6 @@ RectTransform:
   m_AnchoredPosition: {x: 630, y: 200.99997}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &623304743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623304741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5040c6cbbeb2e42a8ec9d1e935775a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &623304744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,19 +535,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623304741}
   m_CullTransparentMesh: 1
---- !u!114 &623304746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623304741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63ebfb81b1cdf24fac026ecf9021f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bestScoreNotation: {fileID: 1415338636}
 --- !u!1 &695055438
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +546,6 @@ GameObject:
   - component: {fileID: 695055439}
   - component: {fileID: 695055442}
   - component: {fileID: 695055441}
-  - component: {fileID: 695055443}
   m_Layer: 5
   m_Name: PlanetImage
   m_TagString: Untagged
@@ -639,18 +611,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695055438}
   m_CullTransparentMesh: 1
---- !u!114 &695055443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695055438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa4300618cb72894485e96c05e3a8674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &851367014
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +653,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &929788387
 GameObject:
@@ -883,7 +843,7 @@ GameObject:
   - component: {fileID: 972739308}
   - component: {fileID: 972739307}
   m_Layer: 5
-  m_Name: BestScoreText
+  m_Name: BestScoreDiscription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,7 +941,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1036388742
 SpriteRenderer:
@@ -1134,9 +1094,10 @@ RectTransform:
   - {fileID: 972739306}
   - {fileID: 623304742}
   - {fileID: 1415338637}
-  - {fileID: 78992278}
+  - {fileID: 1631333641}
   - {fileID: 695055439}
   - {fileID: 1666185645}
+  - {fileID: 78992278}
   - {fileID: 63330643}
   - {fileID: 1592420301}
   - {fileID: 1849408416}
@@ -1321,10 +1282,8 @@ GameObject:
   - component: {fileID: 1470277709}
   - component: {fileID: 1470277712}
   - component: {fileID: 1470277711}
-  - component: {fileID: 1470277710}
-  - component: {fileID: 1470277713}
   m_Layer: 5
-  m_Name: ThisScoreNumber
+  m_Name: ThisScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1350,18 +1309,6 @@ RectTransform:
   m_AnchoredPosition: {x: 630, y: 300.99997}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1470277710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470277708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22b3363892731aa46bc1734fce7b0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1470277711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,19 +1351,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470277708}
   m_CullTransparentMesh: 1
---- !u!114 &1470277713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470277708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63ebfb81b1cdf24fac026ecf9021f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bestScoreNotation: {fileID: 1415338636}
 --- !u!1 &1546720583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetImage: {fileID: 695055441}
   planetNameText: {fileID: 1666185646}
+  thisScoreText: {fileID: 1470277711}
+  bestScoreText: {fileID: 623304744}
+  bestScoreNotation: {fileID: 1415338636}
 --- !u!4 &1546720585
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,7 +1398,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592420300
 GameObject:
@@ -1493,7 +1430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1592420302
 SpriteRenderer:
@@ -1559,7 +1496,7 @@ GameObject:
   - component: {fileID: 1629224977}
   - component: {fileID: 1629224976}
   m_Layer: 5
-  m_Name: ThisScoreText
+  m_Name: ThisScoreDiscription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,7 +1575,7 @@ GameObject:
   - component: {fileID: 1631333641}
   - component: {fileID: 1631333640}
   m_Layer: 0
-  m_Name: ScoreViewNew
+  m_Name: ScoreContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,13 +1640,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631333639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.96, y: 2.37, z: 0}
-  m_LocalScale: {x: 1.5295157, y: 1.4815658, z: 1.0304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 236.8, y: 189.59999, z: -7200}
+  m_LocalScale: {x: 122.36126, y: 118.52527, z: 82.43201}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1073723449}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666185644
 GameObject:
@@ -1918,7 +1855,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1073723449}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1849408417
 SpriteRenderer:
