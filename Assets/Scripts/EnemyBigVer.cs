@@ -6,6 +6,13 @@ using System;
 
 public class EnemyBigVer : MonoBehaviour
 {
+    public enum DIRECTION_TYPE
+    {
+        STRAIGHT
+        , LOWER_LEFT
+        , LOWER_RIGHT
+    }
+
     // スクリプトSpaceShipのコンポーネントを格納する変数
     private SpaceShip spaceShip;
 
@@ -31,51 +38,29 @@ public class EnemyBigVer : MonoBehaviour
         enemyHpBar = canvasObject.transform.Find("EnemyHPBar").GetComponent<PlayerHpBar>();
         enemyHpBar.InitializedHpBar(spaceShip.getHp());
 
-
-        //-----次の移動処理を多様化する
-
-        // <<< Enemy.cs
-        //
-        // 画面上から下に移動させる
-        //spaceShip.Move(transform.up * -1);
-        //
-        //-----
-        // >>> EnemyBigVer.cs
-        EnemyDirection enemyDirection = new EnemyDirection();
-
-        // 0～2（方向の種類）の乱数を生成
-        System.Random randomGenerator = new System.Random();
-        int directionTypeNumber = 2;
-        int randomNumber = randomGenerator.Next(0, directionTypeNumber);
-
-        // ランダムに宇宙船の進行方向を決定
+        // 方向をランダムに決定
+        System.Random random = new System.Random();
+        
+        // Enumの項目数を取得
+        int directionTypeLength = Enum.GetNames(typeof(DIRECTION_TYPE)).Length;
+        DIRECTION_TYPE directionType = (DIRECTION_TYPE)random.Next(directionTypeLength);
+        
         Vector2 direction;
-        switch(randomNumber)
+        switch (directionType)
         {
-            case 0:
-                // 真下へ移動
-                direction = enemyDirection.StraightDirection();
+            case DIRECTION_TYPE.STRAIGHT:
+                direction = new Vector2(0, -1f);
                 break;
-            case 1:
-                // 左下へ移動
-                direction = enemyDirection.LowerLeftDirection();
+            case DIRECTION_TYPE.LOWER_LEFT:
+                direction = new Vector2(-0.7f, -1f);
                 break;
-            case 2:
-                // 右下へ移動
-                direction = enemyDirection.LowerRightDirection();
+            case DIRECTION_TYPE.LOWER_RIGHT:
+                direction = new Vector2(0.7f, -1f);
                 break;
             default:
-                // デフォルトは真下へ移動
-                direction = enemyDirection.StraightDirection();
-                break;
+                throw new Exception("引数がEnum:DIRECTION_TYPEに該当しません");
         }
         spaceShip.Move(direction);
-
-
-
-        //-----移動処理の多様化処理、ここまで
-
-
 
         // 弾の発射処理を実行
         StartCoroutine("Shot");
