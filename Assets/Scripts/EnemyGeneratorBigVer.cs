@@ -45,7 +45,7 @@ public class EnemyGeneratorBigVer : MonoBehaviour
         kanjiInfos = jsonManager.GetKanjiInfoByGradeType(gradeType);
         kanjiInfos = kanjiInfos.OrderBy(i => Guid.NewGuid()).ToArray();
 
-        // 繰り返し関数を実行する（spawnを1秒後に6秒刻みで実行）
+        // 繰り返し関数を実行する（spawnを1秒後に2.3秒刻みで実行）
         InvokeRepeating("Spawn", startTime, interval);
     }
 

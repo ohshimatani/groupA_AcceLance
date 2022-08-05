@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDirection : MonoBehaviour
 {
 
-    public enum DIRECTION_TYPE
+    public enum DIRECTION_TYPE: int
     {
         Straight = 0
         , LowerLeft = 1

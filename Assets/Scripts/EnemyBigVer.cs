@@ -43,22 +43,22 @@ public class EnemyBigVer : MonoBehaviour
         EnemyDirection enemyDirection = new EnemyDirection();
 
         // 0～2（方向の種類）の乱数を生成
-        System.Random r = new System.Random();
-        int randNum = r.Next(0, 3);
+        System.Random randomGenerator = new System.Random();
+        int randomNumber = randomGenerator.Next(0, 3);
 
         // ランダムに宇宙船の進行方向を決定
         Vector2 direction;
-        switch(randNum)
+        switch(randomNumber)
         {
-            case (int)EnemyDirection.DIRECTION_TYPE.Straight:
+            case 0:
                 // 真下へ移動
                 direction = enemyDirection.StraightDirection();
                 break;
-            case (int)EnemyDirection.DIRECTION_TYPE.LowerLeft:
+            case 1:
                 // 左下へ移動
                 direction = enemyDirection.LowerLeftDirection();
                 break;
-            case (int)EnemyDirection.DIRECTION_TYPE.LowerRight:
+            case 2:
                 // 右下へ移動
                 direction = enemyDirection.LowerRightDirection();
                 break;
