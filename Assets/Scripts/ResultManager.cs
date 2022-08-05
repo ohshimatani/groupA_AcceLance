@@ -4,31 +4,36 @@ using UnityEngine;
 
 public class ResultManager : MonoBehaviour
 {
-    // ランクに該当する惑星
-    private Planet planet;
+    private const string BEST_SCORE_PREFS_KEY = "bestScore";
 
-    // 今回のスコア
-    private int thisScore;
-
-    /// <summary>
-    /// Image, Textへのランクの反映と
-    /// アニメーションの実行を行う
-    /// </summary>
     private void Start()
     {
-        // スコアを取得
-        // TODO:前画面からスコアを取得する
-        PlayerPrefs.SetString("thisScore", "33");
-        thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
+        // 今回のスコアと今までの最高スコアを取得する
+        int thisScore = GameManager.score;
+        int bestScore = PlayerPrefs.GetInt(BEST_SCORE_PREFS_KEY, 0);
 
-        // ランクを判断
-        // TODO: ランクの初期化もGame画面からしたい
-        ScoreManager scoreManager = new ScoreManager();
-        planet = scoreManager.JudgeRank(thisScore);
+        // 今回の到達ランク（惑星）を取得
+        Planet planet = GameManager.currentPlanet;
 
-        // ImageとTextを反映する
+        // スコアに関するText、ランクのImageを反映する
         ResultViewController resultViewController = GameObject.Find("ResultViewController").GetComponent<ResultViewController>();
+        resultViewController.SetThisScoreText(thisScore.ToString());
+        resultViewController.SetBestScoreText(bestScore.ToString());
         resultViewController.SetViewPropertyByPlanet(planet);
+
+        // 最高スコアの更新された場合、bestScoreを上書きし、「さい高記ろく！」を画面上に表示する
+        if (thisScore > bestScore)
+        {
+            // PlayerPrefsを更新および保存
+            PlayerPrefs.SetInt(BEST_SCORE_PREFS_KEY, thisScore);
+            PlayerPrefs.Save();
+
+            resultViewController.SetActiveBestScoreNotation(true);
+        }
+        else
+        {
+            resultViewController.SetActiveBestScoreNotation(false);
+        }
 
         // アニメーションを行う
         ResultPlayerAnimator resultPlayerAnimator = GameObject.Find("Player").GetComponent<ResultPlayerAnimator>();

@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     // スクリプトSpaceShipのコンポーネントを格納する変数
     SpaceShip spaceShip;
 
+    // スクリプトGameManagerのコンポーネントを格納する変数
+    private GameManager gameManager;
+
     // スクリプトPlayerHpBarのコンポーネントを格納する変数
     PlayerHpBar playerHpBar;
 
@@ -15,6 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         spaceShip = GetComponent<SpaceShip>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // HPバーの初期設定
         playerHpBar = GameObject.Find("PlayerHPBar").GetComponent<PlayerHpBar>();
@@ -92,19 +96,12 @@ public class Player : MonoBehaviour
             {
                 // 爆発処理
                 spaceShip.Explosion();
-
-                // PlayerPrefsに最終スコアを格納
-                GameObject canvasObject = GameObject.Find("Canvas").gameObject;
-                GameObject textObject = canvasObject.transform.Find("ScoreNumber").gameObject;
-                string thisScore = textObject.GetComponent<ScoreNumber>().GetScoreNumber();
-
-                PlayerPrefs.SetString("thisScore", thisScore);
-
+                
                 // プレイヤーを削除
                 Destroy(gameObject);
 
-                // リザルト画面に遷移
-                SceneManager.LoadScene("Result");
+                // ゲームオーバー処理を実行
+                gameManager.GameOver();
             }
         }
     }
