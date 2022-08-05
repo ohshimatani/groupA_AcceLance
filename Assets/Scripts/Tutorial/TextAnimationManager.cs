@@ -20,5 +20,16 @@ public class TextAnimationManager : MonoBehaviour
     {
         //指定した時間後にBool型のパラメータであるsetTextをTrueにする
         textAnimator.SetBool("setText", true);
+        Debug.Log("setText=true");
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            textAnimator.SetBool("setText", true);
+            Debug.Log("SpaceKey");
+        }
     }
 }
