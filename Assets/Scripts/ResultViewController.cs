@@ -22,6 +22,5 @@ public class ResultViewController : MonoBehaviour
 
         // ‰æ‘œ‚ð”½‰f
         planetImage.sprite = planet.sprite;
-
     }
 }

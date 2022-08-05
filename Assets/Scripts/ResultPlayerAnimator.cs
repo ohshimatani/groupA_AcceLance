@@ -18,7 +18,7 @@ public class ResultPlayerAnimator : MonoBehaviour
     /// <param name="positionX"></param>
     public void Animate(float positionX)
     {
-        this.transform.DOMoveX(positionX, DURATION);
+        transform.DOMoveX(positionX, DURATION);
     }
 
 }
