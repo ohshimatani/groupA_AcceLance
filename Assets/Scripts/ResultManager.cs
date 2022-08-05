@@ -16,15 +16,9 @@ public class ResultManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        // スコアを取得
-        // TODO:前画面からスコアを取得する
-        PlayerPrefs.SetString("thisScore", "33");
-        thisScore = int.Parse(PlayerPrefs.GetString("thisScore", "0"));
-
-        // ランクを判断
-        // TODO: ランクの初期化もGame画面からしたい
-        ScoreManager scoreManager = new ScoreManager();
-        planet = scoreManager.JudgeRank(thisScore);
+        // 今回のスコア・ランク（到達惑星）をGameManagerから取得
+        thisScore = GameManager.score;
+        planet = GameManager.currentPlanet;
 
         // ImageとTextを反映する
         ResultViewController resultViewController = GameObject.Find("ResultViewController").GetComponent<ResultViewController>();
