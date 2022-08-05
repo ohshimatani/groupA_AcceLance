@@ -68,7 +68,7 @@ public class EnemyGeneratorBigVer : MonoBehaviour
 
         // スクリプトEnemyのkanjiInfoを初期化
         // 注意点：Instantiateを行う前に初期化しないとエラーとなる
-        enemyPrefab.GetComponent<EnemyBigVer>().SetKanjiText(kanjiInfos[arrayNumber]);
+        enemyPrefab.GetComponent<Enemy>().SetKanjiText(kanjiInfos[arrayNumber]);
 
         //enemyをインスタンス化する
         Instantiate(
