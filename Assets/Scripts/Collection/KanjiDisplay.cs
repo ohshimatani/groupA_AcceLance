@@ -8,6 +8,22 @@ public class KanjiDisplay : MonoBehaviour
     // 漢字の情報（読み取り専用）
     public KanjiInfo kanjiInfo { get; private set; }
 
+    // 各種セットする用のText
+    private Text titleText;
+    private Text onyomiText;
+    private Text kunyomiText;
+    private Text numberOfStrokeText;
+    private Text defeatNumberText;
+
+    private void Start()
+    {
+        titleText = GameObject.Find("TitleKanji").GetComponent<Text>();
+        onyomiText = GameObject.Find("OnyomiText").GetComponent<Text>();
+        kunyomiText = GameObject.Find("KunyomiText").GetComponent<Text>();
+        numberOfStrokeText = GameObject.Find("NumberOfStrokeText").GetComponent<Text>();
+        defeatNumberText = GameObject.Find("DefeatNumberText").GetComponent<Text>();
+    }
+
     /// <summary>
     /// 左画面に、引数として与えられた漢字の情報を反映
     /// </summary>
@@ -17,11 +33,11 @@ public class KanjiDisplay : MonoBehaviour
         this.kanjiInfo = kanjiInfo;
 
         // 各種値を反映
-        GameObject.Find("TitleKanji").GetComponent<Text>().text = this.kanjiInfo.kanji;
-        GameObject.Find("OnyomiText").GetComponent<Text>().text = string.Join(", ", this.kanjiInfo.onyomi);
-        GameObject.Find("KunyomiText").GetComponent<Text>().text = string.Join(", ", this.kanjiInfo.kunyomi);
-        GameObject.Find("NumberOfStroekText").GetComponent<Text>().text = this.kanjiInfo.kakusu.ToString();
-        GameObject.Find("DefeatNumberText").GetComponent<Text>().text = this.kanjiInfo.defeat_count.ToString();
+        titleText.text = this.kanjiInfo.kanji;
+        onyomiText.text = string.Join(", ", this.kanjiInfo.onyomi);
+        kunyomiText.text = string.Join(", ", this.kanjiInfo.kunyomi);
+        numberOfStrokeText.text = this.kanjiInfo.kakusu.ToString();
+        defeatNumberText.text = this.kanjiInfo.defeat_count.ToString();
     }
 
     /// <summary>

@@ -44,14 +44,14 @@ public class ScrollViewController : MonoBehaviour
                 GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
 
                 // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                kanjiCell.GetComponent<KanjiCell>().InitKanjiStatus(kanjiInfoArray[i]);
+                kanjiCell.GetComponent<KanjiCellButton>().InitStatus(kanjiInfoArray[i]);
             } else
             {
                 // �|����Ă��Ȃ������̂Ƃ��A�n�e�i��\��
                 GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
 
                 // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                secretCell.GetComponent<SecretCell>().InitKanjiStatus(kanjiInfoArray[i]);
+                secretCell.GetComponent<SecretCellButton>().InitStatus(kanjiInfoArray[i]);
             }
         }
     }
