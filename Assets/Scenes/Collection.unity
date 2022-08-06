@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 507394927}
   - component: {fileID: 507394926}
   m_Layer: 5
-  m_Name: Scrollbar Vertical
+  m_Name: ScrollbarVertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da716148330966d42949fd7d743a3228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentRectTransform: {fileID: 2034047379}
+  content: {fileID: 2034047378}
   kanjiCellButton: {fileID: 951661070712603614, guid: 50ce7179c0dc60a4c8e2a4c52c7fc443, type: 3}
   secretCellButton: {fileID: 7525487359545286951, guid: 654935ad4a1ad404790d8456c45d7f6e, type: 3}
 --- !u!114 &1044641801
@@ -1189,6 +1189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelect: {fileID: 21300000, guid: 6abe99fcda56a8f43b6990667f0b670f, type: 3}
   notIsSelect: {fileID: 21300000, guid: b8542129df6a183488df19388e444e77, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}
 --- !u!1 &1254348019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelect: {fileID: 21300000, guid: 4d9c1a0bd442cf945909616a0f28bc4e, type: 3}
   notIsSelect: {fileID: 21300000, guid: 6f305c6ba2522cf4cb39cd359b534582, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}
 --- !u!1 &1488022367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,3 +3292,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelect: {fileID: 21300000, guid: 9dc6a3013710a3f4a881d8216e9317a7, type: 3}
   notIsSelect: {fileID: 21300000, guid: c53e734b5d4cc5f41a3bd579872239c5, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}
