@@ -5,54 +5,47 @@ using UnityEngine.UI;
 
 public class ScrollViewController : MonoBehaviour
 {
-    // Content���A�^�b�`
+    // ボタンセルを表示するためのContent
     [SerializeField] RectTransform contentRectTransform;
 
-    // KanjiCell��Prefab��ݒ�
-    [SerializeField] GameObject kanjiCellPrefab;
+    // KanjiCellのPrefabを設定
+    [SerializeField] GameObject kanjiCellButton;
 
-    // SecretCell��Prefab��ݒ�
-    [SerializeField] GameObject secretCellPrefab;
-
+    // SecretCellのPrefabを設定
+    [SerializeField] GameObject secretCellButton;
 
     /// <summary>
-    /// �����f�[�^��JSON�t�@�C������擾���A���ꂼ��{�^����Text�ɔ��f����B
+    /// 漢字データをJSONファイルから取得し、それぞれボタンに反映する
     /// </summary>
     private void Start()
     {
-        // �����f�[�^��JSON�t�@�C������擾
+        // 漢字データをJSONファイルから取得
         JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
         KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByGradeType(GradeType.ALL);
 
-        // �����ɓn���������̏������ƂɁA�����̃Z�� or �n�e�i�̃Z����z�u
-        ArrangementKanjiCell(kanjiInfoArray);
+        // 引数に渡した漢字の情報をもとに、kanjiCellPrefabかsecretCellPrefabのセルを配置
+        DeployCellButton(kanjiInfoArray);
     }
 
-
     /// <summary>
-    /// �����̏������ƂɁA�����̃Z�� or �n�e�i�̃Z����z�u����B
+    /// 引数の情報をもとに、kanjiCellPrefabかsecretCellPrefabのセルを配置
     /// </summary>
     /// <param name="kanjiInfoArray"></param>
-    private void ArrangementKanjiCell(KanjiInfo[] kanjiInfoArray)
+    private void DeployCellButton(KanjiInfo[] kanjiInfoArray)
     {
-        // �擾���������̐�����KanjiCell�𐶐����AScrollView����Grid�z�u
-        for (int i = 0; i < kanjiInfoArray.Length; i++)
+        // 取得した漢字の数だけボタンを生成し、ScrollView内にGrid配置
+        foreach (KanjiInfo kanjiInfo in kanjiInfoArray)
         {
-            if (kanjiInfoArray[i].defeat_count >= 1)
+            // セットするオブジェクト
+            GameObject setObject = secretCellButton;
+            if (kanjiInfo.defeat_count > 0)
             {
-                // �|���ꂽ�����P���傫���Ƃ��A���̊���Cell��\��
-                GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
-
-                // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                kanjiCell.GetComponent<KanjiCellButton>().InitStatus(kanjiInfoArray[i]);
-            } else
-            {
-                // �|����Ă��Ȃ������̂Ƃ��A�n�e�i��\��
-                GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
-
-                // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                secretCell.GetComponent<SecretCellButton>().InitStatus(kanjiInfoArray[i]);
+                setObject = kanjiCellButton;
             }
+
+            // Instantiateするオブジェクト
+            GameObject instanceObject = Instantiate(setObject, contentRectTransform);
+            instanceObject.GetComponent<CollectionCellButton>().InitStatus(kanjiInfo);
         }
     }
 }

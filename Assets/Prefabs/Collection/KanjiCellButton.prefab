@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 103215455888648297}
   - component: {fileID: 1393787890102362194}
   - component: {fileID: 7340843735793325897}
-  - component: {fileID: 589659555844408278}
+  - component: {fileID: 1611326970620971320}
   m_Layer: 5
-  m_Name: KanjiCell
+  m_Name: KanjiCellButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 589659555844408278}
-        m_TargetAssemblyTypeName: AbstractCellButton, Assembly-CSharp
+      - m_Target: {fileID: 1611326970620971320}
+        m_TargetAssemblyTypeName: CollectionCellButton, Assembly-CSharp
         m_MethodName: OnClickShowDisplay
         m_Mode: 1
         m_Arguments:
@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &589659555844408278
+--- !u!114 &1611326970620971320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,10 +144,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 951661070712603614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c3ea50a54f37d43b32720ebb0aa232, type: 3}
+  m_Script: {fileID: 11500000, guid: 468af623cbc48f6499a11ca70f9aad3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftContainer: {fileID: 0}
 --- !u!1 &6426752302186416687
 GameObject:
   m_ObjectHideFlags: 0

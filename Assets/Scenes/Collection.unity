@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 1044641801}
   - component: {fileID: 1044641800}
   m_Layer: 5
-  m_Name: KanjiScrollView
+  m_Name: ScrollViewController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,8 +971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentRectTransform: {fileID: 2034047379}
-  kanjiCellPrefab: {fileID: 951661070712603614, guid: 50ce7179c0dc60a4c8e2a4c52c7fc443, type: 3}
-  secretCellPrefab: {fileID: 7525487359545286951, guid: 654935ad4a1ad404790d8456c45d7f6e, type: 3}
+  kanjiCellButton: {fileID: 951661070712603614, guid: 50ce7179c0dc60a4c8e2a4c52c7fc443, type: 3}
+  secretCellButton: {fileID: 7525487359545286951, guid: 654935ad4a1ad404790d8456c45d7f6e, type: 3}
 --- !u!114 &1044641801
 MonoBehaviour:
   m_ObjectHideFlags: 0
