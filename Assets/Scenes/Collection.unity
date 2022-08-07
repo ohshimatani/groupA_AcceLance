@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &105110970
+--- !u!1 &147157601
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,78 +131,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 105110971}
-  - component: {fileID: 105110973}
-  - component: {fileID: 105110972}
-  m_Layer: 5
-  m_Name: 2GradeButtonText
+  - component: {fileID: 147157603}
+  - component: {fileID: 147157604}
+  m_Layer: 0
+  m_Name: GradeSelectButtonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &105110971
-RectTransform:
+--- !u!4 &147157603
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105110970}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 147157601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6409837, y: -0.012132239, z: 1.3552717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1121699023}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &105110972
+--- !u!114 &147157604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105110970}
+  m_GameObject: {fileID: 147157601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: 444d125cddce48c40a22444fcea985ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 69e2191109182f04285e0981c219a991, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &105110973
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105110970}
-  m_CullTransparentMesh: 1
+  startSelectedButton: {fileID: 1486067344}
 --- !u!1 &152378068
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +441,7 @@ GameObject:
   - component: {fileID: 507394927}
   - component: {fileID: 507394926}
   m_Layer: 5
-  m_Name: Scrollbar Vertical
+  m_Name: ScrollbarVertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +586,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1504087963}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -750,86 +715,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678578936}
   m_CullTransparentMesh: 1
---- !u!1 &887374056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 887374057}
-  - component: {fileID: 887374059}
-  - component: {fileID: 887374058}
-  m_Layer: 5
-  m_Name: AllSelectButtonText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &887374057
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887374056}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1486067345}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &887374058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887374056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 69e2191109182f04285e0981c219a991, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &887374059
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887374056}
-  m_CullTransparentMesh: 1
 --- !u!1 &894030695
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +830,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1504087963}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1031,86 +916,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1041702346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1041702347}
-  - component: {fileID: 1041702349}
-  - component: {fileID: 1041702348}
-  m_Layer: 5
-  m_Name: 1GradeButtonText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1041702347
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041702346}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2054437099}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1041702348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041702346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 69e2191109182f04285e0981c219a991, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &1041702349
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041702346}
-  m_CullTransparentMesh: 1
 --- !u!1 &1044641798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +930,7 @@ GameObject:
   - component: {fileID: 1044641801}
   - component: {fileID: 1044641800}
   m_Layer: 5
-  m_Name: KanjiScrollView
+  m_Name: ScrollViewController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,9 +970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da716148330966d42949fd7d743a3228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentRectTransform: {fileID: 2034047379}
-  kanjiCellPrefab: {fileID: 951661070712603614, guid: 50ce7179c0dc60a4c8e2a4c52c7fc443, type: 3}
-  secretCellPrefab: {fileID: 7525487359545286951, guid: 654935ad4a1ad404790d8456c45d7f6e, type: 3}
+  content: {fileID: 2034047378}
+  kanjiCellButton: {fileID: 951661070712603614, guid: 50ce7179c0dc60a4c8e2a4c52c7fc443, type: 3}
+  secretCellButton: {fileID: 7525487359545286951, guid: 654935ad4a1ad404790d8456c45d7f6e, type: 3}
 --- !u!114 &1044641801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,7 +992,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 15
   m_Viewport: {fileID: 1971247459}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 507394926}
@@ -1248,6 +1053,7 @@ GameObject:
   - component: {fileID: 1121699026}
   - component: {fileID: 1121699025}
   - component: {fileID: 1121699024}
+  - component: {fileID: 1121699027}
   m_Layer: 5
   m_Name: 2GradeButton
   m_TagString: Untagged
@@ -1266,8 +1072,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.007818201, y: 0.009463632, z: 0.0125}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 105110971}
+  m_Children: []
   m_Father: {fileID: 1569444507}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1295,7 +1100,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1319,7 +1124,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121699025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1121699027}
+        m_TargetAssemblyTypeName: GradeSelectButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1121699025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1175,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121699022}
   m_CullTransparentMesh: 1
+--- !u!114 &1121699027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121699022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d2d7f49f2120c49b261c1c22f515b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelect: {fileID: 21300000, guid: 6abe99fcda56a8f43b6990667f0b670f, type: 3}
+  notIsSelect: {fileID: 21300000, guid: b8542129df6a183488df19388e444e77, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}
 --- !u!1 &1254348019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1309,7 @@ Transform:
   m_Children:
   - {fileID: 1770135185}
   m_Father: {fileID: 1488022371}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1309568216
 MonoBehaviour:
@@ -1630,6 +1463,7 @@ GameObject:
   - component: {fileID: 1486067348}
   - component: {fileID: 1486067347}
   - component: {fileID: 1486067346}
+  - component: {fileID: 1486067349}
   m_Layer: 5
   m_Name: AllSelectButton
   m_TagString: Untagged
@@ -1648,8 +1482,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.007818201, y: 0.009463632, z: 0.0125}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 887374057}
+  m_Children: []
   m_Father: {fileID: 1569444507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1677,7 +1510,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1701,7 +1534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1486067347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1486067349}
+        m_TargetAssemblyTypeName: GradeSelectButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1486067347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,6 +1585,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486067344}
   m_CullTransparentMesh: 1
+--- !u!114 &1486067349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486067344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d2d7f49f2120c49b261c1c22f515b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelect: {fileID: 21300000, guid: 4d9c1a0bd442cf945909616a0f28bc4e, type: 3}
+  notIsSelect: {fileID: 21300000, guid: 6f305c6ba2522cf4cb39cd359b534582, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}
 --- !u!1 &1488022367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1694,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 490605965}
-  - {fileID: 2030366293}
   - {fileID: 1569444507}
   - {fileID: 1863466689}
   - {fileID: 1309568215}
@@ -1875,6 +1735,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1638629269}
+  - {fileID: 2030366293}
   - {fileID: 569017174}
   - {fileID: 1004883799}
   m_Father: {fileID: 490605965}
@@ -2101,7 +1962,7 @@ Transform:
   - {fileID: 2054437099}
   - {fileID: 1121699023}
   m_Father: {fileID: 1488022371}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571472937
 GameObject:
@@ -2115,7 +1976,7 @@ GameObject:
   - component: {fileID: 1571472940}
   - component: {fileID: 1571472939}
   m_Layer: 5
-  m_Name: NumberOfStroekText
+  m_Name: NumberOfStrokeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2275,7 +2136,7 @@ GameObject:
   - component: {fileID: 1624400591}
   - component: {fileID: 1624400590}
   m_Layer: 5
-  m_Name: NumberOfStroekTextKaku
+  m_Name: NumberOfStrokeTextKaku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2783,7 +2644,7 @@ RectTransform:
   m_Children:
   - {fileID: 1044641799}
   m_Father: {fileID: 1488022371}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3153,16 +3014,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030366292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0012207031}
-  m_LocalScale: {x: 0.78110033, y: 0.9573901, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.009763755, y: 0.011967379, z: 0.012500002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1488022371}
+  m_Father: {fileID: 1504087963}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -341, y: -306.08}
+  m_AnchoredPosition: {x: -0.6044922, y: -0.032196045}
   m_SizeDelta: {x: 260.75, y: 74.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030366294
@@ -3295,6 +3156,7 @@ GameObject:
   - component: {fileID: 2054437102}
   - component: {fileID: 2054437101}
   - component: {fileID: 2054437100}
+  - component: {fileID: 2054437103}
   m_Layer: 5
   m_Name: 1GradeButton
   m_TagString: Untagged
@@ -3313,8 +3175,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.007818201, y: 0.009463632, z: 0.0125}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1041702347}
+  m_Children: []
   m_Father: {fileID: 1569444507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3342,7 +3203,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3366,7 +3227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054437101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054437103}
+        m_TargetAssemblyTypeName: GradeSelectButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2054437101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3405,3 +3278,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054437098}
   m_CullTransparentMesh: 1
+--- !u!114 &2054437103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054437098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d2d7f49f2120c49b261c1c22f515b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelect: {fileID: 21300000, guid: 9dc6a3013710a3f4a881d8216e9317a7, type: 3}
+  notIsSelect: {fileID: 21300000, guid: c53e734b5d4cc5f41a3bd579872239c5, type: 3}
+  gradeSelectButtonControllerObj: {fileID: 147157601}
+  scrollViewControllerObj: {fileID: 1044641798}

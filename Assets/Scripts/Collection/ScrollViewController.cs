@@ -5,54 +5,69 @@ using UnityEngine.UI;
 
 public class ScrollViewController : MonoBehaviour
 {
-    // Content���A�^�b�`
-    [SerializeField] RectTransform contentRectTransform;
+    JsonManager jsonManager;
 
-    // KanjiCell��Prefab��ݒ�
-    [SerializeField] GameObject kanjiCellPrefab;
+    // ボタンセルを表示するためのContent
+    [SerializeField] GameObject content;
 
-    // SecretCell��Prefab��ݒ�
-    [SerializeField] GameObject secretCellPrefab;
+    // KanjiCellのPrefabを設定
+    [SerializeField] GameObject kanjiCellButton;
 
+    // SecretCellのPrefabを設定
+    [SerializeField] GameObject secretCellButton;
 
     /// <summary>
-    /// �����f�[�^��JSON�t�@�C������擾���A���ꂼ��{�^����Text�ɔ��f����B
+    /// 漢字データをJSONファイルから取得し、それぞれボタンに反映する
     /// </summary>
     private void Start()
     {
-        // �����f�[�^��JSON�t�@�C������擾
-        JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
-        KanjiInfo[] kanjiInfoArray = jsonManager.GetKanjiInfoByGradeType(GradeType.ALL);
+        // 漢字データをJSONファイルから取得
+        jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
 
-        // �����ɓn���������̏������ƂɁA�����̃Z�� or �n�e�i�̃Z����z�u
-        ArrangementKanjiCell(kanjiInfoArray);
+        // 引数に渡した漢字の情報をもとに、kanjiCellPrefabかsecretCellPrefabのセルを配置
+        DeployCellButton(GradeType.ALL);
     }
 
+    /// <summary>
+    /// 引数の情報をもとに、kanjiCellPrefabかsecretCellPrefabのセルを配置
+    /// </summary>
+    /// <param name="kanjiInfos"></param>
+    public void DeployCellButton(GradeType gradeType)
+    {
+        // 描画を一度リフレッシュする（これをしないと切り替えても漢字セルが残り続ける）
+        RefleshView();
+
+        // 指定された学年の漢字JSONを取得
+        KanjiInfo[] kanjiInfos = jsonManager.GetKanjiInfoByGradeType(gradeType);
+
+        // 取得した漢字の数だけボタンを生成し、ScrollView内にGrid配置
+        foreach (KanjiInfo kanjiInfo in kanjiInfos)
+        {
+            // セットするオブジェクト
+            GameObject setObject = secretCellButton;
+            if (kanjiInfo.defeat_count > 0)
+            {
+                setObject = kanjiCellButton;
+            }
+
+            // Instantiateするオブジェクト
+            GameObject instanceObject = Instantiate(setObject, content.GetComponent<RectTransform>());
+            instanceObject.GetComponent<CollectionCellButton>().InitStatus(kanjiInfo);
+        }
+    }
 
     /// <summary>
-    /// �����̏������ƂɁA�����̃Z�� or �n�e�i�̃Z����z�u����B
+    /// 描画をリフレッシュする
     /// </summary>
-    /// <param name="kanjiInfoArray"></param>
-    private void ArrangementKanjiCell(KanjiInfo[] kanjiInfoArray)
+    private void RefleshView()
     {
-        // �擾���������̐�����KanjiCell�𐶐����AScrollView����Grid�z�u
-        for (int i = 0; i < kanjiInfoArray.Length; i++)
+        // contentの配下にある子オブジェクトを全て削除する
+        foreach (Transform child in content.transform)
         {
-            if (kanjiInfoArray[i].defeat_count >= 1)
-            {
-                // �|���ꂽ�����P���傫���Ƃ��A���̊���Cell��\��
-                GameObject kanjiCell = Instantiate(kanjiCellPrefab, contentRectTransform);
-
-                // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                kanjiCell.GetComponent<KanjiCell>().InitKanjiStatus(kanjiInfoArray[i]);
-            } else
-            {
-                // �|����Ă��Ȃ������̂Ƃ��A�n�e�i��\��
-                GameObject secretCell = Instantiate(secretCellPrefab, contentRectTransform);
-
-                // �Z�����̏��𔽉f�����郁�\�b�h�𔭓�
-                secretCell.GetComponent<SecretCell>().InitKanjiStatus(kanjiInfoArray[i]);
-            }
+            Destroy(child.gameObject);
         }
+
+        // スクロール位置を一番上に戻す
+        gameObject.GetComponent<ScrollRect>().verticalNormalizedPosition = 1.0f;
     }
 }
