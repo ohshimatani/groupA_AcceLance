@@ -14,7 +14,7 @@ public class SpaceShip : MonoBehaviour
     public float speed;
 
     // プレイヤー・敵のHP
-    [SerializeField] int hp;
+    public int hp;
 
     // ダメージポイント
     private const int DAMAGE_POINT = 1;
@@ -34,6 +34,12 @@ public class SpaceShip : MonoBehaviour
     // アニメーターコンポーネント
     private Animator animator;
 
+    // HPバーのオブジェクト
+    [SerializeField] GameObject hpBarObject;
+
+    // HpBarのスクリプト（ただし、Inspector上には表示しない）
+    [System.NonSerialized] public HpBar hpBar;
+
     /// <summary>
     /// ゲーム起動時の処理
     /// </summary>
@@ -41,6 +47,12 @@ public class SpaceShip : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        hpBar = hpBarObject.GetComponent<HpBar>();
+        hpBar.InitializedHpBar(hp);
     }
 
     /// <summary>
@@ -57,15 +69,6 @@ public class SpaceShip : MonoBehaviour
     public void damage()
     {
         hp -= DAMAGE_POINT;
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
-    public int getHp()
-    {
-        return hp;
     }
 
     /// <summary>

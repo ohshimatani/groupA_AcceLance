@@ -21,9 +21,6 @@ public class Enemy : MonoBehaviour
 
     public KanjiInfo kanjiInfo;
 
-    // スクリプトPlayerHpBarのコンポーネントを格納する変数
-    PlayerHpBar enemyHpBar;
-
     /// <summary>
     /// ゲームスタート時の処理
     /// </summary>
@@ -31,12 +28,6 @@ public class Enemy : MonoBehaviour
     {
         spaceShip = GetComponent<SpaceShip>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
-        // HPバーの初期設定
-        // TODO; えねみーHPBarを後で作る
-        GameObject canvasObject = gameObject.transform.Find("Canvas").gameObject;
-        enemyHpBar = canvasObject.transform.Find("EnemyHPBar").GetComponent<PlayerHpBar>();
-        enemyHpBar.InitializedHpBar(spaceShip.getHp());
 
         // 画面上から下に移動させる
         spaceShip.Move(transform.up * -1);
@@ -69,6 +60,10 @@ public class Enemy : MonoBehaviour
         StartCoroutine("Shot");
     }
 
+    /// <summary>
+    /// 漢字のテキストをセットする
+    /// </summary>
+    /// <param name="kanjiInfo"></param>
     public void SetKanjiText(KanjiInfo kanjiInfo)
     {
         this.kanjiInfo = kanjiInfo;
@@ -93,13 +88,13 @@ public class Enemy : MonoBehaviour
             spaceShip.damage();
 
             // HPバーの変更処理
-            enemyHpBar.SetPlayerHpBar(spaceShip.getHp());
+            spaceShip.hpBar.SetHpBarValue(spaceShip.hp);
 
             // 弾の削除
             Destroy(collider.gameObject);
 
             // HPが0になった時の処理
-            if (spaceShip.getHp() <= 0)
+            if (spaceShip.hp <= 0)
             {
                 // 爆発処理
                 spaceShip.Explosion();

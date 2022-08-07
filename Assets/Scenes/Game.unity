@@ -1905,5 +1905,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2755194130348505165, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
+      propertyPath: hp
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755194130348505165, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
+      propertyPath: hpBarObject
+      value: 
+      objectReference: {fileID: 1933346830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a05728ae24518844a09da6c0eca3522, type: 3}
