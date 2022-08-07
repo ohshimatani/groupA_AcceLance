@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         if (layerName == "EnemyBullet" || layerName == "Enemy")
         {
             // ダメージ処理
-            spaceShip.damage();
+            spaceShip.Damage();
 
             // HPバーの変更処理
             spaceShip.hpBar.SetHpBarValue(spaceShip.hp);

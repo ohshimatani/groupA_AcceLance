@@ -66,7 +66,7 @@ public class SpaceShip : MonoBehaviour
     /// <summary>
     /// ダメージ処理（1ずつダメージを食らう）
     /// </summary>
-    public void damage()
+    public void Damage()
     {
         hp -= DAMAGE_POINT;
     }
