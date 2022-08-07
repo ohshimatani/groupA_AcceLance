@@ -17,6 +17,10 @@ public class GradeSelectButtonController : MonoBehaviour
         currentSelectedButton = startSelectedButton;
     }
 
+    /// <summary>
+    /// 現在選択状態にあるボタンの画像を変更する
+    /// </summary>
+    /// <param name="obj"></param>
     public void ChangeSelectedButton(GameObject obj)
     {
         if (currentSelectedButton == obj)
