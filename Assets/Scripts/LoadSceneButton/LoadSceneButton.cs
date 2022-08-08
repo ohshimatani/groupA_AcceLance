@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneButtonController : MonoBehaviour
+public class LoadSceneButton : MonoBehaviour
 {
     public void OnClickLoadTitleScene()
     {
