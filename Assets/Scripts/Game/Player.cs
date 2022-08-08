@@ -70,6 +70,9 @@ public class Player : MonoBehaviour
         // レイヤー名がEnemyBulletの場合
         if (layerName == "EnemyBullet")
         {
+            // 効果音の再生
+            PlayDamageSoundEffect();
+
             // 弾の削除
             Destroy(collider.gameObject);
         }
@@ -111,5 +114,14 @@ public class Player : MonoBehaviour
             // shotDelay秒待つ
             yield return new WaitForSeconds(spaceShip.shotDelay);
         }
+    }
+
+    /// <summary>
+    /// ダメージを受けた際の効果音
+    /// </summary>
+    public void PlayDamageSoundEffect()
+    {
+        AudioClip audioClip = gameObject.GetComponent<AudioSource>().clip;
+        gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
     }
 }

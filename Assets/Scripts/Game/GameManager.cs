@@ -107,6 +107,9 @@ public class GameManager : MonoBehaviour
                 // ˜f¯‚Ì‰æ‘œ‚ğƒ`ƒFƒ“ƒW‚·‚é
                 gamePlanetViewController.ChangeNextPlanet(currentPlanet);
 
+                // Œø‰Ê‰¹‚ÌÄ¶
+                gamePlanetViewController.PlaySoundEffect();
+
                 return;
             }
         }

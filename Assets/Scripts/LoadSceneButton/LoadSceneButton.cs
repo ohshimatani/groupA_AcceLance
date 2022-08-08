@@ -7,31 +7,45 @@ public class LoadSceneButton : MonoBehaviour
 {
     public void OnClickLoadTitleScene()
     {
-        SceneManager.LoadScene("Title");
+        StartCoroutine(AsyncSceneLoad("Title"));
     }
 
     public void OnClickLoadStageSelectScene()
     {
-        SceneManager.LoadScene("StageSelect");
+        StartCoroutine(AsyncSceneLoad("StageSelect"));
     }
 
     public void OnClickLoadTutorialScene()
     {
-        SceneManager.LoadScene("Tutorial");
+        StartCoroutine(AsyncSceneLoad("Tutorial"));
     }
 
     public void OnClickLoadCollectionScene()
     {
-        SceneManager.LoadScene("Collection");
+        StartCoroutine(AsyncSceneLoad("Collection"));
     }
 
     public void OnClickLoadGameScene()
     {
-        SceneManager.LoadScene("Game");
+        StartCoroutine(AsyncSceneLoad("Game"));
     }
 
     public void OnClickLoadParentsScene()
     {
-        SceneManager.LoadScene("Parents");
+        StartCoroutine(AsyncSceneLoad("Parents"));
+    }
+
+    /// <summary>
+    /// É{É^ÉìÇÃå¯â âπÇìríÜÇ≈ìrêÿÇÍÇ≥ÇπÇ»Ç¢ÇΩÇﬂÇ…ÉVÅ[Éìì«Ç›çûÇ›Ç0.5ïbíxÇÍÇ≥ÇπÇÈ
+    /// </summary>
+    /// <param name="sceneName"></param>
+    /// <returns></returns>
+    private IEnumerator AsyncSceneLoad(string sceneName)
+    {
+        var async = SceneManager.LoadSceneAsync(sceneName);
+
+        async.allowSceneActivation = false;
+        yield return new WaitForSeconds(0.5f);
+        async.allowSceneActivation = true;
     }
 }
