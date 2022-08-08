@@ -103,10 +103,8 @@ public class Enemy : MonoBehaviour
                 gameManager.IncrementScore();
 
                 // Json情報の上書き
-                // TODO: リザルト画面への移行タイミングでまとめて行なっても良い
                 JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
                 jsonManager.UpdateDefeatCountByKanjiInfo(kanjiInfo);
-                jsonManager.WriteJsonData();
 
                 // 自身（エネミー）を削除
                 Destroy(gameObject);
