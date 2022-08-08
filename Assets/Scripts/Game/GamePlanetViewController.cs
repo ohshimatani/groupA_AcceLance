@@ -50,6 +50,15 @@ public class GamePlanetViewController : MonoBehaviour
         // ③ nextPlanetのオブジェクト名をcurrentPlanetに変更する
         nextPlanet.name = "CurrentPlanet";
     }
+    
+    /// <summary>
+    /// 惑星が切り替わった際に流すサウンド
+    /// </summary>
+    public void PlaySoundEffect()
+    {
+        AudioClip audioClip = gameObject.GetComponent<AudioSource>().clip;
+        gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
+    }
 
     /// <summary>
     /// ドロップインするときのアニメーション。ドロップインした後にDestory
