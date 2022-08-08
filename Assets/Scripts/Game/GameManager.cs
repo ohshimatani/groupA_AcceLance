@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         var async = SceneManager.LoadSceneAsync("Result");
 
         async.allowSceneActivation = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1);
         async.allowSceneActivation = true;
     }
 
