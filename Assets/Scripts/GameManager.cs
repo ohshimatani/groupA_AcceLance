@@ -64,6 +64,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        // JSON‚Ö‚Ì‘‚«‚İˆ—
+        JsonManager jsonManager = GameObject.Find("JsonManager").GetComponent<JsonManager>();
+        jsonManager.WriteJsonData();
+
         // ƒŠƒUƒ‹ƒg‰æ–Ê‚É‘JˆÚ
         SceneManager.LoadScene("Result");
     }
