@@ -69,7 +69,21 @@ public class GameManager : MonoBehaviour
         jsonManager.WriteJsonData();
 
         // リザルト画面に遷移
-        SceneManager.LoadScene("Result");
+        //SceneManager.LoadScene("Result");
+        StartCoroutine(LoadResultScene());
+    }
+
+    /// <summary>
+    /// Resultシーンへの読み込み処理
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator LoadResultScene()
+    {
+        var async = SceneManager.LoadSceneAsync("Result");
+
+        async.allowSceneActivation = false;
+        yield return new WaitForSeconds(1.5f);
+        async.allowSceneActivation = true;
     }
 
     /// <summary>
