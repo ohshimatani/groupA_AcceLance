@@ -10,18 +10,11 @@ public class Player : MonoBehaviour
     // スクリプトGameManagerのコンポーネントを格納する変数
     private GameManager gameManager;
 
-    // スクリプトPlayerHpBarのコンポーネントを格納する変数
-    PlayerHpBar playerHpBar;
-
     // Start is called before the first frame update
     void Start()
     {
         spaceShip = GetComponent<SpaceShip>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
-        // HPバーの初期設定
-        playerHpBar = GameObject.Find("PlayerHPBar").GetComponent<PlayerHpBar>();
-        playerHpBar.InitializedHpBar(spaceShip.getHp());
 
         // 弾の発射処理の開始
         StartCoroutine("Shot");
@@ -85,13 +78,13 @@ public class Player : MonoBehaviour
         if (layerName == "EnemyBullet" || layerName == "Enemy")
         {
             // ダメージ処理
-            spaceShip.damage();
+            spaceShip.Damage();
 
             // HPバーの変更処理
-            playerHpBar.SetPlayerHpBar(spaceShip.getHp());
+            spaceShip.hpBar.SetHpBarValue(spaceShip.hp);
 
             // HPが0になった時の処理
-            if (spaceShip.getHp() <= 0)
+            if (spaceShip.hp <= 0)
             {
                 // 爆発処理
                 spaceShip.Explosion();

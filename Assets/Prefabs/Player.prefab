@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  hp: 6
   shotDelay: 0.5
   bullet: {fileID: 790810255072894104, guid: b99467d57c1437f4f9c6ee78dc567188, type: 3}
   explosion: {fileID: 1359691145558163931, guid: 3519a532514da4049808bd11ab3d993c, type: 3}
+  hpBarObject: {fileID: 0}
 --- !u!114 &2374728774250227060
 MonoBehaviour:
   m_ObjectHideFlags: 0
