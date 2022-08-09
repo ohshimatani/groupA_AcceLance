@@ -30,13 +30,13 @@ public class GameManager : MonoBehaviour
 
         planets = new Planet[] {
             new Planet("Mercury", "…¯", 0, -5.4f)
-            , new Planet("Venus", "‹à¯", 4, -4.33f)
-            , new Planet("Earth", "’n‹…", 8, -3f)
-            , new Planet("Mars", "‰Î¯", 11, -1.7f)
-            , new Planet("Jupiter", "–Ø¯", 16, 0f)
-            , new Planet("Saturn", "“y¯", 21, 2.73f)
-            , new Planet("Uranus", "“V‰¤¯", 31, 4.87f)
-            , new Planet("Neptune", "ŠC‰¤¯", 51, 6.35f)
+            , new Planet("Venus", "‹à¯", 5, -4.33f)
+            , new Planet("Earth", "’n‹…", 15, -3f)
+            , new Planet("Mars", "‰Î¯", 25, -1.7f)
+            , new Planet("Jupiter", "–Ø¯", 35, 0f)
+            , new Planet("Saturn", "“y¯", 50, 2.73f)
+            , new Planet("Uranus", "“V‰¤¯", 65, 4.87f)
+            , new Planet("Neptune", "ŠC‰¤¯", 80, 6.35f)
         };
 
         // Œ»İ‚Ìƒ‰ƒ“ƒN‚Ì‰Šú’l‚Í…¯‚Æ‚·‚é

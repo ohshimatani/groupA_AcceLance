@@ -17,7 +17,7 @@ public class JsonData
 public class JsonManager : MonoBehaviour
 {
     // 読み込むJSONファイルの名前
-    private const string JSON_FILE = "KanjiInfos.json";
+    private const string JSON_FILE = "KanjiInfos";
 
     // 漢字情報の配列
     private static KanjiInfo[] kanjiInfos;
@@ -30,15 +30,15 @@ public class JsonManager : MonoBehaviour
         string loadJson = null;
 
         // 書き込みが既に完了している場合は、Resourcesとは別の個所から読み込みを行う
-        if (File.Exists(Application.persistentDataPath + JSON_FILE))
+        if (File.Exists(Application.persistentDataPath + JSON_FILE + ".json"))
         {
-            StreamReader streamReader = new StreamReader(Application.persistentDataPath + JSON_FILE);
+            StreamReader streamReader = new StreamReader(Application.persistentDataPath + JSON_FILE + ".json");
             loadJson = streamReader.ReadToEnd();
         }
         else
         {
             // 最初だけResourcesフォルダからの読み込みを行う（ビルド時にエラーが出たのでひとまず応急処置）
-            loadJson = Resources.Load<TextAsset>("Assets/Resources/" + JSON_FILE).ToString();
+            loadJson = Resources.Load<TextAsset>(JSON_FILE).ToString();
         }
 
         // JSONデータ一覧の取得
@@ -59,7 +59,7 @@ public class JsonManager : MonoBehaviour
 
         // 書き込み処理
         string json = JsonUtility.ToJson(jsonData, true);
-        StreamWriter streamWriter = new StreamWriter(Application.persistentDataPath + JSON_FILE);
+        StreamWriter streamWriter = new StreamWriter(Application.persistentDataPath + JSON_FILE + ".json");
         streamWriter.Write(json);
         streamWriter.Flush();
         streamWriter.Close();

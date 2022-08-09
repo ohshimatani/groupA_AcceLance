@@ -70,9 +70,6 @@ public class Player : MonoBehaviour
         // レイヤー名がEnemyBulletの場合
         if (layerName == "EnemyBullet")
         {
-            // 効果音の再生
-            PlayDamageSoundEffect();
-
             // 弾の削除
             Destroy(collider.gameObject);
         }
@@ -80,6 +77,9 @@ public class Player : MonoBehaviour
         // レイヤー名がEnemyBulletまたはEnemyの場合
         if (layerName == "EnemyBullet" || layerName == "Enemy")
         {
+            // 効果音の再生
+            PlayDamageSoundEffect();
+
             // ダメージ処理
             spaceShip.Damage();
 
