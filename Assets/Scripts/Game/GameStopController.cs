@@ -45,6 +45,15 @@ public class GameStopController : MonoBehaviour
     /// </summary>
     public void OnClickLoadTitleScene()
     {
-        SceneManager.LoadScene("Title");
+        Time.timeScale = 1f;
+        StartCoroutine(AsyncLoadTitleScene());
+    }
+    private IEnumerator AsyncLoadTitleScene()
+    {
+        var async = SceneManager.LoadSceneAsync("Title");
+
+        async.allowSceneActivation = false;
+        yield return new WaitForSeconds(0.5f);
+        async.allowSceneActivation = true;
     }
 }
