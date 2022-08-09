@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameStopButtonController : MonoBehaviour
+public class GameStopController : MonoBehaviour
 {
     // 表示させるポップアップオブジェクト
     [SerializeField] GameObject popUpObject;
